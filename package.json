@@ -1,0 +1,22 @@
+{
+  "name": "squirrel-hardware-bridge",
+  "version": "1.0.0",
+  "description": "Local Hardware Bridge Daemon for Qkarts POS Devices",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.3.2",
+    "ts-node": "^10.9.1"
+  }
+}
