@@ -8,11 +8,33 @@ export interface IFingerprintProvider {
   cancel(): Promise<{ success: boolean }>;
 }
 
-export type MockScenario = 
-  | 'SUCCESS' 
-  | 'NO_MATCH' 
-  | 'DEVICE_DISCONNECTED' 
-  | 'DEVICE_BUSY' 
-  | 'CAPTURE_FAILED' 
+export type FingerprintMode = 'mock' | 'hikvision_usb';
+
+export type FingerprintErrorCode =
+  | 'FINGERPRINT_SDK_NOT_FOUND'
+  | 'FINGERPRINT_SDK_LOAD_FAILED'
+  | 'FINGERPRINT_DEVICE_NOT_FOUND'
+  | 'FINGERPRINT_DEVICE_BUSY'
+  | 'FINGERPRINT_CAPTURE_TIMEOUT'
+  | 'FINGERPRINT_CAPTURE_FAILED'
+  | 'FINGERPRINT_NO_MATCH'
+  | 'FINGERPRINT_CANCELLED'
+  | 'FINGERPRINT_WRONG_ARCH'
+  | 'FINGERPRINT_UNSUPPORTED_PLATFORM';
+
+export class FingerprintError extends Error {
+  constructor(public readonly code: FingerprintErrorCode, message: string) {
+    super(message);
+    this.name = 'FingerprintError';
+  }
+}
+
+export type MockScenario =
+  | 'SUCCESS'
+  | 'NO_MATCH'
+  | 'DEVICE_DISCONNECTED'
+  | 'DEVICE_BUSY'
+  | 'CAPTURE_FAILED'
   | 'TIMEOUT'
   | 'ENROLLMENT_FAILED';
+

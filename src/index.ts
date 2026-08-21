@@ -1,9 +1,8 @@
 import WebSocket, { WebSocketServer } from 'ws';
-import dns from 'dns';
 import axios from 'axios';
 import * as dotenv from 'dotenv';
 import { FingerprintProviderFactory } from './providers/provider.factory';
-import { MockScenario } from './providers/provider.interface';
+import { MockScenario, FingerprintError } from './providers/provider.interface';
 
 dotenv.config();
 
@@ -11,8 +10,10 @@ const PORT = Number(process.env.HARDWARE_BRIDGE_PORT || 8765);
 const HOST = '127.0.0.1'; // Loopback only for security!
 const BACKEND_URL = process.env.BACKEND_API || 'http://localhost:8080/api';
 
+const fingerprintMode = process.env.FINGERPRINT_MODE || 'mock';
 console.log(`Starting Squirrel Hardware Bridge on ws://${HOST}:${PORT}`);
 console.log(`Backend API endpoint configured: ${BACKEND_URL}`);
+console.log(`Fingerprint mode: ${fingerprintMode}`);
 
 const wss = new WebSocketServer({ port: PORT, host: HOST });
 
@@ -232,12 +233,15 @@ wss.on('connection', (ws: WebSocket, req) => {
 
     } catch (err: any) {
       console.error(`[Request ${requestId}] Action failed:`, err.message);
+      // Use structured FingerprintErrorCode if available — never expose DLL paths to browser
+      const errorCode = (err instanceof FingerprintError) ? err.code : 'PROVIDER_FAILURE';
+      const safeMessage = (err instanceof FingerprintError) ? err.message : 'An internal hardware error occurred';
       ws.send(JSON.stringify({
         requestId,
         success: false,
         deviceType,
         action,
-        error: { code: 'PROVIDER_FAILURE', message: err.message }
+        error: { code: errorCode, message: safeMessage }
       }));
     }
   });

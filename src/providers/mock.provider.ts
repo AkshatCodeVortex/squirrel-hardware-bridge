@@ -1,9 +1,30 @@
-import { IFingerprintProvider, MockScenario } from './provider.interface';
+import { IFingerprintProvider, MockScenario, FingerprintError } from './provider.interface';
 
+/**
+ * MockFingerprintProvider
+ *
+ * Fully simulates fingerprint hardware for development and testing.
+ * Works on Mac without any physical device.
+ *
+ * ENROLLMENT:
+ *   enrollComplete() generates a deterministic credential reference that encodes the employeeId.
+ *   Format: mock::emp-<employeeId>::finger-<fingerNumber>
+ *
+ * IDENTIFICATION:
+ *   identify() decodes the employeeId from each candidate's credentialReference.
+ *   If targetEmployeeId is set, returns that specific employee (if enrolled).
+ *   Otherwise matches the FIRST candidate whose credentialReference was issued by this mock.
+ *   Returns no match if the credential is not a valid mock credential.
+ *
+ * This eliminates the bug where identify() always returned candidates[0] regardless of fingerprint.
+ */
 export class MockFingerprintProvider implements IFingerprintProvider {
   private activeScenario: MockScenario = 'SUCCESS';
   private targetEmployeeId: string | null = null;
   private isEnrolling = false;
+
+  // Prefix that identifies mock-generated credential references
+  private static readonly MOCK_PREFIX = 'mock::emp-';
 
   public setScenario(scenario: MockScenario, targetEmployeeId: string | null = null) {
     this.activeScenario = scenario;
@@ -19,20 +40,16 @@ export class MockFingerprintProvider implements IFingerprintProvider {
 
   private checkStatus() {
     if (this.activeScenario === 'DEVICE_DISCONNECTED') {
-      throw new Error('DEVICE_NOT_CONNECTED');
+      throw new FingerprintError('FINGERPRINT_DEVICE_NOT_FOUND', 'Mock device is disconnected');
     }
     if (this.activeScenario === 'DEVICE_BUSY') {
-      throw new Error('DEVICE_BUSY');
+      throw new FingerprintError('FINGERPRINT_DEVICE_BUSY', 'Mock device is busy');
     }
   }
 
   async getDeviceStatus(): Promise<'Connected' | 'Disconnected' | 'Busy' | 'Ready' | 'Error'> {
-    if (this.activeScenario === 'DEVICE_DISCONNECTED') {
-      return 'Disconnected';
-    }
-    if (this.activeScenario === 'DEVICE_BUSY') {
-      return 'Busy';
-    }
+    if (this.activeScenario === 'DEVICE_DISCONNECTED') return 'Disconnected';
+    if (this.activeScenario === 'DEVICE_BUSY') return 'Busy';
     return 'Connected';
   }
 
@@ -48,47 +65,48 @@ export class MockFingerprintProvider implements IFingerprintProvider {
   async enrollStart(employeeId: string, fingerNumber: number) {
     this.checkStatus();
     if (this.activeScenario === 'CAPTURE_FAILED') {
-      throw new Error('CAPTURE_FAILED');
+      throw new FingerprintError('FINGERPRINT_CAPTURE_FAILED', 'Mock capture failed');
     }
     this.isEnrolling = true;
     return {
       success: true,
-      message: 'Place finger on scanner (Capture 1)'
+      message: `[MOCK] Place finger on scanner — enrolling employee ${employeeId} finger ${fingerNumber}`
     };
   }
 
   async enrollComplete(employeeId: string, fingerNumber: number) {
     this.checkStatus();
     this.isEnrolling = false;
-    
+
     if (this.activeScenario === 'ENROLLMENT_FAILED') {
-      throw new Error('ENROLLMENT_FAILED');
+      throw new FingerprintError('FINGERPRINT_CAPTURE_FAILED', 'Mock enrollment failed');
     }
     if (this.activeScenario === 'TIMEOUT') {
-      throw new Error('TIMEOUT');
+      throw new FingerprintError('FINGERPRINT_CAPTURE_TIMEOUT', 'Mock capture timeout');
     }
 
-    const mockRef = `mock-fingerprint-ref-${employeeId}-${fingerNumber}-${Math.random().toString(36).substring(7)}`;
-    return {
-      success: true,
-      credentialReference: mockRef
-    };
+    // Deterministic reference: encodes employeeId so identify() can decode it
+    const credentialReference = `${MockFingerprintProvider.MOCK_PREFIX}${employeeId}::finger-${fingerNumber}`;
+    return { success: true, credentialReference };
   }
 
   async verify(employeeId: string, credentialReference: string) {
     this.checkStatus();
-    
+
     if (this.activeScenario === 'NO_MATCH') {
       return { success: true, matched: false };
     }
     if (this.activeScenario === 'CAPTURE_FAILED') {
-      throw new Error('CAPTURE_FAILED');
+      throw new FingerprintError('FINGERPRINT_CAPTURE_FAILED', 'Mock capture failed');
     }
     if (this.activeScenario === 'TIMEOUT') {
-      throw new Error('TIMEOUT');
+      throw new FingerprintError('FINGERPRINT_CAPTURE_TIMEOUT', 'Mock capture timeout');
     }
 
-    return { success: true, matched: true };
+    // Verify that the credential belongs to this employee
+    const expectedPrefix = `${MockFingerprintProvider.MOCK_PREFIX}${employeeId}::`;
+    const matched = credentialReference.startsWith(expectedPrefix);
+    return { success: true, matched };
   }
 
   async identify(candidates: Array<{ employeeId: string; credentialReference: string }>) {
@@ -98,13 +116,13 @@ export class MockFingerprintProvider implements IFingerprintProvider {
       return { success: true, matchedEmployeeId: null, matchedCredentialReference: null };
     }
     if (this.activeScenario === 'CAPTURE_FAILED') {
-      throw new Error('CAPTURE_FAILED');
+      throw new FingerprintError('FINGERPRINT_CAPTURE_FAILED', 'Mock capture failed');
     }
     if (this.activeScenario === 'TIMEOUT') {
-      throw new Error('TIMEOUT');
+      throw new FingerprintError('FINGERPRINT_CAPTURE_TIMEOUT', 'Mock capture timeout');
     }
 
-    // If target employee is specified, search them first
+    // If a specific employee is targeted via mock.scenario, find them
     if (this.targetEmployeeId) {
       const match = candidates.find(c => c.employeeId === this.targetEmployeeId);
       if (match) {
@@ -114,14 +132,29 @@ export class MockFingerprintProvider implements IFingerprintProvider {
           matchedCredentialReference: match.credentialReference
         };
       }
+      // Target was set but not found in candidates
+      return { success: true, matchedEmployeeId: null, matchedCredentialReference: null };
     }
 
-    // Default: match first candidate in list
-    return {
-      success: true,
-      matchedEmployeeId: candidates[0].employeeId,
-      matchedCredentialReference: candidates[0].credentialReference
-    };
+    // Deterministic matching: decode employeeId from mock credential reference
+    // This simulates actual fingerprint matching without hardware
+    for (const candidate of candidates) {
+      if (candidate.credentialReference.startsWith(MockFingerprintProvider.MOCK_PREFIX)) {
+        // Extract the employeeId from the credential: mock::emp-<id>::finger-N
+        const withoutPrefix = candidate.credentialReference.slice(MockFingerprintProvider.MOCK_PREFIX.length);
+        const encodedId = withoutPrefix.split('::')[0];
+        if (encodedId === candidate.employeeId) {
+          return {
+            success: true,
+            matchedEmployeeId: candidate.employeeId,
+            matchedCredentialReference: candidate.credentialReference
+          };
+        }
+      }
+    }
+
+    // No mock credentials matched
+    return { success: true, matchedEmployeeId: null, matchedCredentialReference: null };
   }
 
   async cancel() {
@@ -129,3 +162,4 @@ export class MockFingerprintProvider implements IFingerprintProvider {
     return { success: true };
   }
 }
+
