@@ -24,8 +24,10 @@ class HikvisionFingerprintProvider {
                 path_1.default.resolve(process.cwd(), 'sdk/lib/hifinger.dll'),
                 path_1.default.resolve(process.cwd(), 'sdk/lib/libhifinger.dll'),
                 path_1.default.resolve(process.cwd(), 'sdk/lib/BCCrBiom.dll'),
+                path_1.default.resolve(process.cwd(), 'sdk/lib/FingerprintReader.dll'),
                 path_1.default.resolve(process.cwd(), 'sdk/lib/HCNetSDK.dll'),
                 path_1.default.join(__dirname, '../../sdk/lib/HCNetSDK.dll'),
+                path_1.default.join(__dirname, '../../sdk/lib/FingerprintReader.dll'),
                 'C:\\Windows\\System32\\hifinger.dll'
             ];
             for (const p of candidates) {

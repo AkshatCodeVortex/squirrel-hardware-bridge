@@ -23,8 +23,10 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
         path.resolve(process.cwd(), 'sdk/lib/hifinger.dll'),
         path.resolve(process.cwd(), 'sdk/lib/libhifinger.dll'),
         path.resolve(process.cwd(), 'sdk/lib/BCCrBiom.dll'),
+        path.resolve(process.cwd(), 'sdk/lib/FingerprintReader.dll'),
         path.resolve(process.cwd(), 'sdk/lib/HCNetSDK.dll'),
         path.join(__dirname, '../../sdk/lib/HCNetSDK.dll'),
+        path.join(__dirname, '../../sdk/lib/FingerprintReader.dll'),
         'C:\\Windows\\System32\\hifinger.dll'
       ];
       
