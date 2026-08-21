@@ -1,5 +1,6 @@
 import { IFingerprintProvider } from './provider.interface';
 import { MockFingerprintProvider } from './mock.provider';
+import { HikvisionFingerprintProvider } from './hikvision.provider';
 
 export class FingerprintProviderFactory {
   private static mockProvider = new MockFingerprintProvider();
@@ -12,9 +13,7 @@ export class FingerprintProviderFactory {
     }
 
     if (name === 'hikvision') {
-      // Placeholder for Hikvision integration (step for later)
-      // throw new Error('Hikvision SDK not implemented yet');
-      return this.mockProvider;
+      return new HikvisionFingerprintProvider();
     }
 
     return this.mockProvider;
