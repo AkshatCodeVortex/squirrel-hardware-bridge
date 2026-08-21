@@ -27,6 +27,8 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
         path.resolve(process.cwd(), 'sdk/lib/HCNetSDK.dll'),
         path.join(__dirname, '../../sdk/lib/HCNetSDK.dll'),
         path.join(__dirname, '../../sdk/lib/FingerprintReader.dll'),
+        'C:\\Program Files (x86)\\iVMS-4200 Site\\iVMS-4200 Client\\iVMS-4200 Client\\FingerprintReader.dll',
+        'C:\\Program Files\\iVMS-4200 Site\\iVMS-4200 Client\\iVMS-4200 Client\\FingerprintReader.dll',
         'C:\\Windows\\System32\\hifinger.dll'
       ];
       
