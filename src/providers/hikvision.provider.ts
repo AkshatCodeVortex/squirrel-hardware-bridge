@@ -12,13 +12,51 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
   private FP_Capture: any;
 
   constructor() {
-    const libPath = process.platform === 'win32' 
-      ? './sdk/lib/hifinger.dll' 
-      : './sdk/lib/libhifinger.so';
-    
-    try {
-      this.lib = koffi.load(libPath);
+    let loaded = false;
+    const platform = process.platform;
+
+    if (platform === 'win32') {
+      const candidates = [
+        './sdk/lib/hifinger.dll',
+        './sdk/lib/libhifinger.dll',
+        './sdk/lib/BCCrBiom.dll',
+        'C:\\Windows\\System32\\hifinger.dll'
+      ];
       
+      for (const p of candidates) {
+        try {
+          this.lib = koffi.load(p);
+          console.log(`Successfully loaded Hikvision SDK DLL from: ${p}`);
+          loaded = true;
+          break;
+        } catch (err) {
+          // Continue searching
+        }
+      }
+    } else {
+      const candidates = [
+        './sdk/lib/libhifinger.so',
+        './sdk/lib/libhifinger.dylib'
+      ];
+      
+      for (const p of candidates) {
+        try {
+          this.lib = koffi.load(p);
+          console.log(`Successfully loaded Hikvision SDK library from: ${p}`);
+          loaded = true;
+          break;
+        } catch (err) {
+          // Continue searching
+        }
+      }
+    }
+
+    if (!loaded || !this.lib) {
+      console.warn("WARNING: No Hikvision SDK library binary found or loaded. Device will run in mock fallback mode.");
+      return;
+    }
+
+    try {
       // Map C++ SDK signatures (refer to the Hikvision Programming Guide PDF)
       this.FP_Init = this.lib.func('int FP_Init()');
       this.FP_Open = this.lib.func('int FP_Open()');
@@ -27,7 +65,7 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
       
       this.FP_Init();
     } catch (err: any) {
-      console.error("Failed to load Hikvision SDK binary:", err.message);
+      console.error("Failed to map Hikvision SDK functions:", err.message);
     }
   }
 
