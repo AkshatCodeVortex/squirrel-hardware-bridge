@@ -21,15 +21,15 @@ class HikvisionFingerprintProvider {
         const platform = process.platform;
         if (platform === 'win32') {
             const candidates = [
+                'C:\\Program Files (x86)\\iVMS-4200 Site\\iVMS-4200 Client\\iVMS-4200 Client\\FingerprintReader.dll',
+                'C:\\Program Files\\iVMS-4200 Site\\iVMS-4200 Client\\iVMS-4200 Client\\FingerprintReader.dll',
+                path_1.default.resolve(process.cwd(), 'sdk/lib/FingerprintReader.dll'),
+                path_1.default.join(__dirname, '../../sdk/lib/FingerprintReader.dll'),
                 path_1.default.resolve(process.cwd(), 'sdk/lib/hifinger.dll'),
                 path_1.default.resolve(process.cwd(), 'sdk/lib/libhifinger.dll'),
                 path_1.default.resolve(process.cwd(), 'sdk/lib/BCCrBiom.dll'),
-                path_1.default.resolve(process.cwd(), 'sdk/lib/FingerprintReader.dll'),
                 path_1.default.resolve(process.cwd(), 'sdk/lib/HCNetSDK.dll'),
                 path_1.default.join(__dirname, '../../sdk/lib/HCNetSDK.dll'),
-                path_1.default.join(__dirname, '../../sdk/lib/FingerprintReader.dll'),
-                'C:\\Program Files (x86)\\iVMS-4200 Site\\iVMS-4200 Client\\iVMS-4200 Client\\FingerprintReader.dll',
-                'C:\\Program Files\\iVMS-4200 Site\\iVMS-4200 Client\\iVMS-4200 Client\\FingerprintReader.dll',
                 'C:\\Windows\\System32\\hifinger.dll'
             ];
             for (const p of candidates) {
