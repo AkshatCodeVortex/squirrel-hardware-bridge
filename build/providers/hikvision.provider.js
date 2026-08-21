@@ -36,7 +36,7 @@ class HikvisionFingerprintProvider {
                     break;
                 }
                 catch (err) {
-                    // Continue searching
+                    console.log(`[Diagnostic] Failed to load DLL from '${p}':`, err.message);
                 }
             }
         }
@@ -56,7 +56,7 @@ class HikvisionFingerprintProvider {
                     break;
                 }
                 catch (err) {
-                    // Continue searching
+                    console.log(`[Diagnostic] Failed to load library from '${p}':`, err.message);
                 }
             }
         }

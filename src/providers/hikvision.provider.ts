@@ -34,8 +34,8 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
           loadedPath = p;
           loaded = true;
           break;
-        } catch (err) {
-          // Continue searching
+        } catch (err: any) {
+          console.log(`[Diagnostic] Failed to load DLL from '${p}':`, err.message);
         }
       }
     } else {
@@ -53,8 +53,8 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
           loadedPath = p;
           loaded = true;
           break;
-        } catch (err) {
-          // Continue searching
+        } catch (err: any) {
+          console.log(`[Diagnostic] Failed to load library from '${p}':`, err.message);
         }
       }
     }
