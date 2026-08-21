@@ -13,6 +13,7 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
 
   constructor() {
     let loaded = false;
+    let loadedPath = '';
     const platform = process.platform;
 
     if (platform === 'win32') {
@@ -20,6 +21,7 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
         './sdk/lib/hifinger.dll',
         './sdk/lib/libhifinger.dll',
         './sdk/lib/BCCrBiom.dll',
+        './sdk/lib/HCNetSDK.dll',
         'C:\\Windows\\System32\\hifinger.dll'
       ];
       
@@ -27,6 +29,7 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
         try {
           this.lib = koffi.load(p);
           console.log(`Successfully loaded Hikvision SDK DLL from: ${p}`);
+          loadedPath = p;
           loaded = true;
           break;
         } catch (err) {
@@ -36,13 +39,15 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
     } else {
       const candidates = [
         './sdk/lib/libhifinger.so',
-        './sdk/lib/libhifinger.dylib'
+        './sdk/lib/libhifinger.dylib',
+        './sdk/lib/libhcnetsdk.so'
       ];
       
       for (const p of candidates) {
         try {
           this.lib = koffi.load(p);
           console.log(`Successfully loaded Hikvision SDK library from: ${p}`);
+          loadedPath = p;
           loaded = true;
           break;
         } catch (err) {
@@ -57,11 +62,24 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
     }
 
     try {
-      // Map C++ SDK signatures (refer to the Hikvision Programming Guide PDF)
-      this.FP_Init = this.lib.func('int FP_Init()');
-      this.FP_Open = this.lib.func('int FP_Open()');
-      this.FP_Close = this.lib.func('int FP_Close()');
-      this.FP_Capture = this.lib.func('int FP_Capture(uint8_t *pTemplate, uint32_t *pSize)');
+      const isNetworkSDK = loadedPath.toLowerCase().includes('hcnetsdk');
+      
+      if (isNetworkSDK) {
+        // Map standard Access Control/Network SDK functions
+        const initFn = this.lib.func('bool NET_DVR_Init()');
+        const cleanupFn = this.lib.func('bool NET_DVR_Cleanup()');
+        
+        this.FP_Init = () => initFn();
+        this.FP_Close = () => cleanupFn();
+        this.FP_Open = () => 0; // Placeholder
+        this.FP_Capture = (temp: any, size: any) => 0; // Placeholder
+      } else {
+        // Map specialized USB Enrollment SDK functions (hifinger)
+        this.FP_Init = this.lib.func('int FP_Init()');
+        this.FP_Open = this.lib.func('int FP_Open()');
+        this.FP_Close = this.lib.func('int FP_Close()');
+        this.FP_Capture = this.lib.func('int FP_Capture(uint8_t *pTemplate, uint32_t *pSize)');
+      }
       
       this.FP_Init();
     } catch (err: any) {
