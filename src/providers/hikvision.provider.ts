@@ -1,4 +1,5 @@
 import koffi from 'koffi';
+import path from 'path';
 import { IFingerprintProvider } from './provider.interface';
 
 export class HikvisionFingerprintProvider implements IFingerprintProvider {
@@ -18,10 +19,11 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
 
     if (platform === 'win32') {
       const candidates = [
-        './sdk/lib/hifinger.dll',
-        './sdk/lib/libhifinger.dll',
-        './sdk/lib/BCCrBiom.dll',
-        './sdk/lib/HCNetSDK.dll',
+        path.resolve(process.cwd(), 'sdk/lib/hifinger.dll'),
+        path.resolve(process.cwd(), 'sdk/lib/libhifinger.dll'),
+        path.resolve(process.cwd(), 'sdk/lib/BCCrBiom.dll'),
+        path.resolve(process.cwd(), 'sdk/lib/HCNetSDK.dll'),
+        path.join(__dirname, '../../sdk/lib/HCNetSDK.dll'),
         'C:\\Windows\\System32\\hifinger.dll'
       ];
       
@@ -38,9 +40,10 @@ export class HikvisionFingerprintProvider implements IFingerprintProvider {
       }
     } else {
       const candidates = [
-        './sdk/lib/libhifinger.so',
-        './sdk/lib/libhifinger.dylib',
-        './sdk/lib/libhcnetsdk.so'
+        path.resolve(process.cwd(), 'sdk/lib/libhifinger.so'),
+        path.resolve(process.cwd(), 'sdk/lib/libhifinger.dylib'),
+        path.resolve(process.cwd(), 'sdk/lib/libhcnetsdk.so'),
+        path.join(__dirname, '../../sdk/lib/libhifinger.so')
       ];
       
       for (const p of candidates) {

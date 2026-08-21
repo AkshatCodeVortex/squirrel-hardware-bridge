@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HikvisionFingerprintProvider = void 0;
 const koffi_1 = __importDefault(require("koffi"));
+const path_1 = __importDefault(require("path"));
 class HikvisionFingerprintProvider {
     lib;
     deviceOpen = false;
@@ -19,10 +20,11 @@ class HikvisionFingerprintProvider {
         const platform = process.platform;
         if (platform === 'win32') {
             const candidates = [
-                './sdk/lib/hifinger.dll',
-                './sdk/lib/libhifinger.dll',
-                './sdk/lib/BCCrBiom.dll',
-                './sdk/lib/HCNetSDK.dll',
+                path_1.default.resolve(process.cwd(), 'sdk/lib/hifinger.dll'),
+                path_1.default.resolve(process.cwd(), 'sdk/lib/libhifinger.dll'),
+                path_1.default.resolve(process.cwd(), 'sdk/lib/BCCrBiom.dll'),
+                path_1.default.resolve(process.cwd(), 'sdk/lib/HCNetSDK.dll'),
+                path_1.default.join(__dirname, '../../sdk/lib/HCNetSDK.dll'),
                 'C:\\Windows\\System32\\hifinger.dll'
             ];
             for (const p of candidates) {
@@ -40,9 +42,10 @@ class HikvisionFingerprintProvider {
         }
         else {
             const candidates = [
-                './sdk/lib/libhifinger.so',
-                './sdk/lib/libhifinger.dylib',
-                './sdk/lib/libhcnetsdk.so'
+                path_1.default.resolve(process.cwd(), 'sdk/lib/libhifinger.so'),
+                path_1.default.resolve(process.cwd(), 'sdk/lib/libhifinger.dylib'),
+                path_1.default.resolve(process.cwd(), 'sdk/lib/libhcnetsdk.so'),
+                path_1.default.join(__dirname, '../../sdk/lib/libhifinger.so')
             ];
             for (const p of candidates) {
                 try {
