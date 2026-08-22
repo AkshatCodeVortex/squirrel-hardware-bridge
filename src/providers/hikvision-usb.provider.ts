@@ -7,50 +7,60 @@ import {
 } from './provider.interface';
 
 /**
- * Hikvision / FPModule USB SDK constants
+ * Hikvision FPModule SDK
  *
- * Confirmed from:
- * FPModule_SDK.h
+ * Confirmed from the official FPModule_SDK.h / VC demo:
+ *
+ * FP_SUCCESS      = 0
+ * FP_TIMEOUT      = 2
+ * FP_ENROLL_FAIL  = 3
+ * FP_EXTRACT_FAIL = 5
+ * FP_MATCH_FAIL   = 6
+ *
+ * FP_FTP_MAX      = 512
  */
+
 const FP_SUCCESS = 0;
+const FP_TIMEOUT = 2;
+const FP_ENROLL_FAIL = 3;
+const FP_EXTRACT_FAIL = 5;
+const FP_MATCH_FAIL = 6;
+
+const FP_TEMPLATE_SIZE = 512;
+const FP_SECURITY_LEVEL = 3;
 
 /**
- * Confirmed from FPModule_SDK.h:
+ * IMPORTANT - CONFIRMED WORKING VALUES (tested against real hardware):
  *
- * #define FP_FTP_MAX 512
+ * Enrollment (first capture, builds the template):
+ *   SetCollectTimes(3)   <- NOT 0. 0 means "collect zero presses" and
+ *                           the SDK waits forever for a sequence that
+ *                           can never complete -> guaranteed timeout,
+ *                           regardless of whether a finger is placed.
+ *
+ * Matching / verification capture:
+ *   SetCollectTimes(1)
+ *
+ * This matches the official C# demo (Form1.cs):
+ *   FPutils.FPModule_SetCollectTimes(3);   // enroll
+ *   iRet = FPutils.FPModule_FpEnroll(data);
+ *   ...
+ *   FPutils.FPModule_SetCollectTimes(1);   // verify/match
+ *   iRet = FPutils.FPModule_FpEnroll(data);
  */
-const FP_TEMPLATE_BUFFER_SIZE = 512;
+const FP_ENROLL_MODE = 3;
+const FP_MATCH_MODE = 1;
 
 /**
- * Vendor C++ demo uses security level 3
- * for FPModule_MatchTemplate().
- */
-const FP_MATCH_SECURITY_LEVEL = 3;
-
-/**
- * Vendor C++ demo:
+ * Confirmed from VC demo:
  *
- * Enrollment:
- * FPModule_SetCollectTimes(0);
- *
- * Matching/live capture:
- * FPModule_SetCollectTimes(1);
+ * SetTimeout(1~60 seconds)
  */
-const FP_ENROLL_COLLECT_TIMES = 0;
-const FP_VERIFY_COLLECT_TIMES = 1;
-
-const FP_POLL_INTERVAL_MS = 300;
-const FP_CAPTURE_TIMEOUT_MS = 30_000;
-
-type FingerprintStatus =
-  | 'Connected'
-  | 'Disconnected'
-  | 'Busy'
-  | 'Ready'
-  | 'Error';
+const FP_TIMEOUT_SECONDS = 30;
 
 export class HikvisionUsbFingerprintProvider
-  implements IFingerprintProvider {
+  implements IFingerprintProvider
+{
   private lib: any = null;
 
   private sdkLoaded = false;
@@ -64,6 +74,8 @@ export class HikvisionUsbFingerprintProvider
   private fnCloseDevice: any = null;
   private fnDetectFinger: any = null;
   private fnSetCollectTimes: any = null;
+  private fnSetTimeout: any = null;
+  private fnGetTimeout: any = null;
   private fnFpEnroll: any = null;
   private fnGetQuality: any = null;
   private fnMatchTemplate: any = null;
@@ -75,7 +87,7 @@ export class HikvisionUsbFingerprintProvider
       throw new FingerprintError(
         'FINGERPRINT_UNSUPPORTED_PLATFORM',
         `FPModule_SDK requires Windows. Current platform: ${process.platform}. ` +
-        `Use FINGERPRINT_MODE=mock for development on Mac/Linux.`
+          `Use FINGERPRINT_MODE=mock for Mac/Linux development.`
       );
     }
 
@@ -83,10 +95,9 @@ export class HikvisionUsbFingerprintProvider
   }
 
   /**
-   * Load the real Hikvision USB FPModule SDK.
-   *
-   * IMPORTANT:
-   * There is intentionally NO HCNetSDK/network fallback here.
+   * ============================================================
+   * LOAD SDK
+   * ============================================================
    */
   private loadSdk(): void {
     const arch = process.arch;
@@ -115,11 +126,6 @@ export class HikvisionUsbFingerprintProvider
       `[HikvisionUSB] Required DLL: ${dllName}`
     );
 
-    /**
-     * First preference:
-     *
-     * Project-local SDK.
-     */
     const candidates: string[] = [
       path.resolve(
         process.cwd(),
@@ -129,10 +135,6 @@ export class HikvisionUsbFingerprintProvider
       ),
     ];
 
-    /**
-     * Official SDK installation discovered
-     * on the Windows machine.
-     */
     const officialSdkRoot =
       'C:\\Program Files\\FPModule_SDK_V2.2.1_202027(for Windows)';
 
@@ -154,16 +156,9 @@ export class HikvisionUsbFingerprintProvider
       )
     );
 
-    /**
-     * Remove duplicates.
-     */
-    const uniqueCandidates = [
-      ...new Set(candidates),
-    ];
-
     let loaded = false;
 
-    for (const dllPath of uniqueCandidates) {
+    for (const dllPath of [...new Set(candidates)]) {
       console.log(
         `[HikvisionUSB] Checking DLL: ${dllPath}`
       );
@@ -181,7 +176,8 @@ export class HikvisionUsbFingerprintProvider
         break;
       } catch (err: any) {
         console.log(
-          `[HikvisionUSB] Could not load '${dllPath}': ${err?.message || err
+          `[HikvisionUSB] Failed to load '${dllPath}': ${
+            err?.message || err
           }`
         );
       }
@@ -190,9 +186,7 @@ export class HikvisionUsbFingerprintProvider
     if (!loaded || !this.lib) {
       throw new FingerprintError(
         'FINGERPRINT_SDK_NOT_FOUND',
-        `FPModule SDK not found or could not be loaded. ` +
-        `Expected ${dllName}. ` +
-        `Place it in sdk/lib/ or verify the official SDK installation.`
+        `FPModule SDK not found: ${dllName}`
       );
     }
 
@@ -202,181 +196,128 @@ export class HikvisionUsbFingerprintProvider
   }
 
   /**
-   * Map native functions.
+   * ============================================================
+   * MAP SDK FUNCTIONS
+   * ============================================================
    *
    * IMPORTANT:
-   *
-   * These signatures are based on the actual
-   * FPModule_SDK.h supplied with:
-   *
-   * FPModule_SDK_V2.2.1_202027
-   *
-   * Calling convention:
-   * __stdcall
+   * The official header says __stdcall.
    */
   private mapFunctions(): void {
-    if (!this.lib) {
-      throw new FingerprintError(
-        'FINGERPRINT_SDK_LOAD_FAILED',
-        'FPModule SDK library is not loaded'
-      );
-    }
-
     try {
-      /**
-       * int __stdcall FPModule_OpenDevice(void);
-       */
       this.fnOpenDevice =
         this.lib.func(
-          '__stdcall',
-          'int FPModule_OpenDevice()'
+          'int __stdcall FPModule_OpenDevice()'
         );
 
-      /**
-       * int __stdcall FPModule_CloseDevice(void);
-       */
       this.fnCloseDevice =
         this.lib.func(
-          '__stdcall',
-          'int FPModule_CloseDevice()'
+          'int __stdcall FPModule_CloseDevice()'
         );
 
-      /**
-       * int __stdcall FPModule_DetectFinger(
-       *     int *pdwFpstatus
-       * );
-       */
       this.fnDetectFinger =
         this.lib.func(
-          '__stdcall',
-          'int FPModule_DetectFinger(int *pdwFpstatus)'
+          'int __stdcall FPModule_DetectFinger(int *pdwFpstatus)'
         );
 
-      /**
-       * int __stdcall FPModule_SetCollectTimes(
-       *     int dwTimes
-       * );
-       */
       this.fnSetCollectTimes =
         this.lib.func(
-          '__stdcall',
-          'int FPModule_SetCollectTimes(int dwTimes)'
+          'int __stdcall FPModule_SetCollectTimes(int dwTimes)'
         );
 
-      /**
-       * int __stdcall FPModule_FpEnroll(
-       *     unsigned char *pbyFpTemplate
-       * );
-       */
+      this.fnSetTimeout =
+        this.lib.func(
+          'int __stdcall FPModule_SetTimeout(int dwTime)'
+        );
+
+      this.fnGetTimeout =
+        this.lib.func(
+          'int __stdcall FPModule_GetTimeout(int *pdwTime)'
+        );
+
       this.fnFpEnroll =
         this.lib.func(
-          '__stdcall',
-          'int FPModule_FpEnroll(uint8 *pbyFpTemplate)'
+          'int __stdcall FPModule_FpEnroll(uint8 *pbyFpTemplate)'
         );
 
-      /**
-       * int __stdcall FPModule_GetQuality(
-       *     unsigned char *pbyFpTemplate
-       * );
-       */
       this.fnGetQuality =
         this.lib.func(
-          '__stdcall',
-          'int FPModule_GetQuality(uint8 *pbyFpTemplate)'
+          'int __stdcall FPModule_GetQuality(uint8 *pbyFpTemplate)'
         );
 
-      /**
-       * int __stdcall FPModule_MatchTemplate(
-       *     unsigned char *pbyFpTemplate1,
-       *     unsigned char *pbyFpTemplate2,
-       *     int dwSecurityLevel
-       * );
-       */
       this.fnMatchTemplate =
         this.lib.func(
-          '__stdcall',
-          'int FPModule_MatchTemplate(' +
-          'uint8 *pbyFpTemplate1, ' +
-          'uint8 *pbyFpTemplate2, ' +
-          'int dwSecurityLevel' +
+          'int __stdcall FPModule_MatchTemplate(' +
+            'uint8 *pbyFpTemplate1, ' +
+            'uint8 *pbyFpTemplate2, ' +
+            'int dwSecurityLevel' +
           ')'
         );
 
-      /**
-       * int __stdcall FPModule_GetDeviceInfo(
-       *     char *pbyDeviceInfo
-       * );
-       */
       this.fnGetDeviceInfo =
         this.lib.func(
-          '__stdcall',
-          'int FPModule_GetDeviceInfo(char *pbyDeviceInfo)'
+          'int __stdcall FPModule_GetDeviceInfo(char *pbyDeviceInfo)'
         );
 
-      /**
-       * int __stdcall FPModule_GetSDKVersion(
-       *     char *pbySDKVersion
-       * );
-       */
       this.fnGetSDKVersion =
         this.lib.func(
-          '__stdcall',
-          'int FPModule_GetSDKVersion(char *pbySDKVersion)'
+          'int __stdcall FPModule_GetSDKVersion(char *pbySDKVersion)'
         );
 
       console.log(
-        '[HikvisionUSB] All FPModule SDK functions mapped successfully'
+        '[HikvisionUSB] SDK functions mapped successfully'
       );
 
-      /**
-       * Get SDK version.
-       */
-      try {
-        const versionBuffer =
-          Buffer.alloc(256);
+      this.loadSdkVersion();
 
-        const result =
-          this.fnGetSDKVersion(
-            versionBuffer
-          );
-
-        if (result === FP_SUCCESS) {
-          this.sdkVersion =
-            versionBuffer
-              .toString('ascii')
-              .replace(/\0/g, '')
-              .trim() || 'unknown';
-        }
-      } catch (error: any) {
-        console.warn(
-          '[HikvisionUSB] Could not read SDK version:',
-          error?.message || error
-        );
-
-        this.sdkVersion = 'unknown';
-      }
-
-      console.log(
-        `[HikvisionUSB] SDK version: ${this.sdkVersion}`
-      );
     } catch (err: any) {
       throw new FingerprintError(
         'FINGERPRINT_SDK_LOAD_FAILED',
-        `Failed to map FPModule SDK functions: ${err?.message || err
+        `Failed to map FPModule SDK functions: ${
+          err?.message || err
         }. DLL: ${this.loadedDllPath}`
       );
     }
   }
 
   /**
-   * Prevent two fingerprint operations from
-   * using the physical scanner simultaneously.
+   * ============================================================
+   * SDK VERSION
+   * ============================================================
+   */
+  private loadSdkVersion(): void {
+    try {
+      const buffer = Buffer.alloc(64);
+
+      const result =
+        this.fnGetSDKVersion(buffer);
+
+      if (result === FP_SUCCESS) {
+        this.sdkVersion =
+          buffer
+            .toString('ascii')
+            .replace(/\0/g, '')
+            .trim() || 'unknown';
+      }
+
+      console.log(
+        `[HikvisionUSB] SDK version: ${this.sdkVersion}`
+      );
+    } catch {
+      this.sdkVersion = 'unknown';
+    }
+  }
+
+  /**
+   * ============================================================
+   * LOCK
+   * ============================================================
    */
   private acquireLock(): void {
     if (this.operationInProgress) {
       throw new FingerprintError(
         'FINGERPRINT_DEVICE_BUSY',
-        'Another fingerprint operation is already in progress'
+        'Fingerprint operation already in progress'
       );
     }
 
@@ -387,26 +328,19 @@ export class HikvisionUsbFingerprintProvider
     this.operationInProgress = false;
   }
 
-  private delay(ms: number): Promise<void> {
-    return new Promise((resolve) =>
-      setTimeout(resolve, ms)
-    );
-  }
-
   /**
-   * Open physical USB scanner.
+   * ============================================================
+   * OPEN DEVICE
+   * ============================================================
    */
   private openDevice(): void {
-    if (!this.sdkLoaded) {
-      throw new FingerprintError(
-        'FINGERPRINT_SDK_NOT_FOUND',
-        'FPModule SDK is not loaded'
-      );
-    }
-
     if (this.deviceOpen) {
       return;
     }
+
+    console.log(
+      '[HikvisionUSB] Opening device...'
+    );
 
     const result =
       this.fnOpenDevice();
@@ -421,12 +355,32 @@ export class HikvisionUsbFingerprintProvider
     this.deviceOpen = true;
 
     console.log(
-      '[HikvisionUSB] DS-K1F820-F device opened'
+      '[HikvisionUSB] Device opened successfully'
     );
+
+    /**
+     * Vendor demo exposes SetTimeout(1~60).
+     */
+    const timeoutResult =
+      this.fnSetTimeout(
+        FP_TIMEOUT_SECONDS
+      );
+
+    console.log(
+      `[HikvisionUSB] SetTimeout(${FP_TIMEOUT_SECONDS}) = ${timeoutResult}`
+    );
+
+    if (timeoutResult !== FP_SUCCESS) {
+      console.warn(
+        '[HikvisionUSB] Warning: SDK timeout configuration failed'
+      );
+    }
   }
 
   /**
-   * Close physical USB scanner.
+   * ============================================================
+   * CLOSE DEVICE
+   * ============================================================
    */
   private closeDevice(): void {
     if (!this.deviceOpen) {
@@ -437,19 +391,14 @@ export class HikvisionUsbFingerprintProvider
       const result =
         this.fnCloseDevice();
 
-      if (result !== FP_SUCCESS) {
-        console.warn(
-          `[HikvisionUSB] FPModule_CloseDevice() returned ${result}`
-        );
-      } else {
-        console.log(
-          '[HikvisionUSB] Device closed'
-        );
-      }
-    } catch (error: any) {
+      console.log(
+        `[HikvisionUSB] FPModule_CloseDevice() = ${result}`
+      );
+
+    } catch (err: any) {
       console.warn(
-        '[HikvisionUSB] Device close error:',
-        error?.message || error
+        '[HikvisionUSB] Close error:',
+        err?.message || err
       );
     } finally {
       this.deviceOpen = false;
@@ -457,192 +406,107 @@ export class HikvisionUsbFingerprintProvider
   }
 
   /**
-   * Read device information.
-   */
-  private readDeviceInfo(): string {
-    const buffer =
-      Buffer.alloc(256);
-
-    try {
-      const result =
-        this.fnGetDeviceInfo(buffer);
-
-      if (result !== FP_SUCCESS) {
-        return 'Unavailable';
-      }
-
-      return (
-        buffer
-          .toString('ascii')
-          .replace(/\0/g, '')
-          .trim() || 'Unavailable'
-      );
-    } catch {
-      return 'Unavailable';
-    }
-  }
-
-  /**
-   * Wait until the scanner reports a finger.
+   * ============================================================
+   * CAPTURE TEMPLATE
+   * ============================================================
    *
-   * IMPORTANT:
-   * DetectFinger receives an int*.
-   *
-   * The SDK header confirms the signature.
-   */
-  private async waitForFinger(): Promise<void> {
-    const started =
-      Date.now();
-
-    while (
-      Date.now() - started <
-      FP_CAPTURE_TIMEOUT_MS
-    ) {
-      const statusBuffer =
-        Buffer.alloc(4);
-
-      const result =
-        this.fnDetectFinger(
-          statusBuffer
-        );
-
-      if (result !== FP_SUCCESS) {
-        throw new FingerprintError(
-          'FINGERPRINT_CAPTURE_FAILED',
-          `FPModule_DetectFinger() returned ${result}`
-        );
-      }
-
-      const fingerStatus =
-        statusBuffer.readInt32LE(0);
-
-      /**
-       * The SDK demo uses the returned
-       * pdwFpstatus value.
-       *
-       * The usual status is:
-       * 1 = finger detected
-       * 0 = no finger
-       */
-      if (fingerStatus === 1) {
-        console.log(
-          '[HikvisionUSB] Finger detected'
-        );
-
-        return;
-      }
-
-      await this.delay(
-        FP_POLL_INTERVAL_MS
-      );
-    }
-
-    throw new FingerprintError(
-      'FINGERPRINT_CAPTURE_TIMEOUT',
-      `No finger detected within ${FP_CAPTURE_TIMEOUT_MS / 1000} seconds`
-    );
-  }
-
-  /**
-   * Capture one fingerprint template.
-   *
-   * The SDK's actual API is:
-   *
-   * FPModule_FpEnroll(unsigned char *pbyFpTemplate)
-   *
-   * No size pointer.
+   * collectMode: FP_ENROLL_MODE (3) for enrollment,
+   *              FP_MATCH_MODE (1) for verify/identify captures.
    */
   private captureTemplate(
-    collectTimes: number
-  ): Promise<Buffer> {
-    this.openDevice();
-
+    collectMode: number
+  ): Buffer {
     const collectResult =
       this.fnSetCollectTimes(
-        collectTimes
+        collectMode
       );
+
+    console.log(
+      `[HikvisionUSB] SetCollectTimes(${collectMode}) = ${collectResult}`
+    );
 
     if (collectResult !== FP_SUCCESS) {
       throw new FingerprintError(
         'FINGERPRINT_CAPTURE_FAILED',
-        `FPModule_SetCollectTimes(${collectTimes}) returned ${collectResult}`
+        `FPModule_SetCollectTimes(${collectMode}) returned ${collectResult}`
       );
     }
 
-    console.log(
-      `[HikvisionUSB] Collect times: ${collectTimes}`
-    );
-
-    return this.captureTemplateAfterSetup();
-  }
-
-  /**
-   * Capture after device and collection settings
-   * are configured.
-   */
-  private captureTemplateAfterSetup(): Promise<Buffer> {
-    const templateBuffer =
+    const template =
       Buffer.alloc(
-        FP_TEMPLATE_BUFFER_SIZE
+        FP_TEMPLATE_SIZE
       );
 
     console.log(
-      '[HikvisionUSB] Waiting for finger...'
+      '[HikvisionUSB] Place your finger on the scanner...'
     );
 
-    /**
-     * Wait for actual finger detection.
-     */
-    return this.waitForFinger()
-      .then(() => {
-        console.log(
-          '[HikvisionUSB] Capturing fingerprint template...'
-        );
-
-        const result =
-          this.fnFpEnroll(
-            templateBuffer
-          );
-
-        if (result !== FP_SUCCESS) {
-          throw new FingerprintError(
-            'FINGERPRINT_CAPTURE_FAILED',
-            `FPModule_FpEnroll() returned ${result}`
-          );
-        }
-
-        console.log(
-          `[HikvisionUSB] Template captured (${FP_TEMPLATE_BUFFER_SIZE} byte buffer)`
-        );
-
-        return templateBuffer;
-      });
-  }
-
-  /**
-   * Get fingerprint quality.
-   */
-  private getQuality(
-    template: Buffer
-  ): number {
-    try {
-      return this.fnGetQuality(
+    const result =
+      this.fnFpEnroll(
         template
       );
-    } catch (error: any) {
-      console.warn(
-        '[HikvisionUSB] Quality check failed:',
-        error?.message || error
-      );
 
-      return -1;
+    console.log(
+      `[HikvisionUSB] FPModule_FpEnroll() = ${result}`
+    );
+
+    if (result === FP_TIMEOUT) {
+      throw new FingerprintError(
+        'FINGERPRINT_CAPTURE_TIMEOUT',
+        'Fingerprint capture timed out'
+      );
     }
+
+    if (result === FP_ENROLL_FAIL) {
+      throw new FingerprintError(
+        'FINGERPRINT_CAPTURE_FAILED',
+        'Fingerprint enrollment failed'
+      );
+    }
+
+    if (result === FP_EXTRACT_FAIL) {
+      throw new FingerprintError(
+        'FINGERPRINT_CAPTURE_FAILED',
+        'Fingerprint template extraction failed'
+      );
+    }
+
+    if (result !== FP_SUCCESS) {
+      throw new FingerprintError(
+        'FINGERPRINT_CAPTURE_FAILED',
+        `FPModule_FpEnroll() returned ${result}`
+      );
+    }
+
+    if (template.length !== FP_TEMPLATE_SIZE) {
+      // Defensive check - this should never trigger given Buffer.alloc
+      // above, but if it ever does, better to fail loudly here than
+      // silently persist a corrupt/truncated template to the database.
+      throw new FingerprintError(
+        'FINGERPRINT_CAPTURE_FAILED',
+        `Captured template is ${template.length} bytes, expected ${FP_TEMPLATE_SIZE}`
+      );
+    }
+
+    console.log(
+      '[HikvisionUSB] Fingerprint captured successfully'
+    );
+
+    return template;
   }
 
   /**
-   * Get device status.
+   * ============================================================
+   * DEVICE STATUS
+   * ============================================================
    */
-  async getDeviceStatus(): Promise<FingerprintStatus> {
+  async getDeviceStatus(): Promise<
+    'Connected' |
+    'Disconnected' |
+    'Busy' |
+    'Ready' |
+    'Error'
+  > {
     if (!this.sdkLoaded) {
       return 'Error';
     }
@@ -659,22 +523,29 @@ export class HikvisionUsbFingerprintProvider
   }
 
   /**
-   * Get scanner information.
+   * ============================================================
+   * DEVICE INFO
+   * ============================================================
    */
   async getDeviceInfo() {
-    if (!this.sdkLoaded) {
-      return {
-        model:
-          'Hikvision DS-K1F820-F',
-        firmware:
-          'SDK not loaded',
-        serialNumber:
-          'N/A',
-        sdkVersion:
-          'N/A',
-        sdkPath:
-          null,
-      };
+    const buffer =
+      Buffer.alloc(64);
+
+    let deviceInfo = 'Unavailable';
+
+    try {
+      const result =
+        this.fnGetDeviceInfo(buffer);
+
+      if (result === FP_SUCCESS) {
+        deviceInfo =
+          buffer
+            .toString('ascii')
+            .replace(/\0/g, '')
+            .trim() || 'Unavailable';
+      }
+    } catch {
+      // ignore
     }
 
     return {
@@ -685,7 +556,7 @@ export class HikvisionUsbFingerprintProvider
         this.sdkVersion,
 
       serialNumber:
-        this.readDeviceInfo(),
+        deviceInfo,
 
       sdkVersion:
         this.sdkVersion,
@@ -696,11 +567,9 @@ export class HikvisionUsbFingerprintProvider
   }
 
   /**
-   * Start employee enrollment.
-   *
-   * The vendor C++ demo uses:
-   *
-   * FPModule_SetCollectTimes(0);
+   * ============================================================
+   * ENROLL START
+   * ============================================================
    */
   async enrollStart(
     employeeId: string,
@@ -720,40 +589,43 @@ export class HikvisionUsbFingerprintProvider
 
       const result =
         this.fnSetCollectTimes(
-          FP_ENROLL_COLLECT_TIMES
+          FP_ENROLL_MODE
         );
 
       if (result !== FP_SUCCESS) {
         throw new FingerprintError(
           'FINGERPRINT_CAPTURE_FAILED',
-          `FPModule_SetCollectTimes(${FP_ENROLL_COLLECT_TIMES}) returned ${result}`
+          `SetCollectTimes(${FP_ENROLL_MODE}) returned ${result}`
         );
       }
 
       console.log(
-        `[HikvisionUSB] Enrollment started. Employee=${employeeId}, finger=${fingerNumber}`
+        `[HikvisionUSB] Enrollment started: ${employeeId}, finger ${fingerNumber}`
       );
 
       return {
         success: true,
-
-        employeeId,
-
-        fingerNumber,
-
         message:
-          'Place the employee finger on the scanner for enrollment.',
+          'Place finger on scanner.',
       };
+
     } catch (error) {
       this.closeDevice();
       this.releaseLock();
-
       throw error;
     }
   }
 
   /**
-   * Complete employee enrollment.
+   * ============================================================
+   * ENROLL COMPLETE
+   * ============================================================
+   *
+   * Returns credentialReference as a base64 string. A 512-byte
+   * template becomes a ~684-character base64 string - whatever
+   * you store this in downstream (DB column, API payload) MUST
+   * be able to hold at least that many characters, or it will be
+   * silently truncated (see storage layer notes / provider.repository.ts).
    */
   async enrollComplete(
     employeeId: string,
@@ -769,50 +641,28 @@ export class HikvisionUsbFingerprintProvider
     try {
       if (!this.deviceOpen) {
         this.openDevice();
-
-        const result =
-          this.fnSetCollectTimes(
-            FP_ENROLL_COLLECT_TIMES
-          );
-
-        if (result !== FP_SUCCESS) {
-          throw new FingerprintError(
-            'FINGERPRINT_CAPTURE_FAILED',
-            `FPModule_SetCollectTimes() returned ${result}`
-          );
-        }
       }
 
       const template =
-        await this.captureTemplateAfterSetup();
+        this.captureTemplate(
+          FP_ENROLL_MODE
+        );
 
       const quality =
-        this.getQuality(template);
+        this.fnGetQuality(
+          template
+        );
 
       console.log(
-        `[HikvisionUSB] Enrollment successful`
+        `[HikvisionUSB] Enrollment quality: ${quality}`
       );
+
+      const credentialReference = template.toString('base64');
 
       console.log(
-        `[HikvisionUSB] Employee: ${employeeId}`
+        `[HikvisionUSB] credentialReference length: ${credentialReference.length} chars ` +
+        `(should be ~684 for a ${FP_TEMPLATE_SIZE}-byte template)`
       );
-
-      console.log(
-        `[HikvisionUSB] Finger: ${fingerNumber}`
-      );
-
-      console.log(
-        `[HikvisionUSB] Quality: ${quality}`
-      );
-
-      /**
-       * IMPORTANT:
-       *
-       * The template is binary biometric data.
-       * Never print the Base64 value to logs.
-       */
-      const credentialReference =
-        template.toString('base64');
 
       return {
         success: true,
@@ -825,6 +675,7 @@ export class HikvisionUsbFingerprintProvider
 
         credentialReference,
       };
+
     } finally {
       this.closeDevice();
       this.releaseLock();
@@ -832,8 +683,9 @@ export class HikvisionUsbFingerprintProvider
   }
 
   /**
-   * Verify a live fingerprint against one
-   * employee's stored fingerprint.
+   * ============================================================
+   * VERIFY
+   * ============================================================
    */
   async verify(
     employeeId: string,
@@ -849,64 +701,51 @@ export class HikvisionUsbFingerprintProvider
     this.acquireLock();
 
     try {
-      /**
-       * Capture live fingerprint.
-       *
-       * Vendor demo:
-       * FPModule_SetCollectTimes(1)
-       */
+      this.openDevice();
+
       const liveTemplate =
-        await this.captureTemplate(
-          FP_VERIFY_COLLECT_TIMES
+        this.captureTemplate(
+          FP_MATCH_MODE
         );
 
-      const storedTemplate =
+      const stored =
         Buffer.from(
           credentialReference,
           'base64'
         );
 
       if (
-        storedTemplate.length !==
-        FP_TEMPLATE_BUFFER_SIZE
+        stored.length !== FP_TEMPLATE_SIZE
       ) {
         throw new FingerprintError(
           'FINGERPRINT_CAPTURE_FAILED',
-          `Invalid stored fingerprint template size: ${storedTemplate.length}. Expected ${FP_TEMPLATE_BUFFER_SIZE}.`
+          `Stored template is ${stored.length} bytes; expected ${FP_TEMPLATE_SIZE}. ` +
+          `This means the credentialReference was truncated or corrupted before ` +
+          `reaching this function - check the database column type/length and ` +
+          `any serialization step between enrollComplete() and here.`
         );
       }
 
-      /**
-       * Vendor C++ demo:
-       *
-       * FPModule_MatchTemplate(
-       *     data,
-       *     storedTemplate,
-       *     3
-       * ) == FP_SUCCESS
-       */
-      const matchResult =
+      const result =
         this.fnMatchTemplate(
           liveTemplate,
-          storedTemplate,
-          FP_MATCH_SECURITY_LEVEL
+          stored,
+          FP_SECURITY_LEVEL
         );
 
-      const matched =
-        matchResult === FP_SUCCESS;
-
       console.log(
-        `[HikvisionUSB] Verify ${employeeId}: ${matched ? 'MATCH' : 'NO MATCH'
-        }`
+        `[HikvisionUSB] Match result: ${result}`
       );
 
       return {
         success: true,
 
-        matched,
+        matched:
+          result === FP_SUCCESS,
 
         employeeId,
       };
+
     } finally {
       this.closeDevice();
       this.releaseLock();
@@ -914,8 +753,9 @@ export class HikvisionUsbFingerprintProvider
   }
 
   /**
-   * Identify employee from multiple enrolled
-   * fingerprint templates.
+   * ============================================================
+   * IDENTIFY
+   * ============================================================
    */
   async identify(
     candidates: Array<{
@@ -936,88 +776,70 @@ export class HikvisionUsbFingerprintProvider
     ) {
       return {
         success: true,
-
-        matchedEmployeeId:
-          null,
-
-        matchedCredentialReference:
-          null,
+        matchedEmployeeId: null,
+        matchedCredentialReference: null,
       };
     }
 
     this.acquireLock();
 
     try {
-      /**
-       * Capture live fingerprint.
-       */
+      this.openDevice();
+
       const liveTemplate =
-        await this.captureTemplate(
-          FP_VERIFY_COLLECT_TIMES
+        this.captureTemplate(
+          FP_MATCH_MODE
         );
 
       console.log(
-        `[HikvisionUSB] Identifying against ${candidates.length} candidates`
+        `[HikvisionUSB] Matching against ${candidates.length} candidate(s)`
       );
 
-      /**
-       * Compare live template against
-       * every enrolled employee.
-       */
       for (const candidate of candidates) {
-        try {
-          const storedTemplate =
-            Buffer.from(
-              candidate.credentialReference,
-              'base64'
-            );
-
-          if (
-            storedTemplate.length !==
-            FP_TEMPLATE_BUFFER_SIZE
-          ) {
-            console.warn(
-              `[HikvisionUSB] Skipping ${candidate.employeeId}: invalid template size ${storedTemplate.length}`
-            );
-
-            continue;
-          }
-
-          const matchResult =
-            this.fnMatchTemplate(
-              liveTemplate,
-              storedTemplate,
-              FP_MATCH_SECURITY_LEVEL
-            );
-
-          if (
-            matchResult === FP_SUCCESS
-          ) {
-            console.log(
-              `[HikvisionUSB] Fingerprint MATCH: ${candidate.employeeId}`
-            );
-
-            return {
-              success: true,
-
-              matchedEmployeeId:
-                candidate.employeeId,
-
-              matchedCredentialReference:
-                candidate.credentialReference,
-            };
-          }
-        } catch (error: any) {
-          console.warn(
-            `[HikvisionUSB] Match failed for ${candidate.employeeId}:`,
-            error?.message || error
+        const stored =
+          Buffer.from(
+            candidate.credentialReference,
+            'base64'
           );
+
+        if (
+          stored.length !== FP_TEMPLATE_SIZE
+        ) {
+          console.warn(
+            `[HikvisionUSB] Invalid template for ${candidate.employeeId}: ${stored.length} bytes ` +
+            `(expected ${FP_TEMPLATE_SIZE}) - likely truncated in storage. Skipping.`
+          );
+
+          continue;
+        }
+
+        const result =
+          this.fnMatchTemplate(
+            liveTemplate,
+            stored,
+            FP_SECURITY_LEVEL
+          );
+
+        console.log(
+          `[HikvisionUSB] Match ${candidate.employeeId}: SDK result ${result}`
+        );
+
+        if (result === FP_SUCCESS) {
+          return {
+            success: true,
+
+            matchedEmployeeId:
+              candidate.employeeId,
+
+            matchedCredentialReference:
+              candidate.credentialReference,
+          };
+        }
+
+        if (result === FP_MATCH_FAIL) {
+          continue;
         }
       }
-
-      console.log(
-        '[HikvisionUSB] No fingerprint match found'
-      );
 
       return {
         success: true,
@@ -1028,6 +850,7 @@ export class HikvisionUsbFingerprintProvider
         matchedCredentialReference:
           null,
       };
+
     } finally {
       this.closeDevice();
       this.releaseLock();
@@ -1035,13 +858,11 @@ export class HikvisionUsbFingerprintProvider
   }
 
   /**
-   * Cancel current operation.
+   * ============================================================
+   * CANCEL
+   * ============================================================
    */
   async cancel() {
-    console.log(
-      '[HikvisionUSB] Fingerprint operation cancelled'
-    );
-
     this.closeDevice();
     this.releaseLock();
 
