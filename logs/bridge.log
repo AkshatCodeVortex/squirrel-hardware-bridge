@@ -1,0 +1,39 @@
+[2026-08-24T06:22:29.665Z] [INFO] 
+========================================
+ SQUIRREL HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     https://api-test.qkarts.com/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-24T06:22:29.666Z] [INFO] Starting Squirrel Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-24T06:22:29.667Z] [INFO] Backend API endpoint configured: https://api-test.qkarts.com/api
+[2026-08-24T06:22:29.668Z] [INFO] Fingerprint mode: mock
+[2026-08-24T06:22:29.668Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-24T06:22:29.669Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-24T06:22:29.679Z] [ERROR] [Bridge] WebSocket server error: listen EADDRINUSE: address already in use 127.0.0.1:8765
+[2026-08-24T06:22:29.679Z] [ERROR] [Bridge] Port 8765 already in use — is another bridge instance running?
+[2026-08-24T06:36:59.283Z] [INFO] 
+========================================
+ SQUIRREL HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     https://api-test.qkarts.com/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-24T06:36:59.285Z] [INFO] Starting Squirrel Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-24T06:36:59.285Z] [INFO] Backend API endpoint configured: https://api-test.qkarts.com/api
+[2026-08-24T06:36:59.285Z] [INFO] Fingerprint mode: mock
+[2026-08-24T06:36:59.286Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-24T06:36:59.286Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-24T06:36:59.294Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765

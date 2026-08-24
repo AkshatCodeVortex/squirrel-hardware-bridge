@@ -127,12 +127,20 @@ export class HikvisionUsbFingerprintProvider
     );
 
     const candidates: string[] = [
-      path.resolve(
-        process.cwd(),
-        'sdk',
-        'lib',
-        dllName
-      ),
+      /**
+       * Primary: relative to this module's directory.
+       *
+       * Development  (__dirname = src/)  → project-root/sdk/lib/DLL
+       * Production   (__dirname = build/) → app-root/sdk/lib/DLL
+       *
+       * This works correctly for both ts-node (dev) and the packaged
+       * installer (production) without depending on process.cwd().
+       */
+      path.resolve(__dirname, '..', 'sdk', 'lib', dllName),
+      /**
+       * Legacy fallback: cwd-relative (kept for manual/dev invocations).
+       */
+      path.resolve(process.cwd(), 'sdk', 'lib', dllName),
     ];
 
     const officialSdkRoot =

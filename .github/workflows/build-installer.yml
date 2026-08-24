@@ -1,0 +1,208 @@
+# ============================================================
+# Squirrel Hardware Bridge — Windows Installer CI
+# ============================================================
+# Triggers:
+#   - Push a version tag:  git tag v1.0.0 && git push origin v1.0.0
+#   - Or manually:         GitHub → Actions → Build Installer → Run workflow
+#
+# Output:
+#   Squirrel-Hardware-Bridge-Setup-1.0.0.exe
+#   → uploaded as a GitHub Release asset automatically
+# ============================================================
+
+name: Build Windows Installer
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'           # triggers on: v1.0.0, v1.2.3, etc.
+  workflow_dispatch:        # allows manual trigger from GitHub UI
+    inputs:
+      version:
+        description: 'Version to build (e.g. 1.0.0)'
+        required: false
+        default: '1.0.0'
+
+jobs:
+  build:
+    name: Build on Windows x64
+    runs-on: windows-latest  # Real Windows x64 — required for koffi + Inno Setup
+
+    steps:
+      # ── 1. Checkout ─────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Determine version ─────────────────────────────────────────────────
+      - name: Determine version
+        id: version
+        shell: pwsh
+        run: |
+          if ("${{ github.ref }}" -match "refs/tags/v(.+)") {
+            $ver = $Matches[1]
+          } elseif ("${{ github.event.inputs.version }}" -ne "") {
+            $ver = "${{ github.event.inputs.version }}"
+          } else {
+            $ver = (Get-Content package.json | ConvertFrom-Json).version
+          }
+          echo "VERSION=$ver" >> $env:GITHUB_OUTPUT
+          Write-Host "Building version: $ver"
+
+      # ── 3. Setup Node.js (dev tools — NOT bundled in installer) ──────────────
+      - name: Setup Node.js (build tools only)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # ── 4. Install all dependencies (dev + prod for compilation) ─────────────
+      - name: Install dependencies
+        shell: pwsh
+        run: npm ci
+
+      # ── 5. Compile TypeScript ─────────────────────────────────────────────────
+      - name: Compile TypeScript
+        shell: pwsh
+        run: |
+          npm run build
+          Write-Host "TypeScript compiled successfully"
+          Get-ChildItem build/
+
+      # ── 6. Install PRODUCTION-ONLY deps (for bundling) ────────────────────────
+      # This creates a clean Windows node_modules with the correct koffi binary
+      - name: Install production dependencies (Windows native)
+        shell: pwsh
+        run: |
+          # Temporarily rename dev node_modules and install prod-only
+          if (Test-Path "node_modules_dev") { Remove-Item "node_modules_dev" -Recurse -Force }
+          Rename-Item "node_modules" "node_modules_dev"
+          npm ci --omit=dev
+          Write-Host "Production node_modules ready (Windows koffi binary included)"
+
+      # ── 7. Download portable Node.js 20 LTS ──────────────────────────────────
+      - name: Download portable Node.js 20 LTS
+        shell: pwsh
+        run: |
+          $NODE_VERSION = "20.18.0"
+          $NODE_URL = "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-win-x64.zip"
+          $ZIP = "node-portable.zip"
+          Write-Host "Downloading Node.js v$NODE_VERSION..."
+          Invoke-WebRequest -Uri $NODE_URL -OutFile $ZIP -UseBasicParsing
+          Expand-Archive -Path $ZIP -DestinationPath "node-extract" -Force
+          New-Item -ItemType Directory -Path "dist\node" -Force | Out-Null
+          Copy-Item "node-extract\node-v$NODE_VERSION-win-x64\node.exe" -Destination "dist\node\node.exe"
+          Remove-Item $ZIP, "node-extract" -Recurse -Force
+          Write-Host "node.exe installed: $(Get-Item 'dist\node\node.exe').Length bytes"
+
+      # ── 8. Assemble dist/ folder ──────────────────────────────────────────────
+      - name: Assemble installer payload (dist/)
+        shell: pwsh
+        run: |
+          $VERSION = "${{ steps.version.outputs.VERSION }}"
+          $DIST = "dist"
+
+          # Create directory structure
+          New-Item -ItemType Directory -Path "$DIST\build"         -Force | Out-Null
+          New-Item -ItemType Directory -Path "$DIST\node_modules"  -Force | Out-Null
+          New-Item -ItemType Directory -Path "$DIST\sdk\lib"       -Force | Out-Null
+          New-Item -ItemType Directory -Path "$DIST\config"        -Force | Out-Null
+          New-Item -ItemType Directory -Path "$DIST\logs"          -Force | Out-Null
+
+          # Compiled bridge
+          Copy-Item -Path "build\*"        -Destination "$DIST\build"        -Recurse -Force
+          # Windows production node_modules (with Windows koffi binary)
+          Copy-Item -Path "node_modules\*" -Destination "$DIST\node_modules" -Recurse -Force
+          # SDK DLL
+          Copy-Item -Path "sdk\lib\FPModule_SDK_x64.dll" -Destination "$DIST\sdk\lib\FPModule_SDK_x64.dll"
+          # Silent launcher
+          Copy-Item -Path "launch.vbs"     -Destination "$DIST\launch.vbs"
+          # Config template
+          Copy-Item -Path "config\.env.template" -Destination "$DIST\config\.env.template"
+
+          Write-Host "dist/ assembled:"
+          Get-ChildItem $DIST -Recurse | Where-Object { -not $_.PSIsContainer } | 
+            Select-Object -ExpandProperty FullName |
+            ForEach-Object { Write-Host "  $_" }
+
+      # ── 9. Install Inno Setup 6 ───────────────────────────────────────────────
+      - name: Install Inno Setup 6
+        shell: pwsh
+        run: |
+          choco install innosetup --no-progress -y
+          Write-Host "Inno Setup installed"
+
+      # ── 10. Build installer EXE ───────────────────────────────────────────────
+      - name: Build installer EXE
+        shell: pwsh
+        run: |
+          $VERSION  = "${{ steps.version.outputs.VERSION }}"
+          $DIST     = (Resolve-Path "dist").Path
+          $ISCC     = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          $ISS_FILE = (Resolve-Path "installer\bridge-setup.iss").Path
+
+          if (-not (Test-Path $ISCC)) {
+            # Fallback path
+            $ISCC = "${env:ProgramFiles}\Inno Setup 6\ISCC.exe"
+          }
+
+          Write-Host "Using ISCC: $ISCC"
+          Write-Host "ISS file:   $ISS_FILE"
+          Write-Host "Dist dir:   $DIST"
+          Write-Host "Version:    $VERSION"
+
+          & $ISCC $ISS_FILE "/DDistDir=$DIST" "/DVersion=$VERSION"
+
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "Inno Setup build failed with exit code $LASTEXITCODE"
+            exit 1
+          }
+
+          $OUTPUT = "installer\Squirrel-Hardware-Bridge-Setup-$VERSION.exe"
+          if (-not (Test-Path $OUTPUT)) {
+            Write-Error "Expected output not found: $OUTPUT"
+            exit 1
+          }
+
+          Write-Host "Installer built successfully: $OUTPUT"
+          $size = [math]::Round((Get-Item $OUTPUT).Length / 1MB, 1)
+          Write-Host "Size: ${size} MB"
+
+      # ── 11. Restore dev node_modules for subsequent steps ─────────────────────
+      - name: Restore dev node_modules
+        shell: pwsh
+        run: |
+          if (Test-Path "node_modules") { Remove-Item "node_modules" -Recurse -Force }
+          if (Test-Path "node_modules_dev") { Rename-Item "node_modules_dev" "node_modules" }
+
+      # ── 12. Upload installer as artifact (always available for download) ───────
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Squirrel-Hardware-Bridge-Setup-${{ steps.version.outputs.VERSION }}
+          path: installer/Squirrel-Hardware-Bridge-Setup-*.exe
+          retention-days: 30
+
+      # ── 13. Create GitHub Release (only on tag push) ──────────────────────────
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Squirrel Hardware Bridge v${{ steps.version.outputs.VERSION }}
+          body: |
+            ## Squirrel Hardware Bridge v${{ steps.version.outputs.VERSION }}
+
+            ### Installation
+            1. Download `Squirrel-Hardware-Bridge-Setup-${{ steps.version.outputs.VERSION }}.exe`
+            2. Run as Administrator
+            3. Connect DS-K1F820-F USB scanner
+            4. Open Qkarts POS
+
+            See `README-INSTALL.md` for full documentation.
+
+            ### Requirements
+            - Windows 10/11 x64
+            - Hikvision DS-K1F820-F USB scanner
+            - No Node.js, npm, or developer tools required
+          files: installer/Squirrel-Hardware-Bridge-Setup-*.exe
+          draft: false
+          prerelease: false

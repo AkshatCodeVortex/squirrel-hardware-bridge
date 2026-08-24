@@ -2,11 +2,12 @@
   "name": "squirrel-hardware-bridge",
   "version": "1.0.0",
   "description": "Local Hardware Bridge Daemon for Qkarts POS Devices",
-  "main": "src/index.ts",
+  "main": "build/index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
     "hardware:dev": "ts-node src/index.ts",
     "build": "tsc",
+    "build:prod": "tsc && node scripts/prepare-dist.js",
     "start": "node build/index.js",
     "fingerprint:diagnose": "ts-node src/diagnose.ts",
     "fingerprint:test": "ts-node src/test-hardware.ts",
