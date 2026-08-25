@@ -133,7 +133,7 @@ const fingerprintMode = process.env.FINGERPRINT_MODE || 'mock';
 console.log([
     '',
     '========================================',
-    ` SQUIRREL HARDWARE BRIDGE v${VERSION}`,
+    ` UPLODD HARDWARE BRIDGE v${VERSION}`,
     '========================================',
     ` Platform:    ${process.platform}/${process.arch}`,
     ` Node.js:     ${process.version}`,
@@ -145,7 +145,7 @@ console.log([
     '========================================',
     '',
 ].join('\n'));
-console.log(`Starting Squirrel Hardware Bridge on ws://${HOST}:${PORT}`);
+console.log(`Starting Uplodd Hardware Bridge on ws://${HOST}:${PORT}`);
 console.log(`Backend API endpoint configured: ${BACKEND_URL}`);
 console.log(`Fingerprint mode: ${fingerprintMode}`);
 // ─────────────────────────────────────────────────────────────────────────────

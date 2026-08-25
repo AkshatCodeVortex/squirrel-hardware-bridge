@@ -1,8 +1,8 @@
-# Squirrel Hardware Bridge — Installation Guide
+# Uplodd Hardware Bridge — Installation Guide
 
 ## What This Is
 
-The Squirrel Hardware Bridge connects the **Hikvision DS-K1F820-F** USB fingerprint scanner to the **Qkarts POS** system. It runs silently in the background on the POS Windows PC and provides a local WebSocket server (`ws://127.0.0.1:8765`) that the POS browser tab communicates with.
+The Uplodd Hardware Bridge connects the **Hikvision DS-K1F820-F** USB fingerprint scanner to the **Qkarts POS** system. It runs silently in the background on the POS Windows PC and provides a local WebSocket server (`ws://127.0.0.1:8765`) that the POS browser tab communicates with.
 
 ---
 
@@ -13,7 +13,7 @@ The customer needs **only**:
 | Requirement | Notes |
 |---|---|
 | Windows 10/11 x64 | Required |
-| `Squirrel-Hardware-Bridge-Setup-1.0.0.exe` | The installer |
+| `Uplodd-Hardware-Bridge-Setup-1.0.0.exe` | The installer |
 | Hikvision DS-K1F820-F scanner | Connected via USB |
 
 The customer does **NOT** need:
@@ -29,7 +29,7 @@ The customer does **NOT** need:
 ## Installation Steps
 
 1. **Run the installer** as Administrator  
-   → Double-click `Squirrel-Hardware-Bridge-Setup-1.0.0.exe`
+   → Double-click `Uplodd-Hardware-Bridge-Setup-1.0.0.exe`
 
 2. **Follow the wizard** — accept defaults
 
@@ -43,13 +43,13 @@ That's it.
 
 ## What the Installer Does
 
-- Installs to `C:\Program Files\Squirrel Hardware Bridge\`
+- Installs to `C:\Program Files\Uplodd Hardware Bridge\`
 - Copies portable Node.js runtime (`node\node.exe`) — no system Node.js needed
 - Copies compiled bridge (`build\index.js` + `node_modules\`)
 - Copies Hikvision SDK DLL (`sdk\lib\FPModule_SDK_x64.dll`)
 - Creates `config\.env` from template (only on first install — preserved on upgrade)
 - Creates `logs\` directory
-- Creates Windows Scheduled Task: **Squirrel Hardware Bridge**  
+- Creates Windows Scheduled Task: **Uplodd Hardware Bridge**  
   → Trigger: At user logon  
   → Action: `wscript.exe launch.vbs` (no visible window)  
   → Starts immediately after installation
@@ -59,7 +59,7 @@ That's it.
 ## Installed Directory Structure
 
 ```
-C:\Program Files\Squirrel Hardware Bridge\
+C:\Program Files\Uplodd Hardware Bridge\
 ├── node\
 │   └── node.exe                 ← portable Node.js 20 LTS (bundled)
 ├── build\
@@ -88,7 +88,7 @@ C:\Program Files\Squirrel Hardware Bridge\
 
 ## Configuration
 
-Edit `C:\Program Files\Squirrel Hardware Bridge\config\.env`:
+Edit `C:\Program Files\Uplodd Hardware Bridge\config\.env`:
 
 ```env
 HARDWARE_BRIDGE_PORT=8765
@@ -105,7 +105,7 @@ To apply config changes: **restart the bridge** (see below).
 
 ## Log File
 
-`C:\Program Files\Squirrel Hardware Bridge\logs\bridge.log`
+`C:\Program Files\Uplodd Hardware Bridge\logs\bridge.log`
 
 Logs rotate automatically at 5 MB (kept as `bridge.log.1`).
 
@@ -120,7 +120,7 @@ Normal startup log:
 [INFO] ========================================
 [INFO] [HikvisionUSB] Platform: win32
 [INFO] [HikvisionUSB] Architecture: x64
-[INFO] [HikvisionUSB] DLL: C:\Program Files\Squirrel Hardware Bridge\sdk\lib\FPModule_SDK_x64.dll
+[INFO] [HikvisionUSB] DLL: C:\Program Files\Uplodd Hardware Bridge\sdk\lib\FPModule_SDK_x64.dll
 [INFO] [HikvisionUSB] SDK DLL loaded successfully
 [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
 [INFO] [Bridge] Waiting for POS connection...
@@ -132,27 +132,27 @@ Normal startup log:
 
 **Start:**
 ```
-schtasks /Run /TN "Squirrel Hardware Bridge"
+schtasks /Run /TN "Uplodd Hardware Bridge"
 ```
-Or double-click `C:\Program Files\Squirrel Hardware Bridge\launch.vbs`
+Or double-click `C:\Program Files\Uplodd Hardware Bridge\launch.vbs`
 
 **Stop:**
 ```
-schtasks /End /TN "Squirrel Hardware Bridge"
+schtasks /End /TN "Uplodd Hardware Bridge"
 ```
 Or kill `node.exe` in Task Manager.
 
 **Restart (after config change):**
 ```
-schtasks /End /TN "Squirrel Hardware Bridge"
-schtasks /Run /TN "Squirrel Hardware Bridge"
+schtasks /End /TN "Uplodd Hardware Bridge"
+schtasks /Run /TN "Uplodd Hardware Bridge"
 ```
 
 ---
 
 ## Upgrade Procedure
 
-1. Download the new `Squirrel-Hardware-Bridge-Setup-X.X.X.exe`
+1. Download the new `Uplodd-Hardware-Bridge-Setup-X.X.X.exe`
 2. Run as Administrator — the installer:
    - Stops the running bridge automatically
    - Overwrites all application files
@@ -167,8 +167,8 @@ No manual steps required.
 
 ## Uninstall
 
-**Option A:** Control Panel → Programs → Squirrel Hardware Bridge → Uninstall  
-**Option B:** `C:\Program Files\Squirrel Hardware Bridge\Uninstall.exe`
+**Option A:** Control Panel → Programs → Uplodd Hardware Bridge → Uninstall  
+**Option B:** `C:\Program Files\Uplodd Hardware Bridge\Uninstall.exe`
 
 The uninstaller:
 - Stops the bridge
@@ -181,7 +181,7 @@ The uninstaller:
 ## Troubleshooting
 
 ### Bridge not starting after reboot
-- Check Task Scheduler: `taskschd.msc` → Task Scheduler Library → "Squirrel Hardware Bridge"
+- Check Task Scheduler: `taskschd.msc` → Task Scheduler Library → "Uplodd Hardware Bridge"
 - Verify it shows "Ready" status
 - Right-click → Run to test manually
 - Check `logs\bridge.log` for error messages
@@ -201,7 +201,7 @@ The uninstaller:
 
 ### POS shows "Hardware Bridge Offline"
 - Check `logs\bridge.log` for startup errors
-- Ensure bridge is running: `schtasks /Query /TN "Squirrel Hardware Bridge"`
+- Ensure bridge is running: `schtasks /Query /TN "Uplodd Hardware Bridge"`
 
 ---
 
@@ -232,7 +232,7 @@ GitHub Actions (`.github/workflows/build-installer.yml`) then:
 - Downloads portable Node.js 20 LTS (`node.exe`)
 - Assembles the `dist/` payload
 - Installs Inno Setup 6 via Chocolatey
-- Builds `Squirrel-Hardware-Bridge-Setup-1.0.0.exe`
+- Builds `Uplodd-Hardware-Bridge-Setup-1.0.0.exe`
 - **Creates a GitHub Release** with the EXE as a download attachment
 
 Download the installer from:
@@ -255,7 +255,7 @@ Requirements:
 powershell -ExecutionPolicy Bypass -File scripts\build-installer.ps1
 ```
 
-**Output:** `installer\Squirrel-Hardware-Bridge-Setup-1.0.0.exe`
+**Output:** `installer\Uplodd-Hardware-Bridge-Setup-1.0.0.exe`
 
 ---
 
@@ -277,9 +277,9 @@ Test on a Windows x64 PC with **no developer tools installed**. Install only the
 |---|---|---|
 | 1 | Run Setup.exe | Installs without error |
 | 2 | After install | No visible command prompt or console window |
-| 3 | Check Task Scheduler | "Squirrel Hardware Bridge" task exists, status: Running |
+| 3 | Check Task Scheduler | "Uplodd Hardware Bridge" task exists, status: Running |
 | 4 | Check logs\bridge.log | Shows startup banner and "WebSocket server ready" |
-| 5 | Check bridge\node\node.exe in log | DLL path shows `C:\Program Files\Squirrel Hardware Bridge\sdk\lib\FPModule_SDK_x64.dll` |
+| 5 | Check bridge\node\node.exe in log | DLL path shows `C:\Program Files\Uplodd Hardware Bridge\sdk\lib\FPModule_SDK_x64.dll` |
 | 6 | Open Qkarts POS | "Hardware Bridge Connected" shown |
 | 7 | Enroll fingerprint (Admin) | Enrollment succeeds, template saved to DB |
 | 8 | Login via fingerprint (POS) | Correct employee identified, login succeeds |

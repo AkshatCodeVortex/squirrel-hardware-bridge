@@ -130,13 +130,10 @@ export class HikvisionUsbFingerprintProvider
       /**
        * Primary: relative to this module's directory.
        *
-       * Development  (__dirname = src/)  → project-root/sdk/lib/DLL
-       * Production   (__dirname = build/) → app-root/sdk/lib/DLL
-       *
-       * This works correctly for both ts-node (dev) and the packaged
-       * installer (production) without depending on process.cwd().
+       * Development  (__dirname = src/providers)    → project-root/sdk/lib/DLL
+       * Production   (__dirname = build/providers)  → app-root/sdk/lib/DLL
        */
-      path.resolve(__dirname, '..', 'sdk', 'lib', dllName),
+      path.resolve(__dirname, '..', '..', 'sdk', 'lib', dllName),
       /**
        * Legacy fallback: cwd-relative (kept for manual/dev invocations).
        */

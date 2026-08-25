@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Squirrel Hardware Bridge - Windows Installer Build Script
+    Uplodd Hardware Bridge - Windows Installer Build Script
 .DESCRIPTION
     Compiles TypeScript, assembles the dist folder, downloads portable
     Node.js 20 LTS, and (if Inno Setup is installed) builds the installer EXE.
@@ -14,14 +14,14 @@
       powershell -ExecutionPolicy Bypass -File scripts\build-installer.ps1
 
 .NOTES
-    Output: installer\Squirrel-Hardware-Bridge-Setup-1.0.0.exe
+    Output: installer\Uplodd-Hardware-Bridge-Setup-1.0.0.exe
 #>
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 $VERSION     = "1.0.0"
-$NODE_VERSION = "20.18.0"   # Node.js 20 LTS — stable, long-term support
+$NODE_VERSION = "20.18.0"   # Node.js 20 LTS
 $NODE_URL    = "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-win-x64.zip"
 $SCRIPT_DIR  = $PSScriptRoot
 $ROOT        = Split-Path $SCRIPT_DIR -Parent
@@ -30,37 +30,45 @@ $INSTALLER   = Join-Path $ROOT "installer"
 
 Write-Host ""
 Write-Host "================================================" -ForegroundColor Cyan
-Write-Host " Squirrel Hardware Bridge v$VERSION Build Script" -ForegroundColor Cyan
+Write-Host " Uplodd Hardware Bridge v$VERSION Build Script" -ForegroundColor Cyan
 Write-Host "================================================" -ForegroundColor Cyan
 Write-Host ""
 
-# ── Step 1: Verify Windows x64 ───────────────────────────────────────────────
+# -- Step 1: Verify Windows x64 -----------------------------------------------
 if ([System.Environment]::Is64BitOperatingSystem -eq $false) {
     Write-Error "This build script requires 64-bit Windows."
     exit 1
 }
-Write-Host "[1/7] Platform: Windows x64 ✓" -ForegroundColor Green
+Write-Host "[1/7] Platform: Windows x64 [OK]" -ForegroundColor Green
 
-# ── Step 2: TypeScript Compile ───────────────────────────────────────────────
+# -- Step 2: TypeScript Compile -----------------------------------------------
 Write-Host "[2/7] Compiling TypeScript..." -ForegroundColor Yellow
 Set-Location $ROOT
-& npm run build
+
+Write-Host "      Running npm install (dev deps)..."
+cmd.exe /c "npm.cmd install"
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "npm install failed."
+    exit 1
+}
+
+cmd.exe /c "npm.cmd run build"
 if ($LASTEXITCODE -ne 0) {
     Write-Error "TypeScript compilation failed."
     exit 1
 }
-Write-Host "      TypeScript compiled ✓" -ForegroundColor Green
+Write-Host "      TypeScript compiled [OK]" -ForegroundColor Green
 
-# ── Step 3: Install Production Dependencies ───────────────────────────────────
+# -- Step 3: Install Production Dependencies -----------------------------------
 Write-Host "[3/7] Installing production dependencies..." -ForegroundColor Yellow
-& npm ci --omit=dev
+cmd.exe /c "npm.cmd ci --omit=dev"
 if ($LASTEXITCODE -ne 0) {
     Write-Error "npm ci --omit=dev failed."
     exit 1
 }
-Write-Host "      Production node_modules ready ✓" -ForegroundColor Green
+Write-Host "      Production node_modules ready [OK]" -ForegroundColor Green
 
-# ── Step 4: Assemble dist/ folder ─────────────────────────────────────────────
+# -- Step 4: Assemble dist/ folder ---------------------------------------------
 Write-Host "[4/7] Assembling dist/ folder..." -ForegroundColor Yellow
 
 # Clean and recreate dist
@@ -79,12 +87,12 @@ Copy-Item -Path "$ROOT\node_modules"  -Destination "$DIST\node_modules"  -Recurs
 Copy-Item -Path "$ROOT\sdk\lib\FPModule_SDK_x64.dll" -Destination "$DIST\sdk\lib\FPModule_SDK_x64.dll"
 # Copy silent launcher
 Copy-Item -Path "$ROOT\launch.vbs"    -Destination "$DIST\launch.vbs"
-# Copy config template (becomes config\.env during installation)
+# Copy config template
 Copy-Item -Path "$ROOT\config\.env.template" -Destination "$DIST\config\.env.template"
 
-Write-Host "      dist/ assembled ✓" -ForegroundColor Green
+Write-Host "      dist/ assembled [OK]" -ForegroundColor Green
 
-# ── Step 5: Download Portable Node.js ─────────────────────────────────────────
+# -- Step 5: Download Portable Node.js -----------------------------------------
 $nodeZip = Join-Path $ROOT "node-v$NODE_VERSION-win-x64.zip"
 $nodeDir = "node-v$NODE_VERSION-win-x64"
 
@@ -110,9 +118,9 @@ if (-not (Test-Path $extractedExe)) {
 Copy-Item $extractedExe -Destination "$DIST\node\node.exe"
 Remove-Item $tempExtract -Recurse -Force
 
-Write-Host "      node.exe installed to dist\node\ ✓" -ForegroundColor Green
+Write-Host "      node.exe installed to dist\node\ [OK]" -ForegroundColor Green
 
-# ── Step 6: Verify dist structure ─────────────────────────────────────────────
+# -- Step 6: Verify dist structure ---------------------------------------------
 Write-Host "[6/7] Verifying dist structure..." -ForegroundColor Yellow
 
 $required = @(
@@ -126,16 +134,16 @@ $required = @(
     "$DIST\config\.env.template"
 )
 
-$missing = $required | Where-Object { -not (Test-Path $_) }
+$missing = @($required | Where-Object { -not (Test-Path $_) })
 if ($missing.Count -gt 0) {
     Write-Host "ERROR: Missing required files:" -ForegroundColor Red
     $missing | ForEach-Object { Write-Host "  - $_" -ForegroundColor Red }
     exit 1
 }
 
-Write-Host "      All required files present ✓" -ForegroundColor Green
+Write-Host "      All required files present [OK]" -ForegroundColor Green
 
-# ── Step 7: Build Installer (requires Inno Setup 6) ───────────────────────────
+# -- Step 7: Build Installer (requires Inno Setup 6) ---------------------------
 Write-Host "[7/7] Building installer EXE..." -ForegroundColor Yellow
 
 $issFile = Join-Path $INSTALLER "bridge-setup.iss"
@@ -149,13 +157,13 @@ $iscc = $innoSetupPaths | Where-Object { Test-Path $_ } | Select-Object -First 1
 
 if (-not $iscc) {
     Write-Host ""
-    Write-Host "⚠  Inno Setup 6 not found. Skipping installer compilation." -ForegroundColor Yellow
+    Write-Host "WARNING: Inno Setup 6 not found. Skipping installer compilation." -ForegroundColor Yellow
     Write-Host "   To build the installer:" -ForegroundColor Yellow
     Write-Host "   1. Download Inno Setup 6 from: https://jrsoftware.org/isdl.php" -ForegroundColor Yellow
     Write-Host "   2. Install it, then re-run this script" -ForegroundColor Yellow
     Write-Host "   OR open $issFile manually in Inno Setup and click Build" -ForegroundColor Yellow
     Write-Host ""
-    Write-Host "   dist/ folder is ready — you can test the bridge now:" -ForegroundColor Cyan
+    Write-Host "   dist/ folder is ready - you can test the bridge now:" -ForegroundColor Cyan
     Write-Host "   $DIST\node\node.exe $DIST\build\index.js" -ForegroundColor Cyan
 } else {
     New-Item -ItemType Directory -Path $INSTALLER -Force | Out-Null
@@ -165,11 +173,11 @@ if (-not $iscc) {
         Write-Error "Inno Setup compilation failed."
         exit 1
     }
-    Write-Host "      Installer built ✓" -ForegroundColor Green
+    Write-Host "      Installer built [OK]" -ForegroundColor Green
     Write-Host ""
     Write-Host "================================================" -ForegroundColor Green
     Write-Host " BUILD COMPLETE" -ForegroundColor Green
     Write-Host "================================================" -ForegroundColor Green
-    Write-Host " Installer: $INSTALLER\Squirrel-Hardware-Bridge-Setup-$VERSION.exe" -ForegroundColor Green
+    Write-Host " Installer: $INSTALLER\Uplodd-Hardware-Bridge-Setup-$VERSION.exe" -ForegroundColor Green
     Write-Host "================================================" -ForegroundColor Green
 }

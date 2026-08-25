@@ -1,5 +1,5 @@
 {
-  "name": "squirrel-hardware-bridge",
+  "name": "uplodd-hardware-bridge",
   "version": "1.0.0",
   "description": "Local Hardware Bridge Daemon for Qkarts POS Devices",
   "main": "build/index.js",

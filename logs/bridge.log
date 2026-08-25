@@ -37,3 +37,172 @@
 [2026-08-24T06:36:59.286Z] [INFO] [Bridge] Fingerprint mode: mock
 [2026-08-24T06:36:59.286Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
 [2026-08-24T06:36:59.294Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-24T13:31:57.080Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:35:11.800Z] [INFO] [Request req_1787578511753_ipwxmkb] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-24T13:35:11.873Z] [INFO] Client disconnected
+[2026-08-24T13:35:14.873Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:52:18.269Z] [INFO] [Request req_1787579538263_mlfw88l] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:55:13.094Z] [INFO] [Request req_1787579713093_u8f0kph] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:55:16.109Z] [INFO] Client disconnected
+[2026-08-24T13:55:19.115Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:55:27.361Z] [INFO] [Request req_1787579727360_7y7okye] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:55:29.963Z] [INFO] Client disconnected
+[2026-08-24T13:55:31.867Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:55:33.452Z] [INFO] [Request req_1787579733449_ewqhxn4] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:55:35.070Z] [INFO] Client disconnected
+[2026-08-24T13:55:38.081Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:59:12.340Z] [INFO] [Request req_1787579952338_58ij6p7] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:59:13.963Z] [INFO] Client disconnected
+[2026-08-24T13:59:15.659Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:59:21.589Z] [INFO] [Request req_1787579961588_4h6nrn0] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:59:24.598Z] [INFO] Client disconnected
+[2026-08-24T13:59:26.079Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:59:27.512Z] [INFO] [Request req_1787579967510_tzs356v] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:59:30.321Z] [INFO] Client disconnected
+[2026-08-24T13:59:32.135Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:59:35.960Z] [INFO] [Request req_1787579975959_r5dz6dk] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:59:38.164Z] [INFO] Client disconnected
+[2026-08-24T13:59:40.074Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:59:42.034Z] [INFO] [Request req_1787579982032_x2m7lgx] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:59:43.699Z] [INFO] Client disconnected
+[2026-08-24T13:59:45.019Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T13:59:46.920Z] [INFO] [Request req_1787579986917_osc03da] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T13:59:48.521Z] [INFO] Client disconnected
+[2026-08-24T13:59:51.531Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T14:00:52.180Z] [INFO] [Request req_1787580052179_yasixlj] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T14:00:54.164Z] [INFO] Client disconnected
+[2026-08-24T14:00:58.165Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T14:01:35.103Z] [INFO] [Request req_1787580095102_jhp1qtr] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-24T14:01:35.130Z] [INFO] Client disconnected
+[2026-08-24T14:01:38.143Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T14:01:44.369Z] [INFO] [Request req_1787580104368_m27wh6n] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-24T14:01:44.400Z] [INFO] Client disconnected
+[2026-08-24T14:01:47.408Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T14:05:26.624Z] [INFO] [Request req_1787580326621_uptfdji] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T14:05:28.244Z] [INFO] Client disconnected
+[2026-08-24T14:05:31.247Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T14:18:36.304Z] [INFO] [Request req_1787581116296_7bd6n2t] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T14:18:37.945Z] [INFO] Client disconnected
+[2026-08-24T14:18:40.957Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T14:26:41.851Z] [INFO] [Request req_1787581601849_pls0hm7] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T14:26:43.493Z] [INFO] Client disconnected
+[2026-08-24T14:26:44.397Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T14:26:45.482Z] [INFO] [Request req_1787581605481_c8w7u8l] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T14:26:47.108Z] [INFO] Client disconnected
+[2026-08-24T14:26:50.119Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T14:27:41.767Z] [INFO] [Request req_1787581661765_4ngstgc] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-24T14:27:43.421Z] [INFO] Client disconnected
+[2026-08-24T14:27:54.739Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-24T16:53:05.929Z] [INFO] Client disconnected
+[2026-08-25T06:01:05.045Z] [INFO] Client connected from: undefined
+[2026-08-25T06:01:05.056Z] [WARN] Access Denied: connection attempt from forbidden IP undefined
+[2026-08-25T06:01:05.149Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:01:05.957Z] [INFO] [Request req_1787637665953_hrswiq4] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:01:08.052Z] [INFO] [Request req_1787637665953_hrswiq4] Matching against 18 candidate credentials
+[2026-08-25T06:01:09.631Z] [INFO] Client disconnected
+[2026-08-25T06:01:12.655Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:01:35.898Z] [INFO] Client disconnected
+[2026-08-25T06:01:35.899Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:01:36.706Z] [INFO] [Request req_1787637696705_1l1m7qo] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:01:37.276Z] [INFO] [Request req_1787637696705_1l1m7qo] Matching against 18 candidate credentials
+[2026-08-25T06:01:38.816Z] [INFO] Client disconnected
+[2026-08-25T06:01:41.839Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:01:51.889Z] [INFO] Client disconnected
+[2026-08-25T06:01:51.893Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:01:52.699Z] [INFO] [Request req_1787637712698_qm6x50s] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:01:53.251Z] [INFO] [Request req_1787637712698_qm6x50s] Matching against 18 candidate credentials
+[2026-08-25T06:01:54.833Z] [INFO] Client disconnected
+[2026-08-25T06:01:57.852Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:02:06.562Z] [INFO] Client disconnected
+[2026-08-25T06:02:06.564Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:02:07.370Z] [INFO] [Request req_1787637727369_ribdvl6] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:02:08.237Z] [INFO] [Request req_1787637727369_ribdvl6] Matching against 18 candidate credentials
+[2026-08-25T06:02:09.894Z] [INFO] Client disconnected
+[2026-08-25T06:02:13.909Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:02:48.500Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:02:50.409Z] [INFO] [Request req_1787637770408_dsfd4yz] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T06:02:52.068Z] [INFO] Client disconnected
+[2026-08-25T06:02:53.894Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:02:55.832Z] [INFO] [Request req_1787637775832_20k4usv] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T06:02:57.448Z] [INFO] Client disconnected
+[2026-08-25T06:03:00.456Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:06:37.439Z] [INFO] [Request req_1787637997439_6s8kxd6] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T06:06:39.074Z] [INFO] Client disconnected
+[2026-08-25T06:06:42.216Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:09:12.834Z] [INFO] [Request req_1787638152833_5uctgoj] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T06:09:14.520Z] [INFO] Client disconnected
+[2026-08-25T06:09:23.694Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:10:01.431Z] [INFO] [Request req_1787638201430_24e7815] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T06:10:03.044Z] [INFO] Client disconnected
+[2026-08-25T06:10:18.925Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:11:52.313Z] [INFO] [Request req_1787638312313_v3voxb2] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T06:11:53.937Z] [INFO] Client disconnected
+[2026-08-25T06:11:56.944Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:12:21.776Z] [INFO] Client disconnected
+[2026-08-25T06:13:38.405Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:13:38.418Z] [INFO] Client disconnected
+[2026-08-25T06:13:38.419Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:13:39.226Z] [INFO] [Request req_1787638419225_74k32zr] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:13:39.954Z] [INFO] [Request req_1787638419225_74k32zr] Matching against 5 candidate credentials
+[2026-08-25T06:13:41.494Z] [INFO] Client disconnected
+[2026-08-25T06:13:44.539Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:14:25.265Z] [INFO] [Request req_1787638465265_xh1f4mf] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T06:14:26.915Z] [INFO] Client disconnected
+[2026-08-25T06:14:29.922Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:17:19.828Z] [INFO] Client disconnected
+[2026-08-25T06:17:19.829Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:17:20.635Z] [INFO] [Request req_1787638640634_u2pdjr2] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:17:21.836Z] [INFO] [Request req_1787638640634_u2pdjr2] Matching against 6 candidate credentials
+[2026-08-25T06:17:23.370Z] [INFO] Client disconnected
+[2026-08-25T06:17:26.393Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:18:54.874Z] [INFO] Client disconnected
+[2026-08-25T06:23:10.456Z] [INFO] Client disconnected
+[2026-08-25T06:42:20.679Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:42:21.515Z] [INFO] [Request req_1787640141512_6uhxcok] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:42:22.237Z] [INFO] [Request req_1787640141512_6uhxcok] Matching against 6 candidate credentials
+[2026-08-25T06:42:23.936Z] [INFO] [Request req_1787640143933_39gxme0] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:42:24.143Z] [INFO] [Request req_1787640143933_39gxme0] Matching against 6 candidate credentials
+[2026-08-25T06:42:25.700Z] [INFO] Client disconnected
+[2026-08-25T06:42:28.474Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:42:29.409Z] [INFO] [Request req_1787640149408_iu7jwcm] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:42:30.268Z] [INFO] Client disconnected
+[2026-08-25T06:42:30.680Z] [INFO] [Request req_1787640149408_iu7jwcm] Matching against 6 candidate credentials
+[2026-08-25T06:42:33.275Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:42:34.401Z] [INFO] Client disconnected
+[2026-08-25T06:42:34.403Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:42:35.209Z] [INFO] [Request req_1787640155208_yc1d74l] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:42:35.951Z] [INFO] [Request req_1787640155208_yc1d74l] Matching against 6 candidate credentials
+[2026-08-25T06:42:35.953Z] [INFO] Client disconnected
+[2026-08-25T06:42:38.489Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:42:38.496Z] [INFO] Client disconnected
+[2026-08-25T06:42:38.503Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:42:39.308Z] [INFO] [Request req_1787640159307_vxzqy8s] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:42:40.072Z] [INFO] [Request req_1787640159307_vxzqy8s] Matching against 6 candidate credentials
+[2026-08-25T06:42:41.625Z] [INFO] Client disconnected
+[2026-08-25T06:42:44.060Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:42:44.872Z] [INFO] [Request req_1787640164872_noxnv0f] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T06:42:45.280Z] [INFO] [Request req_1787640164872_noxnv0f] Matching against 6 candidate credentials
+[2026-08-25T06:42:46.220Z] [INFO] Client disconnected
+[2026-08-25T06:42:50.879Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T06:43:07.109Z] [INFO] Client disconnected
+[2026-08-25T08:43:32.430Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T08:43:33.267Z] [INFO] [Request req_1787647413265_jlsp0jb] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T08:43:34.090Z] [INFO] [Request req_1787647413265_jlsp0jb] Matching against 6 candidate credentials
+[2026-08-25T08:43:35.788Z] [INFO] [Request req_1787647415787_94wztun] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T08:43:36.139Z] [INFO] [Request req_1787647415787_94wztun] Matching against 6 candidate credentials
+[2026-08-25T08:43:37.091Z] [INFO] Client disconnected
+[2026-08-25T08:43:40.108Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T08:43:42.292Z] [INFO] Client disconnected
+[2026-08-25T08:43:42.323Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T08:43:43.119Z] [INFO] [Request req_1787647423117_jwth5u3] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T08:43:44.066Z] [INFO] [Request req_1787647423117_jwth5u3] Matching against 6 candidate credentials
+[2026-08-25T08:43:45.223Z] [INFO] [Request req_1787647425222_2yyel15] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T08:43:45.426Z] [INFO] [Request req_1787647425222_2yyel15] Matching against 6 candidate credentials
+[2026-08-25T08:43:46.106Z] [INFO] [Request req_1787647426105_vjml9yj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T08:43:46.330Z] [INFO] [Request req_1787647426105_vjml9yj] Matching against 6 candidate credentials
+[2026-08-25T08:44:03.063Z] [INFO] [Request req_1787647443062_26t20k2] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T08:44:03.993Z] [INFO] [Request req_1787647443062_26t20k2] Matching against 6 candidate credentials
+[2026-08-25T08:44:04.763Z] [INFO] [Request req_1787647444761_p29te3y] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T08:44:05.453Z] [INFO] [Request req_1787647444761_p29te3y] Matching against 6 candidate credentials
+[2026-08-25T08:44:06.616Z] [INFO] Client disconnected
+[2026-08-25T08:44:12.451Z] [INFO] Client connected from: 127.0.0.1

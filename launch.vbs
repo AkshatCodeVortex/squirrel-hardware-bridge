@@ -1,5 +1,5 @@
 ' ============================================================
-' Squirrel Hardware Bridge - Silent Launcher
+' Uplodd Hardware Bridge - Silent Launcher
 ' ============================================================
 ' Starts node.exe with no visible console window (window style 0).
 ' Called by the Windows Scheduled Task at user logon.
@@ -17,10 +17,10 @@ strScript  = strAppDir & "\build\index.js"
 
 ' Validate node.exe exists before attempting to launch
 If Not fso.FileExists(strNodeExe) Then
-  MsgBox "Squirrel Hardware Bridge: node.exe not found at:" & vbCrLf & _
+  MsgBox "Uplodd Hardware Bridge: node.exe not found at:" & vbCrLf & _
          strNodeExe & vbCrLf & vbCrLf & _
-         "Please reinstall Squirrel Hardware Bridge.", _
-         vbCritical, "Squirrel Hardware Bridge"
+         "Please reinstall Uplodd Hardware Bridge.", _
+         vbCritical, "Uplodd Hardware Bridge"
   WScript.Quit 1
 End If
 

@@ -1,5 +1,5 @@
 ; ============================================================
-; Squirrel Hardware Bridge - Inno Setup 6 Installer Script
+; Uplodd Hardware Bridge - Inno Setup 6 Installer Script
 ; ============================================================
 ; Build command (from repo root on Windows):
 ;   powershell -ExecutionPolicy Bypass -File scripts\build-installer.ps1
@@ -17,11 +17,11 @@
   #define Version "1.0.0"
 #endif
 
-#define AppName      "Squirrel Hardware Bridge"
-#define AppExeName   "SquirrelHardwareBridge"
-#define Publisher    "Squirrel / Qkarts"
+#define AppName      "Uplodd Hardware Bridge"
+#define AppExeName   "UploddHardwareBridge"
+#define Publisher    "Uplodd / Qkarts"
 #define AppURL       "https://qkarts.com"
-#define TaskName     "Squirrel Hardware Bridge"
+#define TaskName     "Uplodd Hardware Bridge"
 
 [Setup]
 AppId={{A7B3C9D1-4F2E-4A8B-9C6D-E5F2A1B3C7D9}
@@ -41,7 +41,7 @@ ArchitecturesInstallIn64BitMode=x64
 ; Require admin rights (for Program Files install + Scheduled Task)
 PrivilegesRequired=admin
 OutputDir=.
-OutputBaseFilename=Squirrel-Hardware-Bridge-Setup-{#Version}
+OutputBaseFilename=Uplodd-Hardware-Bridge-Setup-{#Version}
 SetupIconFile=
 Compression=lzma2/ultra64
 SolidCompression=yes
@@ -97,6 +97,72 @@ Source: "{#DistDir}\launch.vbs";            DestDir: "{app}"; Flags: ignoreversi
 Source: "{#DistDir}\config\.env.template";  DestDir: "{app}\config"; Flags: ignoreversion
 
 [Code]
+var
+  TokenPage: TInputQueryWizardPage;
+
+// ────────────────────────────────────────────────────────────────────────────
+// Helper to read existing Terminal Token if upgrading
+// ────────────────────────────────────────────────────────────────────────────
+function GetExistingToken(): String;
+var
+  ConfigPath: String;
+  Lines: TArrayOfString;
+  I: Integer;
+  Line: String;
+begin
+  Result := '';
+  ConfigPath := ExpandConstant('{app}\config\.env');
+  if FileExists(ConfigPath) then
+  begin
+    if LoadStringsFromFile(ConfigPath, Lines) then
+    begin
+      for I := 0 to GetArrayLength(Lines) - 1 do
+      begin
+        Line := Lines[I];
+        if Pos('TERMINAL_TOKEN=', Line) = 1 then
+        begin
+          Result := Copy(Line, 16, Length(Line) - 15);
+          Exit;
+        end;
+      end;
+    end;
+  end;
+end;
+
+// ────────────────────────────────────────────────────────────────────────────
+// Helper to save or update Terminal Token in config\.env
+// ────────────────────────────────────────────────────────────────────────────
+procedure SaveTerminalToken(Token: String);
+var
+  Lines: TArrayOfString;
+  I: Integer;
+  FilePath: String;
+  Found: Boolean;
+begin
+  FilePath := ExpandConstant('{app}\config\.env');
+  if not FileExists(FilePath) then Exit;
+
+  if LoadStringsFromFile(FilePath, Lines) then
+  begin
+    Found := False;
+    for I := 0 to GetArrayLength(Lines) - 1 do
+    begin
+      if Pos('TERMINAL_TOKEN=', Lines[I]) = 1 then
+      begin
+        Lines[I] := 'TERMINAL_TOKEN=' + Token;
+        Found := True;
+        Break;
+      end;
+    end;
+    if not Found then
+    begin
+      SetArrayLength(Lines, GetArrayLength(Lines) + 1);
+      Lines[GetArrayLength(Lines) - 1] := 'TERMINAL_TOKEN=' + Token;
+    end;
+    SaveStringsToFile(FilePath, Lines, False);
+  end;
+end;
+
 // ────────────────────────────────────────────────────────────────────────────
 // Stop any running bridge process before upgrade
 // ────────────────────────────────────────────────────────────────────────────
@@ -187,6 +253,16 @@ end;
 // ────────────────────────────────────────────────────────────────────────────
 // Inno Setup Hooks
 // ────────────────────────────────────────────────────────────────────────────
+procedure InitializeWizard();
+begin
+  TokenPage := CreateInputQueryPage(wpSelectDir,
+    'Terminal Authentication', 'Terminal Token Input',
+    'Please enter the Terminal Token for this POS device.' + #13#10 +
+    'You can find or generate this in the Qkarts Admin panel under Settings -> Terminal Tokens.');
+  TokenPage.Add('Terminal Token:', False);
+  TokenPage.Values[0] := GetExistingToken();
+end;
+
 function PrepareToInstall(var NeedsRestart: Boolean): String;
 begin
   Result := '';
@@ -199,6 +275,7 @@ begin
   if CurStep = ssPostInstall then
   begin
     CreateDefaultConfigIfMissing();
+    SaveTerminalToken(TokenPage.Values[0]);
     CreateScheduledTask();
   end;
 end;
@@ -214,9 +291,9 @@ end;
 [Run]
 ; Start the bridge immediately after installation (first run)
 Filename: "wscript.exe"; Parameters: """{app}\launch.vbs"""; \
-  Description: "Start Squirrel Hardware Bridge now"; \
+  Description: "Start Uplodd Hardware Bridge now"; \
   Flags: nowait postinstall skipifsilent runhidden; \
-  StatusMsg: "Starting Squirrel Hardware Bridge..."
+  StatusMsg: "Starting Uplodd Hardware Bridge..."
 
 [UninstallRun]
 ; Stop bridge before uninstall

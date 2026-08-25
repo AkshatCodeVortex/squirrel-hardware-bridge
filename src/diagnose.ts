@@ -71,7 +71,7 @@ async function runDiagnose() {
       console.log('');
       console.log('To fix:');
       console.log(`  1. Find ${dllName} in your iVMS-4200 installation`);
-      console.log(`  2. Copy it to: squirrel-hardware-bridge/sdk/lib/`);
+      console.log(`  2. Copy it to: uplodd-hardware-bridge/sdk/lib/`);
       console.log('  3. Run this diagnostic again');
       process.exit(1);
     }
