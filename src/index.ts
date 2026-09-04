@@ -143,18 +143,33 @@ wss.on('error', (err: Error) => {
 async function fetchCandidates(): Promise<Array<{ employeeId: string; credentialReference: string }>> {
   const token = process.env.TERMINAL_TOKEN;
   if (!token) {
-    console.warn('[Bridge] WARNING: TERMINAL_TOKEN is not set — fingerprint.identify will return no matches.');
-    return [];
+    throw new FingerprintError(
+      'FINGERPRINT_NO_MATCH',
+      'TERMINAL_TOKEN is not configured. Please generate a terminal token from Admin panel and update the bridge .env file.'
+    );
   }
   try {
     const response = await axios.get(`${BACKEND_URL}/biometric/terminal/candidates`, {
       headers: { 'X-Terminal-Token': token },
       timeout: 10_000,
     });
-    return response.data?.data || [];
+    const candidates = response.data?.data || [];
+    console.log(`[Bridge] Fetched ${candidates.length} candidate(s) from backend`);
+    return candidates;
   } catch (err: any) {
-    console.error(`[Bridge] Failed to fetch candidates: ${err.message}`);
-    return [];
+    const status = err?.response?.status;
+    if (status === 401) {
+      console.error(`[Bridge] Terminal token rejected by backend (401). Token may be expired or the backend JWT secret has changed.`);
+      throw new FingerprintError(
+        'FINGERPRINT_NO_MATCH',
+        'Terminal token is expired or invalid. Please regenerate the terminal token from Admin panel and restart the bridge.'
+      );
+    }
+    console.error(`[Bridge] Failed to fetch candidates: ${err.message} (status: ${status || 'N/A'})`);
+    throw new FingerprintError(
+      'FINGERPRINT_NO_MATCH',
+      `Cannot reach backend to fetch enrolled fingerprints: ${err.message}`
+    );
   }
 }
 

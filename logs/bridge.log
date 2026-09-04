@@ -206,3 +206,1425 @@
 [2026-08-25T08:44:05.453Z] [INFO] [Request req_1787647444761_p29te3y] Matching against 6 candidate credentials
 [2026-08-25T08:44:06.616Z] [INFO] Client disconnected
 [2026-08-25T08:44:12.451Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:30:31.002Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:30:34.275Z] [INFO] [Request req_1787650234271_uvs98pk] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T09:30:35.948Z] [INFO] Client disconnected
+[2026-08-25T09:30:38.954Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:30:50.644Z] [INFO] [Request req_1787650250643_545ttyg] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T09:30:52.246Z] [INFO] Client disconnected
+[2026-08-25T09:30:55.255Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:10.793Z] [INFO] Client disconnected
+[2026-08-25T09:32:11.454Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:11.548Z] [INFO] Client disconnected
+[2026-08-25T09:32:11.553Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:12.389Z] [INFO] [Request req_1787650332388_2k9su9f] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:32:13.644Z] [INFO] [Request req_1787650332388_2k9su9f] Matching against 8 candidate credentials
+[2026-08-25T09:32:14.647Z] [INFO] Client disconnected
+[2026-08-25T09:32:17.652Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:21.568Z] [INFO] Client disconnected
+[2026-08-25T09:32:21.596Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:22.532Z] [INFO] [Request req_1787650342531_uv09thu] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:32:23.152Z] [INFO] [Request req_1787650342531_uv09thu] Matching against 8 candidate credentials
+[2026-08-25T09:32:23.412Z] [INFO] Client disconnected
+[2026-08-25T09:32:26.420Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:27.759Z] [INFO] Client disconnected
+[2026-08-25T09:32:27.808Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:28.627Z] [INFO] [Request req_1787650348624_o40yjb4] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:32:29.087Z] [INFO] Client disconnected
+[2026-08-25T09:32:29.164Z] [INFO] [Request req_1787650348624_o40yjb4] Matching against 8 candidate credentials
+[2026-08-25T09:32:31.221Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:31.236Z] [INFO] Client disconnected
+[2026-08-25T09:32:31.237Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:32.046Z] [INFO] [Request req_1787650352044_1i9l41u] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:32:32.403Z] [INFO] [Request req_1787650352044_1i9l41u] Matching against 8 candidate credentials
+[2026-08-25T09:32:33.308Z] [INFO] Client disconnected
+[2026-08-25T09:32:36.317Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:38.195Z] [INFO] Client disconnected
+[2026-08-25T09:32:38.199Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:32:39.038Z] [INFO] [Request req_1787650359037_gn8liyg] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:32:39.596Z] [INFO] [Request req_1787650359037_gn8liyg] Matching against 8 candidate credentials
+[2026-08-25T09:32:39.613Z] [INFO] Client disconnected
+[2026-08-25T09:32:42.620Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:33:02.214Z] [INFO] Client disconnected
+[2026-08-25T09:33:02.331Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:33:03.076Z] [INFO] [Request req_1787650383073_jek11xy] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:33:03.562Z] [INFO] Client disconnected
+[2026-08-25T09:33:04.293Z] [INFO] [Request req_1787650383073_jek11xy] Matching against 8 candidate credentials
+[2026-08-25T09:33:07.287Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:33:57.408Z] [INFO] Client disconnected
+[2026-08-25T09:33:57.409Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:33:58.220Z] [INFO] [Request req_1787650438216_5rc5jhv] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:33:59.307Z] [INFO] [Request req_1787650438216_5rc5jhv] Matching against 8 candidate credentials
+[2026-08-25T09:34:00.802Z] [INFO] Client disconnected
+[2026-08-25T09:34:03.714Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:34:04.532Z] [INFO] [Request req_1787650444531_q99zzsz] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:34:04.677Z] [INFO] Client disconnected
+[2026-08-25T09:34:05.245Z] [INFO] [Request req_1787650444531_q99zzsz] Matching against 8 candidate credentials
+[2026-08-25T09:34:07.682Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:38:21.965Z] [INFO] Client disconnected
+[2026-08-25T09:38:21.969Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:38:22.774Z] [INFO] [Request req_1787650702772_yeiznjr] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:38:23.284Z] [INFO] [Request req_1787650702772_yeiznjr] Matching against 8 candidate credentials
+[2026-08-25T09:38:24.816Z] [INFO] Client disconnected
+[2026-08-25T09:38:27.836Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:38:32.988Z] [INFO] Client disconnected
+[2026-08-25T09:38:33.006Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:38:33.856Z] [INFO] [Request req_1787650713852_zcrsubb] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:38:34.340Z] [INFO] Client disconnected
+[2026-08-25T09:38:34.820Z] [INFO] [Request req_1787650713852_zcrsubb] Matching against 8 candidate credentials
+[2026-08-25T09:38:37.346Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:40:49.499Z] [INFO] Client disconnected
+[2026-08-25T09:40:49.500Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:40:50.308Z] [INFO] [Request req_1787650850307_ynjgax5] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:40:50.878Z] [INFO] [Request req_1787650850307_ynjgax5] Matching against 8 candidate credentials
+[2026-08-25T09:40:51.460Z] [INFO] Client disconnected
+[2026-08-25T09:40:54.468Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:43:29.457Z] [INFO] [Request req_1787651009454_ekis9cn] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:43:29.469Z] [INFO] [Request req_1787651009455_fqioelh] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:43:29.494Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:43:29.494Z] [INFO] Client disconnected
+[2026-08-25T09:43:29.573Z] [INFO] [Request req_1787651009520_9x7ukzr] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:43:30.080Z] [INFO] [Request req_1787651009454_ekis9cn] Matching against 8 candidate credentials
+[2026-08-25T09:43:30.111Z] [INFO] [Request req_1787651009520_9x7ukzr] Matching against 8 candidate credentials
+[2026-08-25T09:43:30.121Z] [INFO] [Request req_1787651010117_ds5msjm] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:43:30.125Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:43:30.127Z] [INFO] Client disconnected
+[2026-08-25T09:44:22.514Z] [INFO] Client disconnected
+[2026-08-25T09:44:23.047Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:44:23.076Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:44:23.118Z] [INFO] Client disconnected
+[2026-08-25T09:44:23.155Z] [INFO] [Request req_1787651063153_gi3wbto] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:44:23.727Z] [INFO] [Request req_1787651063153_gi3wbto] Matching against 8 candidate credentials
+[2026-08-25T09:44:23.737Z] [INFO] [Request req_1787651063736_zuy8ajs] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:44:23.740Z] [INFO] Client disconnected
+[2026-08-25T09:44:23.792Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:08.806Z] [INFO] Client disconnected
+[2026-08-25T09:46:09.313Z] [INFO] Client connected from: undefined
+[2026-08-25T09:46:09.313Z] [WARN] Access Denied: connection attempt from forbidden IP undefined
+[2026-08-25T09:46:09.335Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:09.511Z] [INFO] [Request req_1787651169442_ep49bjs] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:46:10.034Z] [INFO] [Request req_1787651169442_ep49bjs] Matching against 8 candidate credentials
+[2026-08-25T09:46:10.043Z] [INFO] [Request req_1787651170041_2di2ab1] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:46:10.047Z] [INFO] Client disconnected
+[2026-08-25T09:46:10.049Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:11.920Z] [INFO] Client disconnected
+[2026-08-25T09:46:12.339Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:12.358Z] [INFO] Client disconnected
+[2026-08-25T09:46:12.372Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:12.436Z] [INFO] [Request req_1787651172416_ct8zayg] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:46:12.616Z] [INFO] [Request req_1787651172416_ct8zayg] Matching against 8 candidate credentials
+[2026-08-25T09:46:12.625Z] [INFO] [Request req_1787651172624_qerq4x2] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:46:12.629Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:12.643Z] [INFO] Client disconnected
+[2026-08-25T09:46:14.277Z] [INFO] Client disconnected
+[2026-08-25T09:46:14.669Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:14.747Z] [INFO] Client disconnected
+[2026-08-25T09:46:14.756Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:14.892Z] [INFO] [Request req_1787651174824_ngz0c67] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:46:15.086Z] [INFO] [Request req_1787651174824_ngz0c67] Matching against 8 candidate credentials
+[2026-08-25T09:46:15.100Z] [INFO] [Request req_1787651175093_bjgolic] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:46:15.102Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:15.103Z] [INFO] Client disconnected
+[2026-08-25T09:46:17.393Z] [INFO] [Request req_1787651177392_5lkrq22] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:46:17.394Z] [INFO] Client disconnected
+[2026-08-25T09:46:17.400Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:17.409Z] [INFO] [Request req_1787651177408_q2ywi81] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:46:17.624Z] [INFO] [Request req_1787651177408_q2ywi81] Matching against 8 candidate credentials
+[2026-08-25T09:46:17.641Z] [INFO] [Request req_1787651177633_8vhdhzw] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:46:17.645Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:46:17.646Z] [INFO] Client disconnected
+[2026-08-25T09:46:21.780Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-25T09:46:21.821Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-25T09:47:40.537Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-25T09:47:40.539Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-25T09:47:40.539Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-08-25T09:47:40.539Z] [INFO] Fingerprint mode: mock
+[2026-08-25T09:47:40.540Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-25T09:47:40.540Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-25T09:47:40.549Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-25T09:47:42.452Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:47:42.490Z] [INFO] [Request req_1787651262487_vpukxhl] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:47:42.592Z] [INFO] [Request req_1787651262487_vpukxhl] Matching against 8 candidate credentials
+[2026-08-25T09:47:42.690Z] [INFO] [Request req_1787651262689_ji6o3qv] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:47:42.696Z] [INFO] Client disconnected
+[2026-08-25T09:47:42.698Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:48:15.900Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:50:16.343Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-25T09:50:16.361Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-25T09:51:21.995Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-25T09:51:21.997Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-25T09:51:21.998Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-08-25T09:51:21.998Z] [INFO] Fingerprint mode: mock
+[2026-08-25T09:51:21.998Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-25T09:51:21.998Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-25T09:51:22.006Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-25T09:51:23.037Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:51:23.043Z] [INFO] [Request req_1787651483039_90s6k9f] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:51:23.164Z] [INFO] [Request req_1787651483039_90s6k9f] Matching against 8 candidate credentials
+[2026-08-25T09:51:23.247Z] [INFO] [Request req_1787651483246_kvufoow] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:51:23.251Z] [INFO] Client disconnected
+[2026-08-25T09:51:23.261Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:52:16.173Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:53:51.507Z] [INFO] Client disconnected
+[2026-08-25T09:53:51.987Z] [INFO] Client connected from: undefined
+[2026-08-25T09:53:51.990Z] [WARN] Access Denied: connection attempt from forbidden IP undefined
+[2026-08-25T09:53:52.004Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:53:52.085Z] [INFO] [Request req_1787651632084_ut7n2am] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T09:53:52.201Z] [INFO] [Request req_1787651632084_ut7n2am] Matching against 8 candidate credentials
+[2026-08-25T09:53:52.213Z] [INFO] [Request req_1787651632212_7ywt7d6] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T09:53:52.215Z] [INFO] Client disconnected
+[2026-08-25T09:53:52.218Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T09:54:09.160Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-25T09:54:09.162Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-25T09:54:13.856Z] [INFO] Client disconnected
+[2026-08-25T10:02:47.205Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-25T10:02:47.208Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-25T10:02:47.208Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-08-25T10:02:47.208Z] [INFO] Fingerprint mode: mock
+[2026-08-25T10:02:47.209Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-25T10:02:47.209Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-25T10:02:47.218Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-25T10:02:51.847Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T10:02:53.804Z] [INFO] [Request req_1787652173801_nw0kg7y] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T10:02:55.447Z] [INFO] Client disconnected
+[2026-08-25T10:02:56.840Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T10:03:08.091Z] [INFO] [Request req_1787652188090_au3r1lz] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-25T10:03:09.696Z] [INFO] Client disconnected
+[2026-08-25T10:03:12.706Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T10:57:48.310Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T10:57:48.570Z] [INFO] [Request req_1787655468559_bbjjjbj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T10:57:48.830Z] [INFO] [Request req_1787655468559_bbjjjbj] Matching against 10 candidate credentials
+[2026-08-25T10:57:51.857Z] [INFO] [Request req_1787655471856_io1wxt1] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T10:57:51.860Z] [INFO] Client disconnected
+[2026-08-25T10:57:55.918Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T10:59:32.207Z] [INFO] [Request req_1787655572173_v2bpyyv] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T10:59:32.248Z] [INFO] [Request req_1787655572173_w9agfjm] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T10:59:32.293Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T10:59:32.298Z] [INFO] Client disconnected
+[2026-08-25T10:59:32.299Z] [INFO] [Request req_1787655572295_olbzyp1] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T10:59:32.414Z] [INFO] [Request req_1787655572173_v2bpyyv] Matching against 10 candidate credentials
+[2026-08-25T10:59:32.472Z] [INFO] [Request req_1787655572295_olbzyp1] Matching against 10 candidate credentials
+[2026-08-25T10:59:33.095Z] [INFO] [Request req_1787655573092_eajiysc] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T10:59:33.098Z] [INFO] Client disconnected
+[2026-08-25T10:59:35.857Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T10:59:35.859Z] [INFO] [Request req_1787655575858_5inm5vb] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T10:59:35.949Z] [INFO] [Request req_1787655575858_5inm5vb] Matching against 10 candidate credentials
+[2026-08-25T10:59:36.494Z] [INFO] [Request req_1787655576491_218fvmn] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T10:59:36.501Z] [INFO] Client disconnected
+[2026-08-25T10:59:40.374Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T11:52:56.671Z] [INFO] Client disconnected
+[2026-08-25T11:54:43.369Z] [INFO] Client disconnected
+[2026-08-25T16:20:27.537Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-25T16:20:27.540Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-25T16:20:27.540Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-08-25T16:20:27.541Z] [INFO] Fingerprint mode: mock
+[2026-08-25T16:20:27.541Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-25T16:20:27.541Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-25T16:20:27.549Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-25T16:20:30.979Z] [INFO] Client connected from: undefined
+[2026-08-25T16:20:30.980Z] [WARN] Access Denied: connection attempt from forbidden IP undefined
+[2026-08-25T16:20:30.990Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T16:20:30.995Z] [INFO] [Request req_1787674830992_npps4tj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T16:20:31.120Z] [INFO] [Request req_1787674830992_npps4tj] Matching against 10 candidate credentials
+[2026-08-25T16:20:31.716Z] [INFO] Client disconnected
+[2026-08-25T16:20:38.281Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T16:20:38.289Z] [INFO] [Request req_1787674838286_0jn676q] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T16:20:38.421Z] [INFO] [Request req_1787674838286_0jn676q] Matching against 10 candidate credentials
+[2026-08-25T16:20:39.023Z] [INFO] [Request req_1787674839020_rcgf2bt] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-25T16:20:39.028Z] [INFO] Client disconnected
+[2026-08-25T16:20:42.057Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-25T16:20:48.688Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-25T16:20:48.690Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-25T16:20:52.240Z] [INFO] [Request req_1787674852214_56sjq8h] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-25T16:20:52.245Z] [INFO] [Request req_1787674852214_vwg32hh] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T13:19:38.117Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-28T13:19:38.120Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-28T13:19:38.121Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-08-28T13:19:38.121Z] [INFO] Fingerprint mode: mock
+[2026-08-28T13:19:38.121Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-28T13:19:38.121Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-28T13:19:38.130Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-28T13:19:39.439Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:19:39.461Z] [INFO] [Request req_1787923179438_2zvslt3] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:39.585Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:39.586Z] [INFO] [Request req_1787923179438_2zvslt3] Matching against 0 candidate credentials
+[2026-08-28T13:19:40.614Z] [INFO] [Request req_1787923180613_rgqvchl] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:40.621Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:40.621Z] [INFO] [Request req_1787923180613_rgqvchl] Matching against 0 candidate credentials
+[2026-08-28T13:19:41.624Z] [INFO] [Request req_1787923181623_4xt9lkd] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:41.629Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:41.629Z] [INFO] [Request req_1787923181623_4xt9lkd] Matching against 0 candidate credentials
+[2026-08-28T13:19:42.454Z] [INFO] Client disconnected
+[2026-08-28T13:19:43.000Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:19:43.053Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:19:43.053Z] [INFO] Client disconnected
+[2026-08-28T13:19:43.143Z] [INFO] [Request req_1787923183141_47ie58e] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:43.152Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:43.153Z] [INFO] [Request req_1787923183141_47ie58e] Matching against 0 candidate credentials
+[2026-08-28T13:19:44.185Z] [INFO] [Request req_1787923184184_f7izd9h] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:44.192Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:44.192Z] [INFO] [Request req_1787923184184_f7izd9h] Matching against 0 candidate credentials
+[2026-08-28T13:19:45.194Z] [INFO] [Request req_1787923185194_y5mkfjc] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:45.199Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:45.199Z] [INFO] [Request req_1787923185194_y5mkfjc] Matching against 0 candidate credentials
+[2026-08-28T13:19:46.201Z] [INFO] [Request req_1787923186201_7v7d8ld] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:46.208Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:46.209Z] [INFO] [Request req_1787923186201_7v7d8ld] Matching against 0 candidate credentials
+[2026-08-28T13:19:48.212Z] [INFO] [Request req_1787923188211_ij55p80] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:48.222Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:48.222Z] [INFO] [Request req_1787923188211_ij55p80] Matching against 0 candidate credentials
+[2026-08-28T13:19:48.952Z] [INFO] Client disconnected
+[2026-08-28T13:19:48.954Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:19:48.972Z] [INFO] [Request req_1787923188971_1falh8u] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:49.006Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:49.008Z] [INFO] [Request req_1787923188971_1falh8u] Matching against 0 candidate credentials
+[2026-08-28T13:19:49.225Z] [INFO] [Request req_1787923189225_zuebfif] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:49.236Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:49.236Z] [INFO] [Request req_1787923189225_zuebfif] Matching against 0 candidate credentials
+[2026-08-28T13:19:49.778Z] [INFO] [Request req_1787923189778_gk0zwrv] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:49.784Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:49.785Z] [INFO] [Request req_1787923189778_gk0zwrv] Matching against 0 candidate credentials
+[2026-08-28T13:19:50.011Z] [INFO] [Request req_1787923190011_djn9mee] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:50.016Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:50.017Z] [INFO] [Request req_1787923190011_djn9mee] Matching against 0 candidate credentials
+[2026-08-28T13:19:50.728Z] [INFO] [Request req_1787923190727_a9dgmwd] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:50.738Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:50.739Z] [INFO] [Request req_1787923190727_a9dgmwd] Matching against 0 candidate credentials
+[2026-08-28T13:19:51.360Z] [INFO] [Request req_1787923191359_9mkk0h8] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:51.364Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:51.365Z] [INFO] [Request req_1787923191359_9mkk0h8] Matching against 0 candidate credentials
+[2026-08-28T13:19:51.794Z] [INFO] [Request req_1787923191793_x931tzq] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:51.799Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:51.800Z] [INFO] [Request req_1787923191793_x931tzq] Matching against 0 candidate credentials
+[2026-08-28T13:19:51.982Z] [INFO] [Request req_1787923191981_rx0fg8v] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:51.989Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:51.989Z] [INFO] [Request req_1787923191981_rx0fg8v] Matching against 0 candidate credentials
+[2026-08-28T13:19:52.160Z] [INFO] [Request req_1787923192159_9kveop6] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:52.164Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:52.164Z] [INFO] [Request req_1787923192159_9kveop6] Matching against 0 candidate credentials
+[2026-08-28T13:19:52.494Z] [INFO] [Request req_1787923192493_je82e4u] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:52.499Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:52.500Z] [INFO] [Request req_1787923192493_je82e4u] Matching against 0 candidate credentials
+[2026-08-28T13:19:52.726Z] [INFO] [Request req_1787923192726_et6af55] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:52.731Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:52.731Z] [INFO] [Request req_1787923192726_et6af55] Matching against 0 candidate credentials
+[2026-08-28T13:19:54.032Z] [INFO] Client disconnected
+[2026-08-28T13:19:55.954Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:19:55.964Z] [INFO] Client disconnected
+[2026-08-28T13:19:55.987Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:19:56.057Z] [INFO] [Request req_1787923196052_gxa44tg] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:56.075Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:56.076Z] [INFO] [Request req_1787923196052_gxa44tg] Matching against 0 candidate credentials
+[2026-08-28T13:19:57.085Z] [INFO] [Request req_1787923197084_xroqzqh] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:57.089Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:57.089Z] [INFO] [Request req_1787923197084_xroqzqh] Matching against 0 candidate credentials
+[2026-08-28T13:19:57.464Z] [INFO] Client disconnected
+[2026-08-28T13:19:57.467Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:19:57.478Z] [INFO] [Request req_1787923197477_tnxv4fx] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:57.484Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:57.484Z] [INFO] [Request req_1787923197477_tnxv4fx] Matching against 0 candidate credentials
+[2026-08-28T13:19:58.091Z] [INFO] [Request req_1787923198091_tlulu3z] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:58.097Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:58.097Z] [INFO] [Request req_1787923198091_tlulu3z] Matching against 0 candidate credentials
+[2026-08-28T13:19:58.288Z] [INFO] [Request req_1787923198287_f0wupa9] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:58.292Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:58.293Z] [INFO] [Request req_1787923198287_f0wupa9] Matching against 0 candidate credentials
+[2026-08-28T13:19:59.268Z] [INFO] [Request req_1787923199268_6c43whn] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:59.272Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:59.273Z] [INFO] [Request req_1787923199268_6c43whn] Matching against 0 candidate credentials
+[2026-08-28T13:19:59.951Z] [INFO] [Request req_1787923199950_xoqu91q] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:19:59.957Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:19:59.958Z] [INFO] [Request req_1787923199950_xoqu91q] Matching against 0 candidate credentials
+[2026-08-28T13:23:51.589Z] [INFO] [Request req_1787923431588_bcwojzo] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:23:51.722Z] [INFO] [Request req_1787923431588_bcwojzo] Matching against 10 candidate credentials
+[2026-08-28T13:23:53.276Z] [INFO] Client disconnected
+[2026-08-28T13:23:56.899Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:23:56.913Z] [INFO] [Request req_1787923436911_usvdmsc] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:23:57.051Z] [INFO] [Request req_1787923436911_usvdmsc] Matching against 10 candidate credentials
+[2026-08-28T13:23:57.634Z] [INFO] [Request req_1787923437634_1js6rly] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T13:23:57.637Z] [INFO] Client disconnected
+[2026-08-28T13:24:00.663Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:24:01.296Z] [INFO] [Request req_1787923441295_41ea5b2] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:24:01.298Z] [INFO] [Request req_1787923441295_rg9meez] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T13:24:01.303Z] [INFO] Client disconnected
+[2026-08-28T13:24:01.307Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:24:01.315Z] [INFO] [Request req_1787923441310_led62c4] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:24:01.368Z] [INFO] [Request req_1787923441295_41ea5b2] Matching against 10 candidate credentials
+[2026-08-28T13:24:01.398Z] [INFO] [Request req_1787923441310_led62c4] Matching against 10 candidate credentials
+[2026-08-28T13:24:01.939Z] [INFO] [Request req_1787923441938_qccygln] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T13:24:01.942Z] [INFO] Client disconnected
+[2026-08-28T13:24:04.968Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:25:20.677Z] [INFO] [Request req_1787923520669_bqjzdqx] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:25:20.696Z] [INFO] [Request req_1787923520669_abq12sz] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T13:25:20.699Z] [INFO] Client disconnected
+[2026-08-28T13:25:20.713Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:25:20.739Z] [INFO] [Request req_1787923520738_ehm619d] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:25:20.787Z] [INFO] [Request req_1787923520669_bqjzdqx] Matching against 10 candidate credentials
+[2026-08-28T13:25:20.811Z] [INFO] [Request req_1787923520738_ehm619d] Matching against 10 candidate credentials
+[2026-08-28T13:25:21.353Z] [INFO] [Request req_1787923521352_neripzw] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T13:25:21.356Z] [INFO] Client disconnected
+[2026-08-28T13:25:24.382Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:25:32.555Z] [INFO] [Request req_1787923532535_3qmbqfx] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:25:32.573Z] [INFO] [Request req_1787923532535_p83o2ay] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T13:25:32.575Z] [INFO] Client disconnected
+[2026-08-28T13:25:32.601Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:25:32.606Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:25:32.607Z] [INFO] [Request req_1787923532535_3qmbqfx] Matching against 0 candidate credentials
+[2026-08-28T13:25:32.608Z] [INFO] [Request req_1787923532602_th4tll0] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:25:32.620Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:25:32.621Z] [INFO] [Request req_1787923532602_th4tll0] Matching against 0 candidate credentials
+[2026-08-28T13:25:33.623Z] [INFO] [Request req_1787923533623_eyuoaw5] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:25:33.627Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:25:33.628Z] [INFO] [Request req_1787923533623_eyuoaw5] Matching against 0 candidate credentials
+[2026-08-28T13:25:34.631Z] [INFO] [Request req_1787923534630_5n1xy5w] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:25:34.636Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:25:34.637Z] [INFO] [Request req_1787923534630_5n1xy5w] Matching against 0 candidate credentials
+[2026-08-28T13:25:35.640Z] [INFO] [Request req_1787923535640_06qwdm0] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:25:35.684Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:25:35.684Z] [INFO] [Request req_1787923535640_06qwdm0] Matching against 0 candidate credentials
+[2026-08-28T13:25:59.854Z] [INFO] Client disconnected
+[2026-08-28T13:26:00.321Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:26:00.388Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T13:26:00.388Z] [INFO] Client disconnected
+[2026-08-28T13:26:00.433Z] [INFO] [Request req_1787923560431_7cmd55h] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:26:00.447Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:26:00.448Z] [INFO] [Request req_1787923560431_7cmd55h] Matching against 0 candidate credentials
+[2026-08-28T13:26:01.453Z] [INFO] [Request req_1787923561451_vjcw0un] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:26:01.462Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:26:01.462Z] [INFO] [Request req_1787923561451_vjcw0un] Matching against 0 candidate credentials
+[2026-08-28T13:26:02.466Z] [INFO] [Request req_1787923562465_z7u5898] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:26:02.473Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:26:02.474Z] [INFO] [Request req_1787923562465_z7u5898] Matching against 0 candidate credentials
+[2026-08-28T13:26:03.477Z] [INFO] [Request req_1787923563476_ttimjdh] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T13:26:03.482Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-08-28T13:26:03.483Z] [INFO] [Request req_1787923563476_ttimjdh] Matching against 0 candidate credentials
+[2026-08-28T13:26:21.729Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-28T13:26:21.731Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-28T16:55:26.352Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-28T16:55:26.356Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-28T16:55:26.357Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-08-28T16:55:26.357Z] [INFO] Fingerprint mode: mock
+[2026-08-28T16:55:26.358Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-28T16:55:26.358Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-28T16:55:26.367Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-28T16:55:27.361Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T16:55:27.364Z] [INFO] [Request req_1787936127354_dzvwc8c] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T16:55:27.520Z] [ERROR] [Bridge] Failed to fetch candidates: Request failed with status code 500
+[2026-08-28T16:55:27.520Z] [INFO] [Request req_1787936127354_dzvwc8c] Matching against 0 candidate credentials
+[2026-08-28T16:55:28.525Z] [INFO] [Request req_1787936128524_y71u55v] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T16:55:28.618Z] [INFO] [Request req_1787936128524_y71u55v] Matching against 10 candidate credentials
+[2026-08-28T16:55:29.293Z] [INFO] [Request req_1787936129292_w77gk3c] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T16:55:29.297Z] [INFO] Client disconnected
+[2026-08-28T16:55:32.327Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T16:55:34.352Z] [INFO] [Request req_1787936134351_b452owi] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T16:55:34.354Z] [INFO] [Request req_1787936134351_immeo66] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T16:55:34.361Z] [INFO] Client disconnected
+[2026-08-28T16:55:34.465Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T16:55:34.489Z] [INFO] [Request req_1787936134456_8oidte7] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-28T16:55:34.496Z] [INFO] [Request req_1787936134351_b452owi] Matching against 10 candidate credentials
+[2026-08-28T16:55:34.583Z] [INFO] [Request req_1787936134456_8oidte7] Matching against 10 candidate credentials
+[2026-08-28T16:55:35.240Z] [INFO] [Request req_1787936135238_zoolmb7] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-28T16:55:35.245Z] [INFO] Client disconnected
+[2026-08-28T16:55:38.272Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-28T17:05:28.249Z] [INFO] Client disconnected
+[2026-08-29T10:29:20.027Z] [INFO] Client connected from: undefined
+[2026-08-29T10:29:20.080Z] [WARN] Access Denied: connection attempt from forbidden IP undefined
+[2026-08-29T10:29:20.134Z] [INFO] Client connected from: undefined
+[2026-08-29T10:29:20.135Z] [WARN] Access Denied: connection attempt from forbidden IP undefined
+[2026-08-29T10:29:22.681Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-29T10:29:22.738Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-29T10:29:22.739Z] [INFO] Client disconnected
+[2026-08-29T10:29:22.804Z] [INFO] Client disconnected
+[2026-08-29T10:29:23.881Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-29T10:29:25.784Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-29T10:39:29.288Z] [INFO] Client disconnected
+[2026-08-29T11:03:59.691Z] [INFO] Client disconnected
+[2026-08-30T12:44:37.379Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-30T12:44:37.382Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-30T12:44:37.383Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-08-30T12:44:37.383Z] [INFO] Fingerprint mode: mock
+[2026-08-30T12:44:37.384Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-30T12:44:37.384Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-30T12:44:37.398Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-30T12:44:37.668Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:44:38.618Z] [INFO] [Request req_1788093878602_mcldobj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:44:38.724Z] [INFO] [Request req_1788093878602_mcldobj] Matching against 10 candidate credentials
+[2026-08-30T12:44:40.256Z] [INFO] [Request req_1788093880255_5zle7rm] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:44:40.367Z] [INFO] [Request req_1788093880255_5zle7rm] Matching against 10 candidate credentials
+[2026-08-30T12:44:44.859Z] [INFO] [Request req_1788093884858_xiik8wi] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:44:44.976Z] [INFO] [Request req_1788093884858_xiik8wi] Matching against 10 candidate credentials
+[2026-08-30T12:44:46.077Z] [INFO] [Request req_1788093886076_53if8q7] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:44:46.186Z] [INFO] [Request req_1788093886076_53if8q7] Matching against 10 candidate credentials
+[2026-08-30T12:44:48.349Z] [INFO] Client disconnected
+[2026-08-30T12:44:52.590Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:51:42.935Z] [INFO] Client disconnected
+[2026-08-30T12:51:42.937Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:51:43.781Z] [INFO] [Request req_1788094303780_ynwrit8] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:51:43.880Z] [INFO] [Request req_1788094303780_ynwrit8] Matching against 10 candidate credentials
+[2026-08-30T12:51:45.393Z] [INFO] [Request req_1788094305392_ubzeg5n] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:51:45.489Z] [INFO] [Request req_1788094305392_ubzeg5n] Matching against 10 candidate credentials
+[2026-08-30T12:51:46.954Z] [INFO] Client disconnected
+[2026-08-30T12:51:48.184Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:51:48.199Z] [INFO] Client disconnected
+[2026-08-30T12:51:48.201Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:51:49.005Z] [INFO] [Request req_1788094309005_zg5c4hi] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:51:49.094Z] [INFO] [Request req_1788094309005_zg5c4hi] Matching against 10 candidate credentials
+[2026-08-30T12:52:03.053Z] [INFO] [Request req_1788094323052_pvpterp] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:03.119Z] [INFO] [Request req_1788094323052_pvpterp] Matching against 10 candidate credentials
+[2026-08-30T12:52:04.439Z] [INFO] Client disconnected
+[2026-08-30T12:52:07.452Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:52:19.985Z] [INFO] Client disconnected
+[2026-08-30T12:52:19.986Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:52:20.796Z] [INFO] [Request req_1788094340794_gj9xm6g] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:20.907Z] [INFO] [Request req_1788094340794_gj9xm6g] Matching against 10 candidate credentials
+[2026-08-30T12:52:24.011Z] [INFO] [Request req_1788094344010_7oqpgjh] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:24.111Z] [INFO] [Request req_1788094344010_7oqpgjh] Matching against 10 candidate credentials
+[2026-08-30T12:52:25.440Z] [INFO] [Request req_1788094345438_aubnyxq] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:25.551Z] [INFO] [Request req_1788094345438_aubnyxq] Matching against 10 candidate credentials
+[2026-08-30T12:52:27.358Z] [INFO] [Request req_1788094347357_s2xyncy] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:27.442Z] [INFO] [Request req_1788094347357_s2xyncy] Matching against 10 candidate credentials
+[2026-08-30T12:52:28.490Z] [INFO] [Request req_1788094348489_b8lc8hk] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:28.589Z] [INFO] [Request req_1788094348489_b8lc8hk] Matching against 10 candidate credentials
+[2026-08-30T12:52:29.664Z] [INFO] [Request req_1788094349662_5smsvq2] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:29.755Z] [INFO] [Request req_1788094349662_5smsvq2] Matching against 10 candidate credentials
+[2026-08-30T12:52:30.745Z] [INFO] [Request req_1788094350745_rdato90] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:30.813Z] [INFO] [Request req_1788094350745_rdato90] Matching against 10 candidate credentials
+[2026-08-30T12:52:31.815Z] [INFO] [Request req_1788094351814_0ne1tgd] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:31.926Z] [INFO] [Request req_1788094351814_0ne1tgd] Matching against 10 candidate credentials
+[2026-08-30T12:52:33.171Z] [INFO] Client disconnected
+[2026-08-30T12:52:36.183Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:52:38.193Z] [INFO] Client disconnected
+[2026-08-30T12:52:38.197Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:52:39.003Z] [INFO] [Request req_1788094359001_1c2ysw5] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:39.113Z] [INFO] [Request req_1788094359001_1c2ysw5] Matching against 10 candidate credentials
+[2026-08-30T12:52:40.698Z] [INFO] Client disconnected
+[2026-08-30T12:52:43.707Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:52:57.253Z] [INFO] Client disconnected
+[2026-08-30T12:52:57.257Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:52:58.062Z] [INFO] [Request req_1788094378060_q6astsi] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:58.157Z] [INFO] [Request req_1788094378060_q6astsi] Matching against 10 candidate credentials
+[2026-08-30T12:52:59.717Z] [INFO] [Request req_1788094379715_ldz39ov] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:52:59.810Z] [INFO] [Request req_1788094379715_ldz39ov] Matching against 10 candidate credentials
+[2026-08-30T12:53:02.260Z] [INFO] Client disconnected
+[2026-08-30T12:53:05.266Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:53:18.820Z] [INFO] Client disconnected
+[2026-08-30T12:53:18.822Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:53:19.630Z] [INFO] [Request req_1788094399628_jcvncdt] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:53:19.721Z] [INFO] [Request req_1788094399628_jcvncdt] Matching against 10 candidate credentials
+[2026-08-30T12:53:21.156Z] [INFO] Client disconnected
+[2026-08-30T12:53:24.165Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:53:24.318Z] [INFO] Client disconnected
+[2026-08-30T12:53:24.319Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T12:53:25.138Z] [INFO] [Request req_1788094405135_2ih1s6a] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T12:53:25.244Z] [INFO] [Request req_1788094405135_2ih1s6a] Matching against 10 candidate credentials
+[2026-08-30T12:53:25.661Z] [INFO] Client disconnected
+[2026-08-30T12:53:28.668Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:06:49.782Z] [INFO] Client disconnected
+[2026-08-30T13:08:23.602Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:08:23.624Z] [INFO] [Request req_1788095303623_nnq6kl3] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:08:23.778Z] [INFO] [Request req_1788095303623_nnq6kl3] Matching against 10 candidate credentials
+[2026-08-30T13:08:24.703Z] [INFO] [Request req_1788095304702_8i14fyn] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:08:24.707Z] [INFO] Client disconnected
+[2026-08-30T13:08:27.806Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:08:36.777Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T13:08:36.779Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T13:08:40.107Z] [INFO] [Request req_1788095320086_5wqek2i] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:08:40.109Z] [INFO] [Request req_1788095320086_hph67p2] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:09:39.776Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-30T13:09:39.778Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-30T13:09:39.779Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-08-30T13:09:39.779Z] [INFO] Fingerprint mode: mock
+[2026-08-30T13:09:39.780Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-30T13:09:39.780Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-30T13:09:39.789Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-30T13:09:41.574Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:09:41.576Z] [INFO] [Request req_1788095381573_fcos815] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:09:41.712Z] [INFO] [Request req_1788095381573_fcos815] Matching against 10 candidate credentials
+[2026-08-30T13:09:42.285Z] [INFO] [Request req_1788095382284_hgutis9] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:09:42.288Z] [INFO] Client disconnected
+[2026-08-30T13:09:45.319Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:11:35.028Z] [INFO] [Request req_1788095495028_7y7rnou] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:11:35.033Z] [INFO] [Request req_1788095495028_zcl6e45] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:11:35.035Z] [INFO] Client disconnected
+[2026-08-30T13:11:35.055Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:11:35.100Z] [INFO] [Request req_1788095495093_anocf0f] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:11:35.141Z] [INFO] [Request req_1788095495028_7y7rnou] Matching against 10 candidate credentials
+[2026-08-30T13:11:35.218Z] [INFO] [Request req_1788095495093_anocf0f] Matching against 10 candidate credentials
+[2026-08-30T13:11:35.760Z] [INFO] [Request req_1788095495754_q6p0h5s] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:11:35.771Z] [INFO] Client disconnected
+[2026-08-30T13:11:39.010Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:11:52.396Z] [INFO] [Request req_1788095512396_mh9gcte] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:11:52.399Z] [INFO] [Request req_1788095512396_wy702v1] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:11:52.401Z] [INFO] Client disconnected
+[2026-08-30T13:11:52.421Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:11:52.494Z] [INFO] [Request req_1788095512453_l5wdlc2] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:11:52.517Z] [INFO] [Request req_1788095512396_mh9gcte] Matching against 0 candidate credentials
+[2026-08-30T13:11:52.630Z] [INFO] [Request req_1788095512453_l5wdlc2] Matching against 0 candidate credentials
+[2026-08-30T13:11:53.633Z] [INFO] [Request req_1788095513632_lni72pl] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:11:53.754Z] [INFO] [Request req_1788095513632_lni72pl] Matching against 0 candidate credentials
+[2026-08-30T13:11:54.757Z] [INFO] [Request req_1788095514757_j4x70s3] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:11:54.852Z] [INFO] [Request req_1788095514757_j4x70s3] Matching against 0 candidate credentials
+[2026-08-30T13:11:55.857Z] [INFO] [Request req_1788095515855_6gghjbd] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:11:55.920Z] [INFO] [Request req_1788095515855_6gghjbd] Matching against 0 candidate credentials
+[2026-08-30T13:12:01.215Z] [INFO] Client disconnected
+[2026-08-30T13:12:01.624Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:01.653Z] [INFO] Client disconnected
+[2026-08-30T13:12:01.656Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:01.720Z] [INFO] [Request req_1788095521715_j15e6by] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:01.810Z] [INFO] [Request req_1788095521715_j15e6by] Matching against 0 candidate credentials
+[2026-08-30T13:12:02.821Z] [INFO] [Request req_1788095522819_rgp5f7g] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:02.953Z] [INFO] [Request req_1788095522819_rgp5f7g] Matching against 0 candidate credentials
+[2026-08-30T13:12:03.957Z] [INFO] [Request req_1788095523956_v4r3xw5] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:04.046Z] [INFO] [Request req_1788095523956_v4r3xw5] Matching against 0 candidate credentials
+[2026-08-30T13:12:05.051Z] [INFO] [Request req_1788095525048_8d6ui2f] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:05.126Z] [INFO] [Request req_1788095525048_8d6ui2f] Matching against 0 candidate credentials
+[2026-08-30T13:12:05.279Z] [INFO] Client disconnected
+[2026-08-30T13:12:05.652Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:05.682Z] [INFO] Client disconnected
+[2026-08-30T13:12:05.683Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:05.753Z] [INFO] [Request req_1788095525752_bggk39o] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:05.871Z] [INFO] [Request req_1788095525752_bggk39o] Matching against 0 candidate credentials
+[2026-08-30T13:12:06.875Z] [INFO] [Request req_1788095526874_rrvjqt2] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:07.034Z] [INFO] [Request req_1788095526874_rrvjqt2] Matching against 0 candidate credentials
+[2026-08-30T13:12:08.038Z] [INFO] [Request req_1788095528037_hs6ki7v] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:08.194Z] [INFO] Client disconnected
+[2026-08-30T13:12:08.312Z] [INFO] [Request req_1788095528037_hs6ki7v] Matching against 0 candidate credentials
+[2026-08-30T13:12:08.570Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:08.606Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:08.611Z] [INFO] Client disconnected
+[2026-08-30T13:12:08.700Z] [INFO] [Request req_1788095528697_jfjsd72] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:08.804Z] [INFO] [Request req_1788095528697_jfjsd72] Matching against 0 candidate credentials
+[2026-08-30T13:12:09.808Z] [INFO] [Request req_1788095529806_l5ww6kw] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:09.927Z] [INFO] [Request req_1788095529806_l5ww6kw] Matching against 0 candidate credentials
+[2026-08-30T13:12:10.932Z] [INFO] [Request req_1788095530930_v3orftn] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:11.004Z] [INFO] [Request req_1788095530930_v3orftn] Matching against 0 candidate credentials
+[2026-08-30T13:12:12.008Z] [INFO] [Request req_1788095532007_4vjbeh4] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:12.090Z] [INFO] [Request req_1788095532007_4vjbeh4] Matching against 0 candidate credentials
+[2026-08-30T13:12:26.679Z] [INFO] Client disconnected
+[2026-08-30T13:12:27.043Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:27.072Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:27.072Z] [INFO] Client disconnected
+[2026-08-30T13:12:27.129Z] [INFO] [Request req_1788095547127_fnnkb1w] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:27.250Z] [INFO] [Request req_1788095547127_fnnkb1w] Matching against 0 candidate credentials
+[2026-08-30T13:12:28.254Z] [INFO] [Request req_1788095548253_mks0ej1] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:28.365Z] [INFO] [Request req_1788095548253_mks0ej1] Matching against 0 candidate credentials
+[2026-08-30T13:12:29.340Z] [INFO] Client disconnected
+[2026-08-30T13:12:29.709Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:29.748Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:12:29.749Z] [INFO] Client disconnected
+[2026-08-30T13:12:29.810Z] [INFO] [Request req_1788095549804_729bu3z] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:29.910Z] [INFO] [Request req_1788095549804_729bu3z] Matching against 0 candidate credentials
+[2026-08-30T13:12:30.914Z] [INFO] [Request req_1788095550913_adzjngz] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:31.032Z] [INFO] [Request req_1788095550913_adzjngz] Matching against 0 candidate credentials
+[2026-08-30T13:12:32.035Z] [INFO] [Request req_1788095552034_y7kytwi] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:32.152Z] [INFO] [Request req_1788095552034_y7kytwi] Matching against 0 candidate credentials
+[2026-08-30T13:12:33.155Z] [INFO] [Request req_1788095553155_pkdo669] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:12:33.246Z] [INFO] [Request req_1788095553155_pkdo669] Matching against 0 candidate credentials
+[2026-08-30T13:15:48.602Z] [INFO] Client disconnected
+[2026-08-30T13:15:49.013Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:15:49.097Z] [INFO] [Request req_1788095749096_1dcdujv] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:15:49.189Z] [INFO] [Request req_1788095749096_1dcdujv] Matching against 0 candidate credentials
+[2026-08-30T13:15:50.194Z] [INFO] [Request req_1788095750193_4cmsghz] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:15:50.275Z] [INFO] [Request req_1788095750193_4cmsghz] Matching against 0 candidate credentials
+[2026-08-30T13:15:51.279Z] [INFO] [Request req_1788095751277_iazbgjx] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:15:51.369Z] [INFO] [Request req_1788095751277_iazbgjx] Matching against 0 candidate credentials
+[2026-08-30T13:15:52.373Z] [INFO] [Request req_1788095752371_vx3yff2] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:15:52.469Z] [INFO] [Request req_1788095752371_vx3yff2] Matching against 0 candidate credentials
+[2026-08-30T13:15:58.334Z] [INFO] Client disconnected
+[2026-08-30T13:15:58.711Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:15:58.744Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:15:58.744Z] [INFO] Client disconnected
+[2026-08-30T13:15:58.800Z] [INFO] [Request req_1788095758799_mncxnjo] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:15:58.896Z] [INFO] [Request req_1788095758799_mncxnjo] Matching against 0 candidate credentials
+[2026-08-30T13:15:59.899Z] [INFO] [Request req_1788095759898_mlvm7gp] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:16:00.022Z] [INFO] [Request req_1788095759898_mlvm7gp] Matching against 0 candidate credentials
+[2026-08-30T13:16:01.025Z] [INFO] [Request req_1788095761025_5o997s7] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:16:01.141Z] [INFO] [Request req_1788095761025_5o997s7] Matching against 0 candidate credentials
+[2026-08-30T13:16:02.144Z] [INFO] [Request req_1788095762144_7yztly2] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:16:02.255Z] [INFO] [Request req_1788095762144_7yztly2] Matching against 0 candidate credentials
+[2026-08-30T13:17:04.534Z] [INFO] [Request req_1788095824532_4rlhbcv] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:17:04.538Z] [INFO] Client disconnected
+[2026-08-30T13:17:04.541Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:17:04.731Z] [INFO] [Request req_1788095824730_l25sqz8] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:04.805Z] [INFO] [Request req_1788095824730_l25sqz8] Matching against 0 candidate credentials
+[2026-08-30T13:17:06.290Z] [INFO] [Request req_1788095826289_w2miqpy] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:06.422Z] [INFO] [Request req_1788095826289_w2miqpy] Matching against 0 candidate credentials
+[2026-08-30T13:17:08.290Z] [INFO] [Request req_1788095828289_xq19cjf] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:08.391Z] [INFO] [Request req_1788095828289_xq19cjf] Matching against 0 candidate credentials
+[2026-08-30T13:17:10.290Z] [INFO] [Request req_1788095830289_3052i4j] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:10.382Z] [INFO] [Request req_1788095830289_3052i4j] Matching against 0 candidate credentials
+[2026-08-30T13:17:12.290Z] [INFO] [Request req_1788095832289_xrjr3a9] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:12.385Z] [INFO] [Request req_1788095832289_xrjr3a9] Matching against 0 candidate credentials
+[2026-08-30T13:17:14.290Z] [INFO] [Request req_1788095834289_p6fg336] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:14.382Z] [INFO] [Request req_1788095834289_p6fg336] Matching against 0 candidate credentials
+[2026-08-30T13:17:16.291Z] [INFO] [Request req_1788095836289_bmoip3z] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:16.401Z] [INFO] [Request req_1788095836289_bmoip3z] Matching against 0 candidate credentials
+[2026-08-30T13:17:18.291Z] [INFO] [Request req_1788095838290_5u1ij3a] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:18.362Z] [INFO] [Request req_1788095838290_5u1ij3a] Matching against 0 candidate credentials
+[2026-08-30T13:17:20.290Z] [INFO] [Request req_1788095840288_c5m6cqb] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:20.385Z] [INFO] [Request req_1788095840288_c5m6cqb] Matching against 0 candidate credentials
+[2026-08-30T13:17:22.290Z] [INFO] [Request req_1788095842289_nenobkk] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:22.355Z] [INFO] [Request req_1788095842289_nenobkk] Matching against 0 candidate credentials
+[2026-08-30T13:17:24.377Z] [INFO] [Request req_1788095844376_ph1qrr1] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:24.442Z] [INFO] [Request req_1788095844376_ph1qrr1] Matching against 0 candidate credentials
+[2026-08-30T13:17:27.377Z] [INFO] [Request req_1788095847376_1jqba98] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:27.444Z] [INFO] [Request req_1788095847376_1jqba98] Matching against 0 candidate credentials
+[2026-08-30T13:17:28.793Z] [INFO] [Request req_1788095848792_t767qjs] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:28.879Z] [INFO] [Request req_1788095848792_t767qjs] Matching against 0 candidate credentials
+[2026-08-30T13:17:29.909Z] [INFO] [Request req_1788095849909_wrv6578] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:30.003Z] [INFO] [Request req_1788095849909_wrv6578] Matching against 0 candidate credentials
+[2026-08-30T13:17:30.099Z] [INFO] Client disconnected
+[2026-08-30T13:17:30.525Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:17:30.535Z] [INFO] Client disconnected
+[2026-08-30T13:17:30.537Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:17:30.631Z] [INFO] [Request req_1788095850630_g4dorly] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:30.742Z] [INFO] [Request req_1788095850630_g4dorly] Matching against 0 candidate credentials
+[2026-08-30T13:17:31.745Z] [INFO] [Request req_1788095851744_jxuvefw] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:31.842Z] [INFO] [Request req_1788095851744_jxuvefw] Matching against 0 candidate credentials
+[2026-08-30T13:17:32.845Z] [INFO] [Request req_1788095852844_0x1lbit] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:32.931Z] [INFO] [Request req_1788095852844_0x1lbit] Matching against 0 candidate credentials
+[2026-08-30T13:17:33.935Z] [INFO] [Request req_1788095853934_1hr3ya5] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:34.028Z] [INFO] [Request req_1788095853934_1hr3ya5] Matching against 0 candidate credentials
+[2026-08-30T13:17:35.033Z] [INFO] [Request req_1788095855031_3zbyprj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:35.138Z] [INFO] [Request req_1788095855031_3zbyprj] Matching against 0 candidate credentials
+[2026-08-30T13:17:36.142Z] [INFO] [Request req_1788095856140_x30hg36] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:36.237Z] [INFO] [Request req_1788095856140_x30hg36] Matching against 0 candidate credentials
+[2026-08-30T13:17:37.241Z] [INFO] [Request req_1788095857240_rrdruec] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:37.330Z] [INFO] [Request req_1788095857240_rrdruec] Matching against 0 candidate credentials
+[2026-08-30T13:17:38.334Z] [INFO] [Request req_1788095858333_dx8osob] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:38.420Z] [INFO] [Request req_1788095858333_dx8osob] Matching against 0 candidate credentials
+[2026-08-30T13:17:39.423Z] [INFO] [Request req_1788095859422_phmjms2] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:39.514Z] [INFO] [Request req_1788095859422_phmjms2] Matching against 0 candidate credentials
+[2026-08-30T13:17:41.292Z] [INFO] [Request req_1788095861291_61yn6r3] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:41.408Z] [INFO] [Request req_1788095861291_61yn6r3] Matching against 0 candidate credentials
+[2026-08-30T13:17:43.291Z] [INFO] [Request req_1788095863290_0sovwrb] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:43.381Z] [INFO] [Request req_1788095863290_0sovwrb] Matching against 0 candidate credentials
+[2026-08-30T13:17:45.291Z] [INFO] [Request req_1788095865290_ydpunh1] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:45.388Z] [INFO] [Request req_1788095865290_ydpunh1] Matching against 0 candidate credentials
+[2026-08-30T13:17:46.611Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:17:47.293Z] [INFO] [Request req_1788095867290_8evde5j] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:47.389Z] [INFO] [Request req_1788095867290_8evde5j] Matching against 0 candidate credentials
+[2026-08-30T13:17:47.730Z] [INFO] [Request req_1788095867729_slo9nrl] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-30T13:17:49.291Z] [INFO] [Request req_1788095869290_nhyiv9s] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:17:49.332Z] [INFO] Client disconnected
+[2026-08-30T13:17:49.367Z] [INFO] [Request req_1788095869290_nhyiv9s] Matching against 1 candidate credentials
+[2026-08-30T13:17:49.916Z] [INFO] [Request req_1788095869915_0otqhpe] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:17:49.917Z] [INFO] Client disconnected
+[2026-08-30T13:17:50.631Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:17:51.726Z] [INFO] [Request req_1788095871724_zc9a66e] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-30T13:17:53.359Z] [INFO] Client disconnected
+[2026-08-30T13:17:53.389Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:17:56.370Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:18:01.548Z] [INFO] [Request req_1788095881548_bv8nisk] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:18:01.550Z] [INFO] [Request req_1788095881548_zys4d4r] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:18:01.558Z] [INFO] Client disconnected
+[2026-08-30T13:18:01.565Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:18:01.604Z] [INFO] [Request req_1788095881603_lw8heym] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:18:01.646Z] [INFO] [Request req_1788095881548_bv8nisk] Matching against 2 candidate credentials
+[2026-08-30T13:18:01.725Z] [INFO] [Request req_1788095881603_lw8heym] Matching against 2 candidate credentials
+[2026-08-30T13:18:02.322Z] [INFO] [Request req_1788095882321_7omelq3] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T13:18:02.323Z] [INFO] Client disconnected
+[2026-08-30T13:18:05.353Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:18:08.356Z] [INFO] Client disconnected
+[2026-08-30T13:18:08.359Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:18:09.169Z] [INFO] [Request req_1788095889168_tjc0v8r] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:18:09.280Z] [INFO] [Request req_1788095889168_tjc0v8r] Matching against 2 candidate credentials
+[2026-08-30T13:18:10.743Z] [INFO] Client disconnected
+[2026-08-30T13:18:13.750Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:19:35.838Z] [INFO] Client disconnected
+[2026-08-30T13:19:35.840Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:19:36.648Z] [INFO] [Request req_1788095976646_bn9wn08] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:19:36.742Z] [INFO] [Request req_1788095976646_bn9wn08] Matching against 2 candidate credentials
+[2026-08-30T13:19:38.219Z] [INFO] Client disconnected
+[2026-08-30T13:19:41.229Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:19:50.964Z] [INFO] Client disconnected
+[2026-08-30T13:19:50.966Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:19:51.777Z] [INFO] [Request req_1788095991776_bdd9cjq] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:19:51.870Z] [INFO] [Request req_1788095991776_bdd9cjq] Matching against 2 candidate credentials
+[2026-08-30T13:19:53.311Z] [INFO] Client disconnected
+[2026-08-30T13:19:56.321Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:20:10.694Z] [INFO] Client disconnected
+[2026-08-30T13:20:10.696Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:20:11.509Z] [INFO] [Request req_1788096011508_vxtj5xz] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:20:11.604Z] [INFO] [Request req_1788096011508_vxtj5xz] Matching against 2 candidate credentials
+[2026-08-30T13:20:13.108Z] [INFO] Client disconnected
+[2026-08-30T13:20:16.122Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:21:26.190Z] [INFO] Client disconnected
+[2026-08-30T13:21:26.194Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:21:27.002Z] [INFO] [Request req_1788096087001_rgpysrj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:21:27.102Z] [INFO] [Request req_1788096087001_rgpysrj] Matching against 2 candidate credentials
+[2026-08-30T13:21:28.591Z] [INFO] Client disconnected
+[2026-08-30T13:21:31.615Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:22:09.889Z] [INFO] Client disconnected
+[2026-08-30T13:22:09.890Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:22:10.705Z] [INFO] [Request req_1788096130704_pd92drw] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:22:10.800Z] [INFO] [Request req_1788096130704_pd92drw] Matching against 2 candidate credentials
+[2026-08-30T13:22:12.306Z] [INFO] Client disconnected
+[2026-08-30T13:22:15.321Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:22:47.827Z] [INFO] Client disconnected
+[2026-08-30T13:22:47.829Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:22:48.658Z] [INFO] [Request req_1788096168656_pvugqgf] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:22:48.769Z] [INFO] [Request req_1788096168656_pvugqgf] Matching against 2 candidate credentials
+[2026-08-30T13:22:50.314Z] [INFO] Client disconnected
+[2026-08-30T13:22:53.325Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:24:39.475Z] [INFO] Client disconnected
+[2026-08-30T13:24:39.480Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T13:24:40.289Z] [INFO] [Request req_1788096280287_apeqbld] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T13:24:40.377Z] [INFO] [Request req_1788096280287_apeqbld] Matching against 2 candidate credentials
+[2026-08-30T13:24:41.871Z] [INFO] Client disconnected
+[2026-08-30T13:24:44.888Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:05:52.104Z] [INFO] Client disconnected
+[2026-08-30T15:05:52.107Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:05:52.928Z] [INFO] [Request req_1788102352926_27hoksq] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:05:53.056Z] [INFO] [Request req_1788102352926_27hoksq] Matching against 2 candidate credentials
+[2026-08-30T15:05:54.656Z] [INFO] Client disconnected
+[2026-08-30T15:05:57.668Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:06:29.092Z] [INFO] Client disconnected
+[2026-08-30T15:06:29.093Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:06:29.902Z] [INFO] [Request req_1788102389901_jf7agzh] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:06:29.988Z] [INFO] [Request req_1788102389901_jf7agzh] Matching against 2 candidate credentials
+[2026-08-30T15:06:31.460Z] [INFO] Client disconnected
+[2026-08-30T15:06:34.470Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:12:01.070Z] [INFO] Client disconnected
+[2026-08-30T15:12:01.074Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:12:01.880Z] [INFO] [Request req_1788102721878_oh6i9st] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:12:01.966Z] [INFO] [Request req_1788102721878_oh6i9st] Matching against 2 candidate credentials
+[2026-08-30T15:12:03.452Z] [INFO] Client disconnected
+[2026-08-30T15:12:06.462Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:12:31.305Z] [INFO] Client disconnected
+[2026-08-30T15:12:31.307Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:12:32.120Z] [INFO] [Request req_1788102752118_219bqjq] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:12:32.212Z] [INFO] [Request req_1788102752118_219bqjq] Matching against 2 candidate credentials
+[2026-08-30T15:12:33.675Z] [INFO] Client disconnected
+[2026-08-30T15:12:36.687Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:15:23.949Z] [INFO] Client disconnected
+[2026-08-30T15:15:23.951Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:15:24.768Z] [INFO] [Request req_1788102924766_95jgkij] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:15:24.847Z] [INFO] [Request req_1788102924766_95jgkij] Matching against 2 candidate credentials
+[2026-08-30T15:15:26.385Z] [INFO] Client disconnected
+[2026-08-30T15:15:29.392Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:16:02.094Z] [INFO] Client disconnected
+[2026-08-30T15:16:13.730Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:16:13.784Z] [INFO] [Request req_1788102973751_hojes9s] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:16:13.904Z] [INFO] [Request req_1788102973751_hojes9s] Matching against 2 candidate credentials
+[2026-08-30T15:16:14.505Z] [INFO] [Request req_1788102974504_n5jpats] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T15:16:14.507Z] [INFO] Client disconnected
+[2026-08-30T15:16:17.168Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:16:17.170Z] [INFO] [Request req_1788102977169_uufj8bk] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:16:17.241Z] [INFO] [Request req_1788102977169_uufj8bk] Matching against 2 candidate credentials
+[2026-08-30T15:16:17.759Z] [INFO] [Request req_1788102977755_rwkr1kp] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T15:16:17.763Z] [INFO] Client disconnected
+[2026-08-30T15:16:20.138Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:16:20.142Z] [INFO] [Request req_1788102980141_6vrs8lm] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:16:20.221Z] [INFO] [Request req_1788102980141_6vrs8lm] Matching against 2 candidate credentials
+[2026-08-30T15:16:20.749Z] [INFO] [Request req_1788102980747_uklturi] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T15:16:20.750Z] [INFO] Client disconnected
+[2026-08-30T15:16:22.922Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:16:22.955Z] [INFO] [Request req_1788102982955_esn8lgd] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:16:23.029Z] [INFO] [Request req_1788102982955_esn8lgd] Matching against 2 candidate credentials
+[2026-08-30T15:16:23.581Z] [INFO] [Request req_1788102983580_9tcuzfw] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T15:16:23.584Z] [INFO] Client disconnected
+[2026-08-30T15:16:26.622Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:16:30.303Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:16:30.305Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:16:33.477Z] [INFO] [Request req_1788102993476_n29vk83] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:16:33.479Z] [INFO] [Request req_1788102993476_o251fpt] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T15:16:33.482Z] [INFO] Client disconnected
+[2026-08-30T15:16:33.587Z] [INFO] [Request req_1788102993476_n29vk83] Matching against 2 candidate credentials
+[2026-08-30T15:16:42.044Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:16:42.046Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:16:45.492Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:16:45.492Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:16:45.813Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:16:45.814Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:16:46.092Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:16:46.093Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:17:04.933Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-08-30T15:17:04.939Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-08-30T15:17:04.941Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-08-30T15:17:04.943Z] [INFO] Fingerprint mode: mock
+[2026-08-30T15:17:04.977Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-08-30T15:17:04.977Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-08-30T15:17:05.002Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-08-30T15:17:05.132Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:17:12.027Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:17:12.058Z] [INFO] Client disconnected
+[2026-08-30T15:17:12.059Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:17:12.158Z] [INFO] [Request req_1788103032146_iuqv4zi] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:17:12.270Z] [INFO] [Request req_1788103032146_iuqv4zi] Matching against 2 candidate credentials
+[2026-08-30T15:17:12.846Z] [INFO] [Request req_1788103032843_x735pnt] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T15:17:12.862Z] [INFO] Client disconnected
+[2026-08-30T15:17:15.894Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:17:20.536Z] [INFO] Client disconnected
+[2026-08-30T15:17:20.537Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:17:21.355Z] [INFO] [Request req_1788103041353_v6a7m2f] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:17:21.450Z] [INFO] [Request req_1788103041353_v6a7m2f] Matching against 2 candidate credentials
+[2026-08-30T15:17:22.933Z] [INFO] Client disconnected
+[2026-08-30T15:17:25.945Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:17:45.806Z] [INFO] [Request req_1788103065804_emg8uhb] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-30T15:17:47.440Z] [INFO] Client disconnected
+[2026-08-30T15:17:50.456Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:17:54.285Z] [INFO] [Request req_1788103074284_ukmh3dn] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:17:54.288Z] [INFO] [Request req_1788103074284_amln7ah] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T15:17:54.306Z] [INFO] Client disconnected
+[2026-08-30T15:17:54.339Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:17:54.341Z] [INFO] [Request req_1788103074340_v14lb50] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:17:54.420Z] [INFO] [Request req_1788103074284_ukmh3dn] Matching against 1 candidate credentials
+[2026-08-30T15:17:54.495Z] [INFO] [Request req_1788103074340_v14lb50] Matching against 1 candidate credentials
+[2026-08-30T15:17:55.026Z] [INFO] [Request req_1788103075025_863ioaw] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T15:17:55.031Z] [INFO] Client disconnected
+[2026-08-30T15:17:58.067Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:17:59.308Z] [INFO] Client disconnected
+[2026-08-30T15:17:59.309Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:18:00.119Z] [INFO] [Request req_1788103080118_hd3aeaj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:18:00.220Z] [INFO] [Request req_1788103080118_hd3aeaj] Matching against 1 candidate credentials
+[2026-08-30T15:18:06.814Z] [INFO] [Request req_1788103086813_dcpksap] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:18:06.894Z] [INFO] [Request req_1788103086813_dcpksap] Matching against 1 candidate credentials
+[2026-08-30T15:18:08.131Z] [INFO] [Request req_1788103088130_hl200u0] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:18:08.225Z] [INFO] [Request req_1788103088130_hl200u0] Matching against 1 candidate credentials
+[2026-08-30T15:18:49.945Z] [INFO] Client disconnected
+[2026-08-30T15:18:53.459Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:19:01.740Z] [INFO] [Request req_1788103141739_sjgahtd] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-08-30T15:19:01.770Z] [INFO] Client disconnected
+[2026-08-30T15:19:04.775Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:19:10.114Z] [INFO] [Request req_1788103150113_un88ecm] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-30T15:19:11.744Z] [INFO] Client disconnected
+[2026-08-30T15:19:13.822Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:19:15.313Z] [INFO] [Request req_1788103155311_991osjy] DeviceType: fingerprint | Action: fingerprint.enroll
+[2026-08-30T15:19:16.935Z] [INFO] Client disconnected
+[2026-08-30T15:19:19.943Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:19:23.209Z] [INFO] Client disconnected
+[2026-08-30T15:19:23.211Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:19:24.020Z] [INFO] [Request req_1788103164018_oxl717r] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:19:24.119Z] [INFO] [Request req_1788103164018_oxl717r] Matching against 2 candidate credentials
+[2026-08-30T15:19:25.567Z] [INFO] Client disconnected
+[2026-08-30T15:19:28.578Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:19:33.278Z] [INFO] Client disconnected
+[2026-08-30T15:19:33.280Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:19:34.090Z] [INFO] [Request req_1788103174089_4ezqw1b] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-08-30T15:19:34.168Z] [INFO] [Request req_1788103174089_4ezqw1b] Matching against 2 candidate credentials
+[2026-08-30T15:19:35.637Z] [INFO] Client disconnected
+[2026-08-30T15:19:38.644Z] [INFO] Client connected from: 127.0.0.1
+[2026-08-30T15:19:50.099Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:19:50.101Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-08-30T15:32:37.484Z] [INFO] Client disconnected
+[2026-09-02T16:27:16.358Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-09-02T16:27:16.362Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-09-02T16:27:16.363Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-09-02T16:27:16.363Z] [INFO] Fingerprint mode: mock
+[2026-09-02T16:27:16.364Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-09-02T16:27:16.364Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-09-02T16:27:16.373Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-09-02T16:27:17.318Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T16:27:17.321Z] [INFO] [Request req_1788366437319_kga4aer] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:17.407Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:17.407Z] [INFO] [Request req_1788366437319_kga4aer] Matching against 0 candidate credentials
+[2026-09-02T16:27:18.441Z] [INFO] [Request req_1788366438441_kk5130i] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:18.446Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:18.447Z] [INFO] [Request req_1788366438441_kk5130i] Matching against 0 candidate credentials
+[2026-09-02T16:27:19.451Z] [INFO] [Request req_1788366439450_q3r12jj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:19.457Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:19.458Z] [INFO] [Request req_1788366439450_q3r12jj] Matching against 0 candidate credentials
+[2026-09-02T16:27:19.700Z] [INFO] Client disconnected
+[2026-09-02T16:27:20.244Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T16:27:20.247Z] [INFO] [Request req_1788366440246_5mrk6tt] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:20.252Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:20.253Z] [INFO] [Request req_1788366440246_5mrk6tt] Matching against 0 candidate credentials
+[2026-09-02T16:27:20.463Z] [INFO] [Request req_1788366440461_fxqt3bw] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:20.471Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:20.472Z] [INFO] [Request req_1788366440461_fxqt3bw] Matching against 0 candidate credentials
+[2026-09-02T16:27:21.057Z] [INFO] [Request req_1788366441056_9yzxhzz] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:21.062Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:21.062Z] [INFO] [Request req_1788366441056_9yzxhzz] Matching against 0 candidate credentials
+[2026-09-02T16:27:21.256Z] [INFO] [Request req_1788366441255_ml9wfyu] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:21.262Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:21.262Z] [INFO] [Request req_1788366441255_ml9wfyu] Matching against 0 candidate credentials
+[2026-09-02T16:27:21.476Z] [INFO] [Request req_1788366441475_w1wkive] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:21.478Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:21.479Z] [INFO] [Request req_1788366441475_w1wkive] Matching against 0 candidate credentials
+[2026-09-02T16:27:22.265Z] [INFO] [Request req_1788366442264_1j2ubac] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:22.270Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:22.271Z] [INFO] [Request req_1788366442264_1j2ubac] Matching against 0 candidate credentials
+[2026-09-02T16:27:22.382Z] [INFO] [Request req_1788366442382_qdt7j9b] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:22.387Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:22.387Z] [INFO] [Request req_1788366442382_qdt7j9b] Matching against 0 candidate credentials
+[2026-09-02T16:27:22.481Z] [INFO] [Request req_1788366442481_n6b9m2i] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:22.485Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:22.485Z] [INFO] [Request req_1788366442481_n6b9m2i] Matching against 0 candidate credentials
+[2026-09-02T16:27:23.042Z] [INFO] [Request req_1788366443041_r5qj2hx] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:23.047Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:23.048Z] [INFO] [Request req_1788366443041_r5qj2hx] Matching against 0 candidate credentials
+[2026-09-02T16:27:23.274Z] [INFO] [Request req_1788366443273_8w5m19q] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:23.278Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:23.279Z] [INFO] [Request req_1788366443273_8w5m19q] Matching against 0 candidate credentials
+[2026-09-02T16:27:23.488Z] [INFO] [Request req_1788366443487_lk0jivu] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:23.491Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:23.491Z] [INFO] [Request req_1788366443487_lk0jivu] Matching against 0 candidate credentials
+[2026-09-02T16:27:24.285Z] [INFO] [Request req_1788366444285_njzxm0i] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:24.288Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:24.288Z] [INFO] [Request req_1788366444285_njzxm0i] Matching against 0 candidate credentials
+[2026-09-02T16:27:24.442Z] [INFO] Client disconnected
+[2026-09-02T16:27:27.501Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T16:27:27.504Z] [INFO] [Request req_1788366447503_26jdn4l] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:27.514Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:27.514Z] [INFO] [Request req_1788366447503_26jdn4l] Matching against 0 candidate credentials
+[2026-09-02T16:27:28.300Z] [INFO] [Request req_1788366448299_4ec96ob] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:28.307Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:28.308Z] [INFO] [Request req_1788366448299_4ec96ob] Matching against 0 candidate credentials
+[2026-09-02T16:27:28.497Z] [INFO] [Request req_1788366448496_ri5yk31] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:28.505Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:28.506Z] [INFO] [Request req_1788366448496_ri5yk31] Matching against 0 candidate credentials
+[2026-09-02T16:27:28.517Z] [INFO] [Request req_1788366448516_guaacok] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:28.521Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:28.522Z] [INFO] [Request req_1788366448516_guaacok] Matching against 0 candidate credentials
+[2026-09-02T16:27:29.310Z] [INFO] [Request req_1788366449310_qq4bysl] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:29.315Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:29.315Z] [INFO] [Request req_1788366449310_qq4bysl] Matching against 0 candidate credentials
+[2026-09-02T16:27:29.509Z] [INFO] [Request req_1788366449507_nkc7wjj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:29.513Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:29.513Z] [INFO] [Request req_1788366449507_nkc7wjj] Matching against 0 candidate credentials
+[2026-09-02T16:27:29.525Z] [INFO] [Request req_1788366449524_t71jmjh] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:29.529Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:29.529Z] [INFO] [Request req_1788366449524_t71jmjh] Matching against 0 candidate credentials
+[2026-09-02T16:27:29.652Z] [INFO] Client disconnected
+[2026-09-02T16:27:30.113Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T16:27:30.151Z] [INFO] [Request req_1788366450150_b47tctq] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:30.155Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:30.156Z] [INFO] [Request req_1788366450150_b47tctq] Matching against 0 candidate credentials
+[2026-09-02T16:27:31.177Z] [INFO] [Request req_1788366451176_5zfn5l1] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:31.182Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:31.183Z] [INFO] [Request req_1788366451176_5zfn5l1] Matching against 0 candidate credentials
+[2026-09-02T16:27:32.188Z] [INFO] [Request req_1788366452187_k28pic4] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:32.195Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:32.196Z] [INFO] [Request req_1788366452187_k28pic4] Matching against 0 candidate credentials
+[2026-09-02T16:27:33.199Z] [INFO] [Request req_1788366453197_718aym5] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:33.209Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:33.215Z] [INFO] [Request req_1788366453197_718aym5] Matching against 0 candidate credentials
+[2026-09-02T16:27:34.905Z] [INFO] [Request req_1788366454903_l85ccz0] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:34.910Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:34.911Z] [INFO] [Request req_1788366454903_l85ccz0] Matching against 0 candidate credentials
+[2026-09-02T16:27:36.703Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:27:36.704Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:27:36.904Z] [INFO] [Request req_1788366456902_d7wry7l] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:36.911Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:36.912Z] [INFO] [Request req_1788366456902_d7wry7l] Matching against 0 candidate credentials
+[2026-09-02T16:27:38.904Z] [INFO] [Request req_1788366458903_6vtyhlx] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:38.910Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:38.911Z] [INFO] [Request req_1788366458903_6vtyhlx] Matching against 0 candidate credentials
+[2026-09-02T16:27:40.319Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:27:40.320Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:27:40.904Z] [INFO] [Request req_1788366460903_cimc592] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:40.915Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:40.915Z] [INFO] [Request req_1788366460903_cimc592] Matching against 0 candidate credentials
+[2026-09-02T16:27:42.251Z] [INFO] [Request req_1788366462250_a9j9yob] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:42.255Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:42.255Z] [INFO] [Request req_1788366462250_a9j9yob] Matching against 0 candidate credentials
+[2026-09-02T16:27:43.261Z] [INFO] [Request req_1788366463260_7k0yhh9] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:43.264Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:43.264Z] [INFO] [Request req_1788366463260_7k0yhh9] Matching against 0 candidate credentials
+[2026-09-02T16:27:44.903Z] [INFO] [Request req_1788366464902_xcvrsir] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:44.906Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:44.907Z] [INFO] [Request req_1788366464902_xcvrsir] Matching against 0 candidate credentials
+[2026-09-02T16:27:46.691Z] [INFO] [Request req_1788366466676_k9epq2k] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:46.705Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:46.707Z] [INFO] [Request req_1788366466676_k9epq2k] Matching against 0 candidate credentials
+[2026-09-02T16:27:47.710Z] [INFO] [Request req_1788366467709_hu91nxo] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:47.712Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:47.713Z] [INFO] [Request req_1788366467709_hu91nxo] Matching against 0 candidate credentials
+[2026-09-02T16:27:48.716Z] [INFO] [Request req_1788366468715_bd0rmmq] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:48.722Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:48.722Z] [INFO] [Request req_1788366468715_bd0rmmq] Matching against 0 candidate credentials
+[2026-09-02T16:27:53.282Z] [INFO] [Request req_1788366473281_qk701nf] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:53.287Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:53.288Z] [INFO] [Request req_1788366473281_qk701nf] Matching against 0 candidate credentials
+[2026-09-02T16:27:58.069Z] [INFO] [Request req_1788366478057_6b23lv6] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:58.092Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:58.093Z] [INFO] [Request req_1788366478057_6b23lv6] Matching against 0 candidate credentials
+[2026-09-02T16:27:59.095Z] [INFO] [Request req_1788366479094_ovyen0y] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:27:59.099Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:27:59.099Z] [INFO] [Request req_1788366479094_ovyen0y] Matching against 0 candidate credentials
+[2026-09-02T16:28:00.903Z] [INFO] [Request req_1788366480902_31ow25b] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:00.907Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:00.907Z] [INFO] [Request req_1788366480902_31ow25b] Matching against 0 candidate credentials
+[2026-09-02T16:28:01.910Z] [INFO] [Request req_1788366481910_exj6rcx] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:01.913Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:01.914Z] [INFO] [Request req_1788366481910_exj6rcx] Matching against 0 candidate credentials
+[2026-09-02T16:28:02.916Z] [INFO] [Request req_1788366482915_oupo3rn] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:02.921Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:02.921Z] [INFO] [Request req_1788366482915_oupo3rn] Matching against 0 candidate credentials
+[2026-09-02T16:28:04.044Z] [INFO] [Request req_1788366483924_lyiwr4e] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:04.072Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:04.073Z] [INFO] [Request req_1788366483924_lyiwr4e] Matching against 0 candidate credentials
+[2026-09-02T16:28:05.903Z] [INFO] [Request req_1788366485902_af293wk] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:05.906Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:05.906Z] [INFO] [Request req_1788366485902_af293wk] Matching against 0 candidate credentials
+[2026-09-02T16:28:07.174Z] [INFO] [Request req_1788366487173_3c7ettp] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:07.176Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:07.177Z] [INFO] [Request req_1788366487173_3c7ettp] Matching against 0 candidate credentials
+[2026-09-02T16:28:07.894Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:28:07.895Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:28:08.407Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:28:08.407Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:28:08.791Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:28:08.791Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:28:09.572Z] [INFO] [Request req_1788366489571_e9zqydn] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:09.574Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:09.575Z] [INFO] [Request req_1788366489571_e9zqydn] Matching against 0 candidate credentials
+[2026-09-02T16:28:13.588Z] [INFO] [Request req_1788366493587_whlab0s] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:13.592Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:13.593Z] [INFO] [Request req_1788366493587_whlab0s] Matching against 0 candidate credentials
+[2026-09-02T16:28:15.247Z] [INFO] [Request req_1788366495247_fsqz9tg] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:15.251Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:15.252Z] [INFO] [Request req_1788366495247_fsqz9tg] Matching against 0 candidate credentials
+[2026-09-02T16:28:17.047Z] [INFO] [Request req_1788366497046_2h0vz88] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:17.051Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:17.051Z] [INFO] [Request req_1788366497046_2h0vz88] Matching against 0 candidate credentials
+[2026-09-02T16:28:18.903Z] [INFO] [Request req_1788366498902_peaj6ic] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:18.909Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:18.910Z] [INFO] [Request req_1788366498902_peaj6ic] Matching against 0 candidate credentials
+[2026-09-02T16:28:29.027Z] [INFO] [Request req_1788366509026_v1cg9mp] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:29.033Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:29.034Z] [INFO] [Request req_1788366509026_v1cg9mp] Matching against 0 candidate credentials
+[2026-09-02T16:28:32.915Z] [INFO] [Request req_1788366512914_qp47gnq] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:32.924Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:32.925Z] [INFO] [Request req_1788366512914_qp47gnq] Matching against 0 candidate credentials
+[2026-09-02T16:28:43.056Z] [INFO] [Request req_1788366523054_u6qhd4g] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:43.062Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:43.062Z] [INFO] [Request req_1788366523054_u6qhd4g] Matching against 0 candidate credentials
+[2026-09-02T16:28:54.904Z] [INFO] [Request req_1788366534902_t6l7o0t] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:28:54.912Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:28:54.913Z] [INFO] [Request req_1788366534902_t6l7o0t] Matching against 0 candidate credentials
+[2026-09-02T16:29:06.905Z] [INFO] [Request req_1788366546903_7lgsmc8] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:29:06.911Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:29:06.912Z] [INFO] [Request req_1788366546903_7lgsmc8] Matching against 0 candidate credentials
+[2026-09-02T16:29:09.575Z] [INFO] [Request req_1788366549573_bifo6kf] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:29:09.582Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:29:09.583Z] [INFO] [Request req_1788366549573_bifo6kf] Matching against 0 candidate credentials
+[2026-09-02T16:29:20.904Z] [INFO] [Request req_1788366560903_jkhd2um] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:29:20.910Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:29:20.911Z] [INFO] [Request req_1788366560903_jkhd2um] Matching against 0 candidate credentials
+[2026-09-02T16:29:24.332Z] [INFO] [Request req_1788366564331_8ltd6e4] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:29:24.336Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:29:24.337Z] [INFO] [Request req_1788366564331_8ltd6e4] Matching against 0 candidate credentials
+[2026-09-02T16:29:25.904Z] [INFO] [Request req_1788366565903_3g7r7d7] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:29:25.910Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:29:25.911Z] [INFO] [Request req_1788366565903_3g7r7d7] Matching against 0 candidate credentials
+[2026-09-02T16:29:34.503Z] [INFO] [Request req_1788366574501_6co2cxi] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:29:34.509Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:29:34.510Z] [INFO] [Request req_1788366574501_6co2cxi] Matching against 0 candidate credentials
+[2026-09-02T16:29:44.713Z] [INFO] [Request req_1788366584712_donn16p] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:29:44.719Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:29:44.720Z] [INFO] [Request req_1788366584712_donn16p] Matching against 0 candidate credentials
+[2026-09-02T16:29:55.904Z] [INFO] [Request req_1788366595902_eyc21p5] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:29:55.912Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:29:55.913Z] [INFO] [Request req_1788366595902_eyc21p5] Matching against 0 candidate credentials
+[2026-09-02T16:30:00.020Z] [INFO] [Request req_1788366600019_k0r696x] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:30:00.027Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:30:00.028Z] [INFO] [Request req_1788366600019_k0r696x] Matching against 0 candidate credentials
+[2026-09-02T16:30:01.965Z] [INFO] [Request req_1788366601965_dxwm7vx] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:30:01.968Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:30:01.968Z] [INFO] [Request req_1788366601965_dxwm7vx] Matching against 0 candidate credentials
+[2026-09-02T16:30:09.577Z] [INFO] [Request req_1788366609576_hv98ybj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:30:09.585Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:30:09.585Z] [INFO] [Request req_1788366609576_hv98ybj] Matching against 0 candidate credentials
+[2026-09-02T16:30:20.904Z] [INFO] [Request req_1788366620902_9j0fxmc] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:30:20.910Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:30:20.910Z] [INFO] [Request req_1788366620902_9j0fxmc] Matching against 0 candidate credentials
+[2026-09-02T16:30:22.904Z] [INFO] [Request req_1788366622903_fjenbl6] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:30:22.910Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:30:22.911Z] [INFO] [Request req_1788366622903_fjenbl6] Matching against 0 candidate credentials
+[2026-09-02T16:30:34.904Z] [INFO] [Request req_1788366634903_u1a6x1c] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:30:34.909Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:30:34.910Z] [INFO] [Request req_1788366634903_u1a6x1c] Matching against 0 candidate credentials
+[2026-09-02T16:30:42.323Z] [INFO] [Request req_1788366642322_r102sva] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T16:30:42.329Z] [ERROR] [Bridge] Failed to fetch candidates: connect ECONNREFUSED ::1:8080; connect ECONNREFUSED 127.0.0.1:8080
+[2026-09-02T16:30:42.329Z] [INFO] [Request req_1788366642322_r102sva] Matching against 0 candidate credentials
+[2026-09-02T16:30:42.614Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T16:30:42.615Z] [ERROR] (node:64644) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [WebSocketServer]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+[2026-09-02T16:30:42.615Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:42:32.586Z] [INFO] 
+========================================
+ UPLODD HARDWARE BRIDGE v1.0.0
+========================================
+ Platform:    darwin/x64
+ Node.js:     v24.15.0
+ WebSocket:   ws://127.0.0.1:8765
+ Fingerprint: mock
+ Backend:     http://localhost:8080/api
+ App root:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge
+ Log file:    /Users/akshat/Squirrel/Qkarts/squirrel-hardware-bridge/logs/bridge.log
+========================================
+
+[2026-09-02T19:42:32.591Z] [INFO] Starting Uplodd Hardware Bridge on ws://127.0.0.1:8765
+[2026-09-02T19:42:32.591Z] [INFO] Backend API endpoint configured: http://localhost:8080/api
+[2026-09-02T19:42:32.591Z] [INFO] Fingerprint mode: mock
+[2026-09-02T19:42:32.592Z] [INFO] [Bridge] Fingerprint mode: mock
+[2026-09-02T19:42:32.593Z] [INFO] [Bridge] Using MockFingerprintProvider — full POS testing without hardware
+[2026-09-02T19:42:32.609Z] [INFO] [Bridge] WebSocket server ready on ws://127.0.0.1:8765
+[2026-09-02T19:42:33.568Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T19:42:33.574Z] [INFO] [Request req_1788378153560_xw0y9jd] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:33.983Z] [INFO] [Request req_1788378153560_xw0y9jd] Matching against 2 candidate credentials
+[2026-09-02T19:42:35.935Z] [INFO] [Request req_1788378155934_ymp7g3o] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:36.191Z] [INFO] [Request req_1788378155934_ymp7g3o] Matching against 2 candidate credentials
+[2026-09-02T19:42:37.543Z] [INFO] [Request req_1788378157542_co7ubf9] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:37.727Z] [INFO] [Request req_1788378157542_co7ubf9] Matching against 2 candidate credentials
+[2026-09-02T19:42:39.071Z] [INFO] [Request req_1788378159071_t2tqthz] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:39.132Z] [INFO] [Request req_1788378159071_t2tqthz] Matching against 2 candidate credentials
+[2026-09-02T19:42:40.477Z] [INFO] [Request req_1788378160476_7jfnj5l] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:40.538Z] [INFO] [Request req_1788378160476_7jfnj5l] Matching against 2 candidate credentials
+[2026-09-02T19:42:42.275Z] [INFO] [Request req_1788378162274_mc170pg] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:42.366Z] [INFO] [Request req_1788378162274_mc170pg] Matching against 2 candidate credentials
+[2026-09-02T19:42:44.444Z] [INFO] [Request req_1788378164443_bb034fm] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:44.566Z] [INFO] [Request req_1788378164443_bb034fm] Matching against 2 candidate credentials
+[2026-09-02T19:42:45.697Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T19:42:45.736Z] [INFO] [Request req_1788378165725_v966kcq] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:45.870Z] [INFO] [Request req_1788378165725_v966kcq] Matching against 2 candidate credentials
+[2026-09-02T19:42:46.135Z] [INFO] [Request req_1788378166133_hj7r5mu] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:46.228Z] [INFO] [Request req_1788378166133_hj7r5mu] Matching against 2 candidate credentials
+[2026-09-02T19:42:46.510Z] [INFO] [Request req_1788378166508_ohhlkjm] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-09-02T19:42:46.514Z] [INFO] Client disconnected
+[2026-09-02T19:42:48.135Z] [INFO] [Request req_1788378168134_5sh5k1j] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:48.202Z] [INFO] [Request req_1788378168134_5sh5k1j] Matching against 2 candidate credentials
+[2026-09-02T19:42:49.530Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T19:42:49.906Z] [INFO] [Request req_1788378169904_hvf39dn] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:49.907Z] [INFO] [Request req_1788378169904_omtk7y2] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-09-02T19:42:49.911Z] [INFO] Client disconnected
+[2026-09-02T19:42:49.954Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T19:42:49.988Z] [INFO] [Request req_1788378169966_16dbu9f] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:49.992Z] [INFO] [Request req_1788378169904_hvf39dn] Matching against 2 candidate credentials
+[2026-09-02T19:42:50.072Z] [INFO] [Request req_1788378169966_16dbu9f] Matching against 2 candidate credentials
+[2026-09-02T19:42:50.136Z] [INFO] [Request req_1788378170135_9tgiwao] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:50.240Z] [INFO] [Request req_1788378170135_9tgiwao] Matching against 2 candidate credentials
+[2026-09-02T19:42:50.626Z] [INFO] [Request req_1788378170623_m7fu752] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-09-02T19:42:50.630Z] [INFO] Client disconnected
+[2026-09-02T19:42:52.136Z] [INFO] [Request req_1788378172135_0amniwk] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:52.219Z] [INFO] [Request req_1788378172135_0amniwk] Matching against 2 candidate credentials
+[2026-09-02T19:42:53.221Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T19:42:53.224Z] [INFO] [Request req_1788378173223_3gg3e7c] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:53.305Z] [INFO] [Request req_1788378173223_3gg3e7c] Matching against 2 candidate credentials
+[2026-09-02T19:42:54.114Z] [INFO] [Request req_1788378174113_t2z9s7m] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-09-02T19:42:54.117Z] [INFO] Client disconnected
+[2026-09-02T19:42:54.146Z] [INFO] [Request req_1788378174144_jgo6j5s] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:54.274Z] [INFO] [Request req_1788378174144_jgo6j5s] Matching against 2 candidate credentials
+[2026-09-02T19:42:56.137Z] [INFO] [Request req_1788378176136_gxzkzb0] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:56.206Z] [INFO] [Request req_1788378176136_gxzkzb0] Matching against 2 candidate credentials
+[2026-09-02T19:42:57.166Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T19:42:58.141Z] [INFO] [Request req_1788378178140_62yex8y] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:42:58.274Z] [INFO] [Request req_1788378178140_62yex8y] Matching against 2 candidate credentials
+[2026-09-02T19:43:00.139Z] [INFO] [Request req_1788378180138_wy0csq4] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:00.231Z] [INFO] [Request req_1788378180138_wy0csq4] Matching against 2 candidate credentials
+[2026-09-02T19:43:02.141Z] [INFO] [Request req_1788378182138_3oe9r3n] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:02.212Z] [INFO] [Request req_1788378182138_3oe9r3n] Matching against 2 candidate credentials
+[2026-09-02T19:43:04.140Z] [INFO] [Request req_1788378184138_l1l4uja] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:04.258Z] [INFO] [Request req_1788378184138_l1l4uja] Matching against 2 candidate credentials
+[2026-09-02T19:43:06.141Z] [INFO] [Request req_1788378186139_lurdhfl] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:06.220Z] [INFO] [Request req_1788378186139_lurdhfl] Matching against 2 candidate credentials
+[2026-09-02T19:43:08.140Z] [INFO] [Request req_1788378188139_u741t0p] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:08.276Z] [INFO] [Request req_1788378188139_u741t0p] Matching against 2 candidate credentials
+[2026-09-02T19:43:10.140Z] [INFO] [Request req_1788378190139_j3zf0ro] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:10.283Z] [INFO] [Request req_1788378190139_j3zf0ro] Matching against 2 candidate credentials
+[2026-09-02T19:43:12.140Z] [INFO] [Request req_1788378192140_1g8mrzb] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:12.278Z] [INFO] [Request req_1788378192140_1g8mrzb] Matching against 2 candidate credentials
+[2026-09-02T19:43:14.140Z] [INFO] [Request req_1788378194139_m0fc4us] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:14.424Z] [INFO] [Request req_1788378194422_28gctyz] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:14.426Z] [INFO] [Request req_1788378194423_ryjyudy] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-09-02T19:43:14.433Z] [INFO] Client disconnected
+[2026-09-02T19:43:14.482Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T19:43:14.535Z] [INFO] [Request req_1788378194489_veim97t] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:15.417Z] [INFO] [Request req_1788378194139_m0fc4us] Matching against 2 candidate credentials
+[2026-09-02T19:43:15.536Z] [INFO] [Request req_1788378194422_28gctyz] Matching against 2 candidate credentials
+[2026-09-02T19:43:16.916Z] [INFO] [Request req_1788378194489_veim97t] Matching against 2 candidate credentials
+[2026-09-02T19:43:19.141Z] [INFO] [Request req_1788378199140_8il8vyt] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:19.388Z] [INFO] [Request req_1788378199140_8il8vyt] Matching against 2 candidate credentials
+[2026-09-02T19:43:23.450Z] [INFO] [Request req_1788378203446_9ajyu3p] DeviceType: fingerprint | Action: fingerprint.cancel
+[2026-09-02T19:43:23.452Z] [INFO] Client disconnected
+[2026-09-02T19:43:26.496Z] [INFO] Client connected from: 127.0.0.1
+[2026-09-02T19:43:28.141Z] [INFO] [Request req_1788378208140_0bkdfrn] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:28.240Z] [INFO] [Request req_1788378208140_0bkdfrn] Matching against 2 candidate credentials
+[2026-09-02T19:43:30.142Z] [INFO] [Request req_1788378210141_2prx943] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:30.217Z] [INFO] [Request req_1788378210141_2prx943] Matching against 2 candidate credentials
+[2026-09-02T19:43:32.142Z] [INFO] [Request req_1788378212141_ajmrt6y] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:32.247Z] [INFO] [Request req_1788378212141_ajmrt6y] Matching against 2 candidate credentials
+[2026-09-02T19:43:34.142Z] [INFO] [Request req_1788378214141_zr4flnj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:34.328Z] [INFO] [Request req_1788378214141_zr4flnj] Matching against 2 candidate credentials
+[2026-09-02T19:43:36.142Z] [INFO] [Request req_1788378216140_8scjkmv] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:36.280Z] [INFO] [Request req_1788378216140_8scjkmv] Matching against 2 candidate credentials
+[2026-09-02T19:43:38.142Z] [INFO] [Request req_1788378218141_dg1nr2t] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:38.228Z] [INFO] [Request req_1788378218141_dg1nr2t] Matching against 2 candidate credentials
+[2026-09-02T19:43:40.143Z] [INFO] [Request req_1788378220141_u8bfucr] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:40.279Z] [INFO] [Request req_1788378220141_u8bfucr] Matching against 2 candidate credentials
+[2026-09-02T19:43:42.142Z] [INFO] [Request req_1788378222140_i49atv0] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:42.657Z] [INFO] [Request req_1788378222140_i49atv0] Matching against 2 candidate credentials
+[2026-09-02T19:43:44.609Z] [INFO] [Request req_1788378224609_kv9hmi6] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:44.690Z] [INFO] [Request req_1788378224609_kv9hmi6] Matching against 2 candidate credentials
+[2026-09-02T19:43:48.580Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:48.582Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:50.945Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:50.945Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:51.142Z] [INFO] [Request req_1788378231141_33c72aj] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:51.214Z] [INFO] [Request req_1788378231141_33c72aj] Matching against 2 candidate credentials
+[2026-09-02T19:43:51.288Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:51.288Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:53.220Z] [INFO] [Request req_1788378233219_5r5n800] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:53.310Z] [INFO] [Request req_1788378233219_5r5n800] Matching against 2 candidate credentials
+[2026-09-02T19:43:54.960Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:54.961Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:55.229Z] [INFO] [Request req_1788378235228_s33lzru] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:55.511Z] [INFO] [Request req_1788378235228_s33lzru] Matching against 2 candidate credentials
+[2026-09-02T19:43:55.707Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:55.708Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:55.995Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:55.996Z] [ERROR] (node:5194) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [WebSocketServer]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+[2026-09-02T19:43:55.997Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:56.252Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:56.253Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:56.483Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:56.484Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:56.734Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:56.734Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:56.993Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:56.994Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:57.262Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:57.263Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:57.538Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:57.539Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:57.795Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:57.796Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:58.071Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:58.071Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:58.142Z] [INFO] [Request req_1788378238141_lu9nz09] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:43:58.298Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:58.298Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:58.304Z] [INFO] [Request req_1788378238141_lu9nz09] Matching against 2 candidate credentials
+[2026-09-02T19:43:58.533Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:58.534Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:58.783Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:58.785Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:59.002Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:59.002Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:59.283Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:43:59.284Z] [INFO] [Bridge] Received SIGINT — shutting down
+[2026-09-02T19:44:00.143Z] [INFO] [Request req_1788378240142_k0f1cck] DeviceType: fingerprint | Action: fingerprint.identify
+[2026-09-02T19:44:00.238Z] [INFO] [Request req_1788378240142_k0f1cck] Matching against 2 candidate credentials

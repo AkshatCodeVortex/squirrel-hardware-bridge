@@ -111,7 +111,7 @@ var
   Line: String;
 begin
   Result := '';
-  ConfigPath := ExpandConstant('{app}\config\.env');
+  ConfigPath := WizardDirValue + '\config\.env';
   if FileExists(ConfigPath) then
   begin
     if LoadStringsFromFile(ConfigPath, Lines) then
@@ -139,7 +139,7 @@ var
   FilePath: String;
   Found: Boolean;
 begin
-  FilePath := ExpandConstant('{app}\config\.env');
+  FilePath := WizardDirValue + '\config\.env';
   if not FileExists(FilePath) then Exit;
 
   if LoadStringsFromFile(FilePath, Lines) then
@@ -260,7 +260,17 @@ begin
     'Please enter the Terminal Token for this POS device.' + #13#10 +
     'You can find or generate this in the Qkarts Admin panel under Settings -> Terminal Tokens.');
   TokenPage.Add('Terminal Token:', False);
-  TokenPage.Values[0] := GetExistingToken();
+end;
+
+procedure CurPageChanged(CurPageID: Integer);
+begin
+  if CurPageID = TokenPage.ID then
+  begin
+    if TokenPage.Values[0] = '' then
+    begin
+      TokenPage.Values[0] := GetExistingToken();
+    end;
+  end;
 end;
 
 function PrepareToInstall(var NeedsRestart: Boolean): String;

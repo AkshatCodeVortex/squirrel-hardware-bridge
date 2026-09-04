@@ -309,7 +309,22 @@ class HikvisionUsbFingerprintProvider {
         if (this.deviceOpen) {
             return 'Ready';
         }
-        return 'Connected';
+        // Probe whether the USB scanner is actually plugged in
+        try {
+            const result = this.fnOpenDevice();
+            if (result !== FP_SUCCESS) {
+                return 'Disconnected';
+            }
+            // Device opened successfully — close it immediately so it's free for operations
+            try {
+                this.fnCloseDevice();
+            }
+            catch { /* ignore */ }
+            return 'Connected';
+        }
+        catch {
+            return 'Disconnected';
+        }
     }
     /**
      * ============================================================
